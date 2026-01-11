@@ -52,13 +52,6 @@ npm run host
 npm run test:coverage
 ```
 
-### NPM bloat
-
-In this project, we set a threshold for how large the `/node_modules` folder can become after an `npm install`.
-In our [`package.json`](package.json), we set the size to 256 MB.
-
-To test the size of the dependencies in your local workspace, run `npm run test:size`.
-
 ## Architecture 🗿
 
 For architecture-related information, please refer to [`ARCHITECTURE.md`](ARCHITECTURE.md).
