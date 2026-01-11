@@ -31,7 +31,7 @@
     "start": "npm run dev",
     "dev": "wrangler dev",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite build -- mode production && wrangler deploy -e=preview",
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:size": "npm i && size-limit",

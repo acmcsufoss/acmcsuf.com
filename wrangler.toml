@@ -11,10 +11,6 @@ preview_urls = true
 binding = "ASSETS"
 directory = ".svelte-kit/cloudflare"
 
-[[routes]]
-pattern = "acmcsuf.com"
-custom_domain = true
-
 [observability]
 [observability.logs]
 enabled = true
@@ -23,4 +19,8 @@ invocation_logs = true
 persist = true
 
 [env.production]
-name = "acmcsuf-com"
+route = "acmcsuf.com"
+workers_dev = false
+
+[env.preview]
+workers_dev = true
