@@ -29,7 +29,7 @@
   ],
   "scripts": {
     "start": "npm run dev",
-    "dev": "vite dev",
+    "dev": "wrangler dev",
     "build": "vite build",
     "preview": "vite preview",
     "test": "vitest --run",
