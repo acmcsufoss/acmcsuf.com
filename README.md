@@ -2,8 +2,6 @@
 
 > Official website of CSUF's ACM club.
 
-[![Website Check](https://github.com/EthanThatOneKid/acmcsuf.com/actions/workflows/check_website.yaml/badge.svg)](https://github.com/EthanThatOneKid/acmcsuf.com/actions/workflows/check_website.yaml)
-
 ## Develop [👩‍💻][netlify_dashboard]
 
 > 💡 This project runs on Node.js; [install the latest long-term support version][node_download].
@@ -18,10 +16,12 @@ For a more detailed overview of this repository's structure, feel free to review
 
 ## Deployment 🚀
 
-[![Netlify Status](https://api.netlify.com/api/v1/badges/ee624373-9c84-4f33-a5db-daa69d18ae6e/deploy-status)](https://app.netlify.com/sites/acmcsuf/deploys)
+This site is deployed with Cloudflare Workers.
 
-Whenever a push is made to the main branch, Netlify builds the site, tests it, and if there are no errors, it will deploy a preview site.
+Whenever a push is made to the main branch, Cloudflare builds the site, tests it, and if there are no errors, it will deploy a preview site.
 Once all checks have been passed, the preview site gets promoted to production.
+
+The site can also be deployed manually by those with sufficient permissions using Wrangler. Use `npm run deploy` to do so.
 
 ---
 
@@ -30,9 +30,8 @@ Current Webmaster: [**Dianella Sy**][webmaster_url]
 
 [node_download]: https://nodejs.org/en/download/
 [github_action_deploy]: .github/workflows/deploy.yaml
-[demo_url]: https://acmcsuf.com/
+[live_url]: https://acmcsuf.com/
 [acm_officers]: https://acmcsuf.com/teams/
 [webmaster_url]: https://github.com/dianellasy/
 [dev_server]: http://localhost:3000/
-[netlify_dashboard]: https://app.netlify.com/sites/acmcsuf
 [team_doc]: https://docs.google.com/document/d/11GoIBTAAnIOgmWuG1TsgXUE3MMkweQ8V6bB9TbrY0Hs/edit?usp=sharing
