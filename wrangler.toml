@@ -1,0 +1,26 @@
+# For more details on how to configure Wrangler, refer to:
+# https://developers.cloudflare.com/workers/wrangler/configuration/
+
+name = "acmcsuf-com"
+main = ".svelte-kit/cloudflare/_worker.js"
+compatibility_date = "2026-01-04"
+compatibility_flags = [ "nodejs_als", "nodejs_compat" ]
+preview_urls = true
+
+[assets]
+binding = "ASSETS"
+directory = ".svelte-kit/cloudflare"
+
+[observability]
+[observability.logs]
+enabled = true
+head_sampling_rate = 1
+invocation_logs = true
+persist = true
+
+[env.production]
+route = "acmcsuf.com"
+workers_dev = false
+
+[env.preview]
+workers_dev = true

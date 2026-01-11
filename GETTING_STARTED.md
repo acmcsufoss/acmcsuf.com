@@ -3,9 +3,9 @@
 1. Install [Node.js](https://nodejs.org/en/) (LTS version).
 1. Install [Git](https://git-scm.com/downloads).
    - If you are not comfortable with the Git command line tool, you may use GitHub Desktop (<https://desktop.github.com/>). Take a look at <https://acmcsuf.com/1st/> if this is your first time contributing to an open source project.
-1. Create a fork of [acmcsuf.com](https://github.com/EthanThatOneKid/acmcsuf.com), similar to <https://github.com/diamondburned/acmcsuf.com>.
+1. Create a fork of [acmcsuf.com](https://github.com/acmcsufoss/acmcsuf.com), similar to <https://github.com/diamondburned/acmcsuf.com>.
 1. (Optional; required on some pages) Create an [access token](https://scribehow.com/shared/Generating_a_personal_access_token__eMf0UJYaS5OcGrO_lJTpGg).
-1. Follow [these instructions](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/CONTRIBUTING.md#setting-up-your-env-file) to add it to your dev environment.
+1. Follow [these instructions](https://github.com/acmcsufoss/acmcsuf.com/blob/main/CONTRIBUTING.md#setting-up-your-env-file) to add it to your dev environment.
 
 ## Local development setup
 
@@ -31,12 +31,12 @@
    1. A link to the issue that you resolved (if applicable).
    1. Any screenshots if your change affects something visible on the website or that you believe would help the reviewer understand your changes.
    1. Examples of good PRs:
-      1. [https://acmcsuf.com/pull/477](https://github.com/EthanThatOneKid/acmcsuf.com/pull/477)
-      1. [https://acmcsuf.com/pull/469](https://github.com/EthanThatOneKid/acmcsuf.com/pull/469)
-      1. [https://acmcsuf.com/pull/401](https://github.com/EthanThatOneKid/acmcsuf.com/pull/401)
+      1. [https://acmcsuf.com/pull/477](https://github.com/acmcsufoss/acmcsuf.com/pull/477)
+      1. [https://acmcsuf.com/pull/469](https://github.com/acmcsufoss/acmcsuf.com/pull/469)
+      1. [https://acmcsuf.com/pull/401](https://github.com/acmcsufoss/acmcsuf.com/pull/401)
    1. Examples of bad PRs:
-      1. [https://acmcsuf.com/pull/359](https://github.com/EthanThatOneKid/acmcsuf.com/pull/359)
-      1. [https://acmcsuf.com/pull/357](https://github.com/EthanThatOneKid/acmcsuf.com/pull/357)
+      1. [https://acmcsuf.com/pull/359](https://github.com/acmcsufoss/acmcsuf.com/pull/359)
+      1. [https://acmcsuf.com/pull/357](https://github.com/acmcsufoss/acmcsuf.com/pull/357)
 1. Use the "Reviewers" panel on the top-right side of the PR page to request a review. Reach out to your chosen reviewer outside of GitHub to ensure they are aware of your code review request.
 1. As a requester, it is courteous to give your chosen reviewer a heads-up before formally requesting a review. As a reviewer, it is also common courtesy to respond to code review requests within 24 hours.
 1. If your chosen reviewer does not review your code within 24 hours, consider gently reminding them. Alternatively, if necessary, you can request a review from another individual.
@@ -46,6 +46,6 @@
 
 If you aren’t already familiar with Svelte, you should go through the official [Svelte tutorial](https://svelte.dev/tutorial/basics), as much of the codebase uses it.
 
-Once you’re ready to start, you may either assign yourself to an issue or ask for an issue to be assigned to you. I’d recommend starting with issues tagged [“Good First Issue”](https://github.com/EthanThatOneKid/acmcsuf.com/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
+Once you’re ready to start, you may either assign yourself to an issue or ask for an issue to be assigned to you. I’d recommend starting with issues tagged [“Good First Issue”](https://github.com/acmcsufoss/acmcsuf.com/issues?q=is%3Aopen+is%3Aissue+label%3A%22good+first+issue%22).
 
-For a more in depth overview of the codebase, check out [CONTRIBUTING.md](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/CONTRIBUTING.md) and [ARCHITECTURE.md](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/ARCHITECTURE.md).
+For a more in depth overview of the codebase, check out [CONTRIBUTING.md](https://github.com/acmcsufoss/acmcsuf.com/blob/main/CONTRIBUTING.md) and [ARCHITECTURE.md](https://github.com/acmcsufoss/acmcsuf.com/blob/main/ARCHITECTURE.md).

@@ -78,7 +78,7 @@
 
     <p>
       Fork the repository by clicking on the fork button on the top of <a
-        href="https://github.com/ethanthatonekid/acmcsuf.com#readme"
+        href="https://github.com/acmcsufoss/acmcsuf.com#readme"
         ><code>acmcsuf.com</code>'s page on GitHub</a
       >. This will create a copy of this repository in your account.
     </p>
