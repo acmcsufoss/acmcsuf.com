@@ -11,10 +11,10 @@
     "npm": ">=10.5.1"
   },
   "repository": {
-    "url": "git+https://github.com/EthanThatOneKid/acmcsuf.com.git"
+    "url": "git+https://github.com/acmcsufoss/acmcsuf.com.git"
   },
   "bugs": {
-    "url": "https://github.com/EthanThatOneKid/acmcsuf.com/issues"
+    "url": "https://github.com/acmcsufoss/acmcsuf.com/issues"
   },
   "main": "svelte.config.js",
   "keywords": [

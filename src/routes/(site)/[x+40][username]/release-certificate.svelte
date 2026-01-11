@@ -27,7 +27,7 @@
     {/if}
     in
     <a
-      href={`https://github.com/EthanThatOneKid/acmcsuf.com/releases/tag/${data.to.tagName}`}
+      href={`https://github.com/acmcsufoss/acmcsuf.com/releases/tag/${data.to.tagName}`}
       target="_blank"
       rel="noopener noreferrer">release {data.to.tagName}</a
     >

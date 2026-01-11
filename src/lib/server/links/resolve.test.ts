@@ -3,9 +3,9 @@ import { resolve } from './resolve';
 
 test('resolve resolves shortlinks', () => {
   const actual = resolve(new URL('https://acmcsuf.com/github'), {
-    github: 'https://github.com/ethanthatonekid/acmcsuf.com',
+    github: 'https://github.com/acmcsufoss/acmcsuf.com',
   });
-  const expected = new URL('https://github.com/ethanthatonekid/acmcsuf.com');
+  const expected = new URL('https://github.com/acmcsufoss/acmcsuf.com');
   expect(actual.href).toStrictEqual(expected.href);
 });
 
