@@ -22,6 +22,7 @@ Whenever a push is made to the main branch, Cloudflare builds the site, tests it
 Once all checks have been passed, the preview site gets promoted to production.
 
 The site can also be deployed manually by those with sufficient permissions using Wrangler. Use `npm run deploy` to do so.
+
 > Make sure you have a `.env.production` file with the correct production variables.
 
 ---
