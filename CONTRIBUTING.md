@@ -13,7 +13,7 @@ First, make sure that Node.js is **installed** on your machine in order to run o
 If you do not have Node.js installed, visit their [downloads page][node_dl] and install the latest long-term supported version.
 
 To contribute to this project, you may simply begin by **cloning** this repository to your machine.
-Clone this repository by [directly downloading it][ddl] or via git: `git clone https://github.com/ethanthatonekid/acmcsuf.com.git`.
+Clone this repository by [directly downloading it][ddl] or via git: `git clone https://github.com/acmcsufoss/acmcsuf.com.git`.
 
 Open the repository in your code editor or terminal of choice and enter `npm i` to **install** the project's dependencies.
 After that, enter `npm run dev` to spin up the development server.
@@ -117,7 +117,7 @@ Below is how `GH_ACCESS_TOKEN` should be defined in your `.env` file, where `YOU
 GH_ACCESS_TOKEN=YOUR_PAT
 ```
 
-**Fair Warning**: Never commit your _PAT_ (or any sensitive information) in files that are not ignored by our [`.gitignore`](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/.gitignore) file (`.env` being one of them).
+**Fair Warning**: Never commit your _PAT_ (or any sensitive information) in files that are not ignored by our [`.gitignore`](https://github.com/acmcsufoss/acmcsuf.com/blob/main/.gitignore) file (`.env` being one of them).
 
 Other environment variables are needed to provide information that allows the program to fetch data from the correct place. It is okay to copy and paste the additional variables into your `.env` file as defined below because they are already public.
 
@@ -125,7 +125,7 @@ Other environment variables are needed to provide information that allows the pr
 # Your personal GitHub access token
 GH_ACCESS_TOKEN=YOUR_PAT
 
-# General discussion on GitHub: <https://github.com/EthanThatOneKid/acmcsuf.com/discussions/categories/newsletter>
+# General discussion on GitHub: <https://github.com/acmcsufoss/acmcsuf.com/discussions/categories/newsletter>
 GH_DISCUSSION_CATEGORY_ID=DIC_kwDOE7ysSc4CAC0o
 
 # Switch to 1 to turn on debug mode.
@@ -155,7 +155,7 @@ Alternatively, board members may update the shortlinks using a Discord slash com
 
 ## Updating blog posts
 
-<https://acmcsuf.com/blog> posts are stored via GitHub Discussions on the acmcsuf.com repository's [`Newsletter` category](https://github.com/EthanThatOneKid/acmcsuf.com/discussions/categories/newsletter). Edit existing blog posts by editing the corresponding discussion. Create new blog posts by creating a new discussion in the `Newsletter` category (<https://acmcsuf.com/blog/new>).
+<https://acmcsuf.com/blog> posts are stored via GitHub Discussions on the acmcsuf.com repository's [`Newsletter` category](https://github.com/acmcsufoss/acmcsuf.com/discussions/categories/newsletter). Edit existing blog posts by editing the corresponding discussion. Create new blog posts by creating a new discussion in the `Newsletter` category (<https://acmcsuf.com/blog/new>).
 
 ## Custom workflows
 
@@ -171,11 +171,11 @@ Manually creating and closing text channels for every single GitHub issue is not
 We also want a way to archive these discussions without cluttering the Discord server with text channels.
 To accomplish these needs, we need a way to automate those tasks whenever an issue is created or closed on this GitHub repository.
 
-The [`workflows/create_issue_channel.yaml`](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/.github/workflows/create_issue_channel.yaml) workflow is responsible for creating a new text channel whenever an issue is opened [or reopened] on Github.
-This workflow relies on [`scripts/create-issue-channel.js`](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/scripts/create-issue-channel.js) to create the text channel and send the first message containing a link to the newly created issue.
+The [`workflows/create_issue_channel.yaml`](https://github.com/acmcsufoss/acmcsuf.com/blob/main/.github/workflows/create_issue_channel.yaml) workflow is responsible for creating a new text channel whenever an issue is opened [or reopened] on Github.
+This workflow relies on [`scripts/create-issue-channel.js`](https://github.com/acmcsufoss/acmcsuf.com/blob/main/scripts/create-issue-channel.js) to create the text channel and send the first message containing a link to the newly created issue.
 
-The [`workflows/close_issue_channel.yaml`](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/.github/workflows/close_issue_channel.yaml) workflow is responsible for closing a text channel whenever a corresponding issue is closed [or deleted] on Github.
-This workflow relies on [`scripts/close-issue-channel.js`](https://github.com/EthanThatOneKid/acmcsuf.com/blob/main/scripts/close-issue-channel.js) to transcribe the old issue channel's messages to a dedicated _archive_ channel and then delete the old channel.
+The [`workflows/close_issue_channel.yaml`](https://github.com/acmcsufoss/acmcsuf.com/blob/main/.github/workflows/close_issue_channel.yaml) workflow is responsible for closing a text channel whenever a corresponding issue is closed [or deleted] on Github.
+This workflow relies on [`scripts/close-issue-channel.js`](https://github.com/acmcsufoss/acmcsuf.com/blob/main/scripts/close-issue-channel.js) to transcribe the old issue channel's messages to a dedicated _archive_ channel and then delete the old channel.
 
 ## Webmaster's note 📝
 
