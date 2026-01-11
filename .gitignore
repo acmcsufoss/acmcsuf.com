@@ -6,6 +6,8 @@ node_modules
 .env
 .env.*
 !.env.example
+.dev.vars
+.dev.vars.*
 vite.config.js.timestamp-*
 vite.config.ts.timestamp-*
 src/routes/(site)/\[x+40\]\[username\]/\[repo_name\]/+page.svelte
