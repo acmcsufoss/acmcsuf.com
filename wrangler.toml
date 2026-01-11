@@ -5,6 +5,7 @@ name = "acmcsuf-com"
 main = ".svelte-kit/cloudflare/_worker.js"
 compatibility_date = "2026-01-04"
 compatibility_flags = [ "nodejs_als", "nodejs_compat" ]
+preview_urls = true
 
 [assets]
 binding = "ASSETS"
