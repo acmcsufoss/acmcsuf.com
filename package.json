@@ -23,8 +23,8 @@
   "license": "MIT",
   "size-limit": [
     {
-      "path": "node_modules",
-      "limit": "256 MB"
+      "path": ".svelte-kit/cloudflare/_worker.js",
+      "limit": "50 KB"
     }
   ],
   "scripts": {
