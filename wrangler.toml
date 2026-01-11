@@ -10,6 +10,10 @@ compatibility_flags = [ "nodejs_als", "nodejs_compat" ]
 binding = "ASSETS"
 directory = ".svelte-kit/cloudflare"
 
+[[routes]]
+pattern = "acmcsuf.com"
+custom_domain = true
+
 [observability]
 [observability.logs]
 enabled = true
