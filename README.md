@@ -1,8 +1,8 @@
-# [`acmcsuf.com`][demo_url] 🐘
+# [`acmcsuf.com`][live_url] 🐘
 
 > Official website of CSUF's ACM club.
 
-## Develop [👩‍💻][netlify_dashboard]
+## Develop
 
 > 💡 This project runs on Node.js; [install the latest long-term support version][node_download].
 
