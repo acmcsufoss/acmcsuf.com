@@ -73,11 +73,10 @@ In the case of this project, our TSConfig is mostly extended from [`@tsconfig/sv
 
 [This file](svelte.config.js) is a configuration file of sorts that handles the bundling and live page reloading when developing the project.
 
-## `.eslintrc.cjs` 📄
-
+## `.eslint.config.js`
 [This file](.eslintrc.cjs) is a file that declares the _linting_ configuration of the project.
 
-## `.prettierrc` 📄
+## `.prettierrc` and `.prettierignore` 📄
 
 [This file](.prettierrc) is a file that declares the _formatting_ configuration of the project.
 
