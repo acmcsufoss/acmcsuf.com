@@ -967,6 +967,10 @@
       "F25": [
         { "title": "AI Team Lead", "tier": 20 },
         { "title": "Algo Officer", "tier": 12 }
+      ],
+      "S26": [
+        { "title": "AI Team Lead", "tier": 20 },
+        { "title": "Algo Officer", "tier": 12 }
       ]
     },
     "discord": "@josu4412"
@@ -1117,7 +1121,8 @@
     "fullName": "Yves Velasquez Vega",
     "picture": "yves-velasquez-vega.webp",
     "positions": {
-      "F24": [{ "title": "AI Officer", "tier": 21 }]
+      "F24": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@hallowsyves"
   },
@@ -1282,6 +1287,10 @@
       "F25": [
         { "title": "AI Officer", "tier": 21 },
         { "title": "Marketing Officer", "tier": 9 }
+      ],
+      "S26": [
+        { "title": "AI Officer", "tier": 21 },
+        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
     "discord": "@wiseeisw_99756"
@@ -1375,7 +1384,8 @@
     "picture": "nathan-choi.webp",
     "positions": {
       "S25": [{ "title": "AI Officer", "tier": 21 }],
-      "F25": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@nchoi123"
   },
@@ -1392,7 +1402,8 @@
     "picture": "ender-batu.webp",
     "positions": {
       "S25": [{ "title": "AI Officer", "tier": 21 }],
-      "F25": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@rothchild"
   },
@@ -1489,7 +1500,10 @@
   {
     "fullName": "Omar Rafiq",
     "picture": "omar-rafiq.webp",
-    "positions": { "F25": [{ "title": "AI Officer", "tier": 21 }] },
+    "positions": {
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
+    },
     "discord": "@dimesv2"
   },
   {
@@ -1568,7 +1582,8 @@
     "fullName": "Kai Llora",
     "picture": "kai-llora.webp",
     "positions": {
-      "F25": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@kaillo_"
   },
@@ -1608,7 +1623,8 @@
     "fullName": "Dylan Geraci",
     "picture": "dylan-geraci.webp",
     "positions": {
-      "F25": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@random_c0de"
   },
@@ -1632,7 +1648,8 @@
     "fullName": "Shane Smeaton",
     "picture": "shane-smeaton.webp",
     "positions": {
-      "F25": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }],
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@53np41_jaeger.00"
   },
@@ -1702,5 +1719,13 @@
       "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@quxssont"
+  },
+  {
+    "fullName": "Aren Chavez",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
+    },
+    "discord": "@meltyblend"
   }
 ]
