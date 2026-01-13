@@ -85,10 +85,22 @@ In the case of this project, our TSConfig is mostly extended from [`@tsconfig/sv
 [This JSON file](package.json) describes information about the project and stores the information for all of the dependencies (along with their versions) used in the project.
 This includes `"dependencies"` that are used inside our program and `"devDependencies"` that are used for development outside of the inner-workings of our program.
 
+## `.npmrc` 📄
+
+Configuration options for the `npm` package manager.
+
+## `.nvmrc` 📄
+
+Specifies the exact node version to be used for those using Node Version Manager. Also used in CI.
+
 ## `package-lock.json` 📄
 
 This file is not meant to be modified by humans, but instead left to be managed by the project's package manager, NPM.
 Even though it is not affected by developers, the lock file is still important and so it is [_advised_](https://blog.logrocket.com/why-you-should-use-package-lock-json/) to leave it out of the `.gitignore` file.
+
+## `wrangler.toml` 📄
+
+See [CLOUDFLARE_WORKERS.md](./CLOUDFLARE_WORKERS.md) for info on this file.
 
 [sveltekit_home]: https://kit.svelte.dev/
 [svelte_home]: https://svelte.dev
