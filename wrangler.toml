@@ -5,7 +5,6 @@ name = "acmcsuf-com"
 main = ".svelte-kit/cloudflare/_worker.js"
 compatibility_date = "2026-01-04"
 compatibility_flags = [ "nodejs_als", "nodejs_compat" ]
-preview_urls = true
 
 [assets]
 binding = "ASSETS"
@@ -18,9 +17,27 @@ head_sampling_rate = 1
 invocation_logs = true
 persist = true
 
-[env.production]
-route = "acmcsuf.com"
-workers_dev = false
+# ==== Route/Domain Configuration ==================================================================
+# https://developers.cloudflare.com/workers/configuration/routing/
 
-[env.preview]
+# This uses vars defined in .env.production (make sure debug is off!)
+[env.production]
+routes = [
+  { pattern = "acmcsuf.com", custom_domain = true }
+]
+# https://developers.cloudflare.com/workers/configuration/previews/
+# To create a preview deployment, use one of the following:
+#   `wrangler versions upload -e [env-name]`
+#   `wrangler versions upload -e [env-name] --preview-alias [alias-name]`
+# The latter puts the alias name in the URL, useful for tracking an in-progress feature.
+# Live preview URLs can be found in the "Deployments" tab of the Worker.
 workers_dev = true
+preview_urls = true
+
+# More environments can be created here, and they can be deployed by running
+# `wrangler deploy -e [env-name]`, and they'll use a `.env.[env-name]` file.
+# Example:
+
+# [env.staging]
+# route = "staging.acmcsuf.com/*"
+# workers_dev = false
