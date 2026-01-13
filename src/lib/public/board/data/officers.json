@@ -1686,5 +1686,21 @@
       "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@joshywatt"
+  },
+  {
+    "fullName": "Mark Gaballa",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
+    },
+    "discord": "@gaballa."
+  },
+  {
+    "fullName": "Isamaliya Tirth Vipulbhai",
+    "picture": "isamaliya-tirth-vipulbhai.webp",
+    "positions": {
+      "S26": [{ "title": "AI Officer", "tier": 21 }]
+    },
+    "discord": "@quxssont"
   }
 ]
