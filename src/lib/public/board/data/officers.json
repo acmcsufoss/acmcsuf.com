@@ -1417,7 +1417,8 @@
     "picture": "madeline-savoiu.webp",
     "positions": {
       "S25": [{ "title": "Marketing Officer", "tier": 9 }],
-      "F25": [{ "title": "Marketing Officer", "tier": 9 }]
+      "F25": [{ "title": "Marketing Officer", "tier": 9 }],
+      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
     },
     "discord": "@briuche"
   },
@@ -1459,7 +1460,8 @@
     "fullName": "Julie Yun",
     "picture": "placeholder.webp",
     "positions": {
-      "F25": [{ "title": "Marketing Officer", "tier": 9 }]
+      "F25": [{ "title": "Marketing Officer", "tier": 9 }],
+      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
     },
     "discord": "@basicworm"
   },
@@ -1631,7 +1633,8 @@
     "fullName": "Aidan Joshi",
     "picture": "aidan-joshi.webp",
     "positions": {
-      "F25": [{ "title": "Marketing Officer", "tier": 9 }]
+      "F25": [{ "title": "Marketing Officer", "tier": 9 }],
+      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
     },
     "discord": "@that.gunter"
   },
@@ -1766,7 +1769,7 @@
   },
   {
     "fullName": "Aren Chavez",
-    "picture": "placeholder.webp",
+    "picture": "aren-chavez.webp",
     "positions": {
       "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
@@ -1822,5 +1825,13 @@
       "S26": [{ "title": "Dev Officer", "tier": 19 }]
     },
     "discord": "@xiaowidebao"
+  },
+  {
+    "fullName": "Samson Du",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
+    },
+    "discord": "@samson.duu"
   }
 ]
