@@ -1674,7 +1674,8 @@
     "fullName": "Homan Qiu",
     "picture": "placeholder.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Team Lead", "tier": 22 }]
+      "F25": [{ "title": "Game Dev Team Lead", "tier": 22 }],
+      "S26": [{ "title": "Game Dev Team Lead", "tier": 22 }]
     },
     "discord": "@non_fish"
   },
@@ -1691,7 +1692,8 @@
     "fullName": "Maverick Malfavon",
     "picture": "maverick-malfavon.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
+      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@mavreal"
   },
@@ -1699,7 +1701,8 @@
     "fullName": "John Alora",
     "picture": "john-alora.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
+      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@cedrix"
   },
@@ -1707,7 +1710,8 @@
     "fullName": "Alessandro Garcia",
     "picture": "alessandro-garcia.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
+      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@acczelzz"
   },
@@ -1715,7 +1719,8 @@
     "fullName": "Ruman Saiyed",
     "picture": "ruman-saiyed.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
+      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@biryani23"
   },
@@ -1738,7 +1743,8 @@
     "fullName": "Joshua Marquez",
     "picture": "joshua-marquez.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
+      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@joshywatt"
   },
