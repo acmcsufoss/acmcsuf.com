@@ -1086,7 +1086,8 @@
       "S24": [{ "title": "Algo Officer", "tier": 12 }],
       "F24": [{ "title": "Algo Officer", "tier": 12 }],
       "S25": [{ "title": "Algo Officer", "tier": 12 }],
-      "F25": [{ "title": "Algo Team Lead", "tier": 11 }]
+      "F25": [{ "title": "Algo Team Lead", "tier": 11 }],
+      "S26": [{ "title": "Algo Team Lead", "tier": 11 }]
     },
     "discord": "@cyrily"
   },
@@ -1274,7 +1275,8 @@
       "F25": [
         { "title": "ICPC Lead", "tier": 27 },
         { "title": "Algo Officer", "tier": 12 }
-      ]
+      ],
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
     "discord": "@baremetal_alchemist"
   },
@@ -1537,7 +1539,10 @@
   {
     "fullName": "Eli Thomas",
     "picture": "eli-thomas.webp",
-    "positions": { "F25": [{ "title": "Algo Officer", "tier": 12 }] },
+    "positions": {
+      "F25": [{ "title": "Algo Officer", "tier": 12 }],
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+    },
     "discord": "@eli.th"
   },
   {
@@ -1632,7 +1637,8 @@
     "fullName": "Jonathan Soo",
     "picture": "jonathan-soo.webp",
     "positions": {
-      "F25": [{ "title": "Algo Officer", "tier": 12 }]
+      "F25": [{ "title": "Algo Officer", "tier": 12 }],
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
     "discord": "@jonnie7728"
   },
@@ -1692,6 +1698,10 @@
       "F25": [
         { "title": "Game Dev Officer", "tier": 23 },
         { "title": "Algo Officer", "tier": 12 }
+      ],
+      "S26": [
+        { "title": "Game Dev Officer", "tier": 23 },
+        { "title": "Algo Officer", "tier": 12 }
       ]
     },
     "discord": "@bald0398"
@@ -1727,5 +1737,37 @@
       "S26": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@meltyblend"
+  },
+  {
+    "fullName": "Aidan Rus",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+    },
+    "discord": "@acepainter"
+  },
+  {
+    "fullName": "Andrew Nguyen",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+    },
+    "discord": "@patheit"
+  },
+  {
+    "fullName": "Gerardo Medina",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+    },
+    "discord": "@jerrycompiled"
+  },
+  {
+    "fullName": "Shane Sharma",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+    },
+    "discord": "@samayy"
   }
 ]
