@@ -1289,10 +1289,6 @@
       "F25": [
         { "title": "AI Officer", "tier": 21 },
         { "title": "Marketing Officer", "tier": 9 }
-      ],
-      "S26": [
-        { "title": "AI Officer", "tier": 21 },
-        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
     "discord": "@wiseeisw_99756"
@@ -1354,6 +1350,11 @@
     "positions": {
       "S25": [{ "title": "Design Officer", "tier": 16 }],
       "F25": [
+        { "title": "Design Team Lead", "tier": 13 },
+        { "title": "Dev Officer", "tier": 19 },
+        { "title": "Node Buds Officer", "tier": 26 }
+      ],
+      "S26": [
         { "title": "Design Team Lead", "tier": 13 },
         { "title": "Dev Officer", "tier": 19 },
         { "title": "Node Buds Officer", "tier": 26 }
@@ -1435,6 +1436,10 @@
       "F25": [
         { "title": "Marketing Team Lead", "tier": 8 },
         { "title": "Design Officer", "tier": 16 }
+      ],
+      "S26": [
+        { "title": "Marketing Team Lead", "tier": 8 },
+        { "title": "Design Officer", "tier": 16 }
       ]
     },
     "discord": "@qasple"
@@ -1495,6 +1500,10 @@
       "F25": [
         { "title": "Design Officer", "tier": 16 },
         { "title": "Marketing Officer", "tier": 9 }
+      ],
+      "S26": [
+        { "title": "Design Officer", "tier": 16 },
+        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
     "discord": "@sofa.gui9702"
@@ -1532,9 +1541,13 @@
       "F25": [
         { "title": "Design Officer", "tier": 16 },
         { "title": "Marketing Officer", "tier": 9 }
+      ],
+      "S26": [
+        { "title": "Design Officer", "tier": 16 },
+        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
-    "discord": "@balencilana"
+    "discord": "@steezyprogrammer"
   },
   {
     "fullName": "Eli Thomas",
@@ -1552,6 +1565,10 @@
       "F25": [
         { "title": "Design Officer", "tier": 16 },
         { "title": "Marketing Officer", "tier": 9 }
+      ],
+      "S26": [
+        { "title": "Design Officer", "tier": 16 },
+        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
     "discord": "@yuriko.lpz"
@@ -1561,6 +1578,10 @@
     "picture": "daisy-martinez.webp",
     "positions": {
       "F25": [
+        { "title": "Design Officer", "tier": 16 },
+        { "title": "Marketing Officer", "tier": 9 }
+      ],
+      "S26": [
         { "title": "Design Officer", "tier": 16 },
         { "title": "Marketing Officer", "tier": 9 }
       ]
@@ -1742,7 +1763,10 @@
     "fullName": "Aidan Rus",
     "picture": "placeholder.webp",
     "positions": {
-      "S26": [{ "title": "Algo Officer", "tier": 12 }]
+      "S26": [
+        { "title": "Algo Officer", "tier": 12 },
+        { "title": "Design Officer", "tier": 16 }
+      ]
     },
     "discord": "@acepainter"
   },
@@ -1769,5 +1793,13 @@
       "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
     "discord": "@samayy"
+  },
+  {
+    "fullName": "Jasmine Vu",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Design Officer", "tier": 16 }]
+    },
+    "discord": "@jazorie"
   }
 ]
