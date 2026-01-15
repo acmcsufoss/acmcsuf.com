@@ -1,7 +1,7 @@
-import type { PageLoadEvent } from './$types';
 import type { Color } from './colors';
+import colorsJSON from '$lib/assets/global.json';
 
-export async function load({ fetch }: PageLoadEvent) {
-  const colors: Color[] = await fetch('/global.json').then((r) => r.json());
+export async function load() {
+  const colors: Color[] = colorsJSON;
   return { colors };
 }
