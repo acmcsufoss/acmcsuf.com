@@ -1,6 +1,7 @@
 import { Term } from '../types';
 
 export const VISIBLE_TERMS = [
+  Term.Spring26,
   Term.Fall25,
   Term.Spring25,
   Term.Fall24,

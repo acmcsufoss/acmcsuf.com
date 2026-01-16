@@ -76,6 +76,7 @@
     "googleapis": "^134.0.0",
     "html-to-text": "^9.0.5",
     "lc-dailies": "github:acmcsufoss/lc-dailies#npm",
+    "picomatch": "^4.0.3",
     "pomo": "github:ethanthatonekid/pomo#npm",
     "qrcode": "^1.5.3",
     "rrule": "^2.7.2",
