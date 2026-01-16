@@ -19,6 +19,7 @@
     Term.Fall24,
     Term.Spring25,
     Term.Fall25,
+    Term.Spring26,
   ];
   const gamedevTerms = [
     Term.Spring23,
@@ -27,6 +28,7 @@
     Term.Fall24,
     Term.Spring25,
     Term.Fall25,
+    Term.Spring26,
   ];
   $: skip =
     (members.length === 0 && !permanentTeamIDs.includes(info?.id)) ||
