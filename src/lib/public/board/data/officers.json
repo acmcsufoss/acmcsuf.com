@@ -1788,7 +1788,7 @@
   },
   {
     "fullName": "Aidan Rus",
-    "picture": "placeholder.webp",
+    "picture": "aidan-rus.webp",
     "positions": {
       "S26": [
         { "title": "Algo Officer", "tier": 12 },
@@ -1815,7 +1815,7 @@
   },
   {
     "fullName": "Shane Sharma",
-    "picture": "placeholder.webp",
+    "picture": "shane-sharma.webp",
     "positions": {
       "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
@@ -1823,7 +1823,7 @@
   },
   {
     "fullName": "Jasmine Vu",
-    "picture": "placeholder.webp",
+    "picture": "jasmine-vu.webp",
     "positions": {
       "S26": [{ "title": "Design Officer", "tier": 16 }]
     },
@@ -1831,7 +1831,7 @@
   },
   {
     "fullName": "Alexia Arroyo Tellez",
-    "picture": "placeholder.webp",
+    "picture": "alexia-arroyo-tellez.webp",
     "positions": {
       "S26": [{ "title": "Dev Officer", "tier": 19 }]
     },
@@ -1866,7 +1866,7 @@
   },
   {
     "fullName": "Adam Ho",
-    "picture": "placeholder.webp",
+    "picture": "adam-ho.webp",
     "positions": {
       "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
