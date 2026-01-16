@@ -2,7 +2,7 @@
   "name": "acmcsuf.com",
   "short_name": "acmCSUF",
   "description": "ACM at CSUF",
-  "author": "https://github.com/EthanThatOneKid/acmcsuf.com/",
+  "author": "https://github.com/acmcsufoss/acmcsuf.com/",
   "homepage_url": "https://acmcsuf.com/",
   "offline_enabled": true,
   "omnibox": { "keyword": "acmcsuf" },

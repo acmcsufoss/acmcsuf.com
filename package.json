@@ -11,10 +11,10 @@
     "npm": ">=10.5.1"
   },
   "repository": {
-    "url": "git+https://github.com/EthanThatOneKid/acmcsuf.com.git"
+    "url": "git+https://github.com/acmcsufoss/acmcsuf.com.git"
   },
   "bugs": {
-    "url": "https://github.com/EthanThatOneKid/acmcsuf.com/issues"
+    "url": "https://github.com/acmcsufoss/acmcsuf.com/issues"
   },
   "main": "svelte.config.js",
   "keywords": [
@@ -23,30 +23,32 @@
   "license": "MIT",
   "size-limit": [
     {
-      "path": "node_modules",
-      "limit": "256 MB"
+      "path": ".svelte-kit/cloudflare/_worker.js",
+      "limit": "50 KB"
     }
   ],
   "scripts": {
     "start": "npm run dev",
-    "dev": "vite dev",
+    "dev": "wrangler dev",
     "build": "vite build",
-    "preview": "vite preview",
+    "preview": "vite build -- mode production && wrangler versions upload -e production",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "test:size": "npm i && size-limit",
+    "test:size": "npm run build && size-limit",
     "test:coverage": "vitest run --coverage",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --compiler-warnings \"css-unused-selector:ignore,unused-export-let:error\"",
     "lint": "eslint . --fix",
     "format": "prettier --write .",
     "host": "npm run all && npm run preview",
     "all": "npm run lint && npm run format && npm run check && npm run build && npm t",
-    "generate:colors": "node scripts/generate-colors/index.js"
+    "generate:colors": "node scripts/generate-colors/index.js",
+    "deploy": "vite build --mode production && wrangler deploy -e production"
   },
   "devDependencies": {
     "@eslint/js": "^9.35.0",
     "@size-limit/file": "^8.2.6",
     "@sveltejs/adapter-auto": "^6.1.0",
+    "@sveltejs/adapter-cloudflare": "^7.2.4",
     "@sveltejs/kit": "^2.37.0",
     "@types/html-to-text": "^9.0.1",
     "@types/qrcode": "^1.5.1",
