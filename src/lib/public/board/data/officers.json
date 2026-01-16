@@ -804,7 +804,8 @@
       "S24": [{ "title": "Dev Officer", "tier": 19 }],
       "F24": [{ "title": "President", "tier": 0 }],
       "S25": [{ "title": "President", "tier": 0 }],
-      "F25": [{ "title": "Node Buds Team Lead", "tier": 34 }]
+      "F25": [{ "title": "Node Buds Team Lead", "tier": 34 }],
+      "S26": [{ "title": "Node Buds Team Lead", "tier": 34 }]
     },
     "discord": "@jjoeldaniel"
   },
@@ -1417,8 +1418,7 @@
     "picture": "madeline-savoiu.webp",
     "positions": {
       "S25": [{ "title": "Marketing Officer", "tier": 9 }],
-      "F25": [{ "title": "Marketing Officer", "tier": 9 }],
-      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
+      "F25": [{ "title": "Marketing Officer", "tier": 9 }]
     },
     "discord": "@briuche"
   },
@@ -1452,7 +1452,8 @@
     "picture": "demi-chen.webp",
     "positions": {
       "S25": [{ "title": "Node Buds Officer", "tier": 26 }],
-      "F25": [{ "title": "Node Buds Officer", "tier": 26 }]
+      "F25": [{ "title": "Node Buds Officer", "tier": 26 }],
+      "S26": [{ "title": "Node Buds Officer", "tier": 26 }]
     },
     "discord": "@hungry52"
   },
@@ -1537,6 +1538,10 @@
       "F25": [
         { "title": "Node Buds Co-Team Lead", "tier": 36 },
         { "title": "Open Source Officer", "tier": 33 }
+      ],
+      "S26": [
+        { "title": "Node Buds Co-Team Lead", "tier": 36 },
+        { "title": "Open Source Officer", "tier": 33 }
       ]
     },
     "discord": "@beeemi"
@@ -1599,7 +1604,8 @@
     "fullName": "Cassandra Santillano",
     "picture": "cassandra-santillano.webp",
     "positions": {
-      "F25": [{ "title": "Node Buds Officer", "tier": 26 }]
+      "F25": [{ "title": "Node Buds Officer", "tier": 26 }],
+      "S26": [{ "title": "Node Buds Officer", "tier": 26 }]
     },
     "discord": "@jumpingbean_12"
   },
@@ -1830,8 +1836,27 @@
     "fullName": "Samson Du",
     "picture": "placeholder.webp",
     "positions": {
-      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
+      "S26": [
+        { "title": "Marketing Officer", "tier": 9 },
+        { "title": "Node Buds Officer", "tier": 26 }
+      ]
     },
     "discord": "@samson.duu"
+  },
+  {
+    "fullName": "Brian Hlonggul",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Node Buds Officer", "tier": 26 }]
+    },
+    "discord": "@broglemeow"
+  },
+  {
+    "fullName": "Kevin Fuentes",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Node Buds Officer", "tier": 26 }]
+    },
+    "discord": "@creatorkemii"
   }
 ]
