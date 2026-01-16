@@ -1223,7 +1223,8 @@
     "positions": {
       "F24": [{ "title": "Open Source Officer", "tier": 33 }],
       "S25": [{ "title": "Open Source Officer", "tier": 33 }],
-      "F25": [{ "title": "Open Source Officer", "tier": 33 }]
+      "F25": [{ "title": "Open Source Officer", "tier": 33 }],
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@drafte"
   },
@@ -1308,7 +1309,8 @@
     "picture": "siddharth-vasu.webp",
     "positions": {
       "S25": [{ "title": "Open Source Officer", "tier": 33 }],
-      "F25": [{ "title": "Open Source Officer", "tier": 33 }]
+      "F25": [{ "title": "Open Source Officer", "tier": 33 }],
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@prince_sidon"
   },
@@ -1373,7 +1375,8 @@
       "F25": [
         { "title": "Marketing Officer", "tier": 9 },
         { "title": "Open Source Officer", "tier": 33 }
-      ]
+      ],
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@timothyou"
   },
@@ -1470,7 +1473,8 @@
     "fullName": "Eddie Cortes",
     "picture": "eddie-cortes.webp",
     "positions": {
-      "F25": [{ "title": "Open Source Officer", "tier": 33 }]
+      "F25": [{ "title": "Open Source Officer", "tier": 33 }],
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@yitzy_"
   },
@@ -1648,7 +1652,8 @@
     "fullName": "Anderson Pham",
     "picture": "anderson-pham.webp",
     "positions": {
-      "F25": [{ "title": "Open Source Officer", "tier": 33 }]
+      "F25": [{ "title": "Open Source Officer", "tier": 33 }],
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@levelbubble"
   },
@@ -1858,5 +1863,13 @@
       "S26": [{ "title": "Node Buds Officer", "tier": 26 }]
     },
     "discord": "@creatorkemii"
+  },
+  {
+    "fullName": "Adam Ho",
+    "picture": "placeholder.webp",
+    "positions": {
+      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
+    },
+    "discord": "@farmerakh"
   }
 ]
