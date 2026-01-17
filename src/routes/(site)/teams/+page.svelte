@@ -37,8 +37,8 @@
     const element = document.querySelector(link);
     if (!element) return;
     element.scrollIntoView({
-      behavior: 'smooth'
-    })
+      behavior: 'smooth',
+    });
   }
 </script>
 
