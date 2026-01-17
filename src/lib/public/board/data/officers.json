@@ -602,7 +602,10 @@
         { "title": "Node Buds Team Lead", "tier": 34 }
       ],
       "F25": [{ "title": "Treasurer", "tier": 4 }],
-      "S26": [{ "title": "Treasurer", "tier": 4 }]
+      "S26": [
+        { "title": "Treasurer", "tier": 4 },
+        { "title": "Design Officer", "tier": 16 }
+      ]
     },
     "discord": "@evie724"
   },
@@ -1557,10 +1560,6 @@
       "F25": [
         { "title": "Design Officer", "tier": 16 },
         { "title": "Marketing Officer", "tier": 9 }
-      ],
-      "S26": [
-        { "title": "Design Officer", "tier": 16 },
-        { "title": "Marketing Officer", "tier": 9 }
       ]
     },
     "discord": "@steezyprogrammer"
@@ -1790,10 +1789,7 @@
     "fullName": "Aidan Rus",
     "picture": "aidan-rus.webp",
     "positions": {
-      "S26": [
-        { "title": "Algo Officer", "tier": 12 },
-        { "title": "Design Officer", "tier": 16 }
-      ]
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
     "discord": "@acepainter"
   },
