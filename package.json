@@ -29,9 +29,10 @@
   ],
   "scripts": {
     "start": "npm run dev",
-    "dev": "wrangler dev",
+    "dev": "vite dev",
     "build": "vite build",
-    "preview": "vite build -- mode production && wrangler versions upload -e production",
+    "preview": "wrangler dev",
+    "preview:live": "vite build -- mode production && wrangler versions upload -e production",
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:size": "npm run build && size-limit",
