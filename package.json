@@ -31,8 +31,9 @@
     "start": "npm run dev",
     "dev": "vite dev",
     "build": "vite build",
-    "preview": "wrangler dev",
-    "preview:live": "vite build -- mode production && wrangler versions upload -e production",
+    "build:prod": "CLOUDFLARE_ENV=production vite build",
+    "preview": "npm run build:prod && vite preview",
+    "preview:live": "npm run build:prod && wrangler versions upload",
     "test": "vitest --run",
     "test:watch": "vitest",
     "test:size": "npm run build && size-limit",
@@ -43,7 +44,7 @@
     "host": "npm run all && npm run preview",
     "all": "npm run lint && npm run format && npm run check && npm run build && npm t",
     "generate:colors": "node scripts/generate-colors/index.js",
-    "deploy": "vite build --mode production && wrangler deploy -e production"
+    "deploy": "npm run build:prod && wrangler deploy"
   },
   "devDependencies": {
     "@cloudflare/vite-plugin": "^1.21.0",
