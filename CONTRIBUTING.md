@@ -19,6 +19,7 @@ Open the repository in your code editor or terminal of choice and enter `npm i` 
 After that, enter `npm run dev` to spin up the development server.
 As the development server is running, open up [`http://localhost:5173/`](http://localhost:5173/).
 Every update made to the source code will trigger your `http://localhost:5173/` page to reload automatically.
+Make sure to run `npm run preview` to verify your changes look good in the production environment.
 
 Now that you've got everything up-and-running, you are free to contribute to your heart's content.
 
