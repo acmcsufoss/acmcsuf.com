@@ -46,6 +46,7 @@
     "deploy": "vite build --mode production && wrangler deploy -e production"
   },
   "devDependencies": {
+    "@cloudflare/vite-plugin": "^1.21.0",
     "@eslint/js": "^9.35.0",
     "@size-limit/file": "^8.2.6",
     "@sveltejs/adapter-auto": "^6.1.0",
