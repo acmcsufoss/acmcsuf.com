@@ -1642,8 +1642,7 @@
     "fullName": "Aidan Joshi",
     "picture": "aidan-joshi.webp",
     "positions": {
-      "F25": [{ "title": "Marketing Officer", "tier": 9 }],
-      "S26": [{ "title": "Marketing Officer", "tier": 9 }]
+      "F25": [{ "title": "Marketing Officer", "tier": 9 }]
     },
     "discord": "@that.gunter"
   },
