@@ -1226,8 +1226,7 @@
     "positions": {
       "F24": [{ "title": "Open Source Officer", "tier": 33 }],
       "S25": [{ "title": "Open Source Officer", "tier": 33 }],
-      "F25": [{ "title": "Open Source Officer", "tier": 33 }],
-      "S26": [{ "title": "Open Source Officer", "tier": 33 }]
+      "F25": [{ "title": "Open Source Officer", "tier": 33 }]
     },
     "discord": "@drafte"
   },
@@ -1364,7 +1363,6 @@
       ],
       "S26": [
         { "title": "Design Team Lead", "tier": 13 },
-        { "title": "Dev Officer", "tier": 19 },
         { "title": "Node Buds Officer", "tier": 26 }
       ]
     },
@@ -1731,8 +1729,7 @@
     "fullName": "Ruman Saiyed",
     "picture": "ruman-saiyed.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
-      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@biryani23"
   },
