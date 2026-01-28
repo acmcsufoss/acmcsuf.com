@@ -1623,8 +1623,7 @@
     "fullName": "Kai Llora",
     "picture": "kai-llora.webp",
     "positions": {
-      "F25": [{ "title": "AI Officer", "tier": 21 }],
-      "S26": [{ "title": "AI Officer", "tier": 21 }]
+      "F25": [{ "title": "AI Officer", "tier": 21 }]
     },
     "discord": "@kaillo_"
   },
