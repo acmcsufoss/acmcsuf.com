@@ -602,10 +602,7 @@
         { "title": "Node Buds Team Lead", "tier": 34 }
       ],
       "F25": [{ "title": "Treasurer", "tier": 4 }],
-      "S26": [
-        { "title": "Treasurer", "tier": 4 },
-        { "title": "Design Officer", "tier": 16 }
-      ]
+      "S26": [{ "title": "Treasurer", "tier": 4 }]
     },
     "discord": "@evie724"
   },
