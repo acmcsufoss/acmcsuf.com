@@ -1716,8 +1716,7 @@
     "fullName": "Alessandro Garcia",
     "picture": "alessandro-garcia.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
-      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@acczelzz"
   },
@@ -1737,10 +1736,7 @@
         { "title": "Game Dev Officer", "tier": 23 },
         { "title": "Algo Officer", "tier": 12 }
       ],
-      "S26": [
-        { "title": "Game Dev Officer", "tier": 23 },
-        { "title": "Algo Officer", "tier": 12 }
-      ]
+      "S26": [{ "title": "Algo Officer", "tier": 12 }]
     },
     "discord": "@bald0398"
   },
