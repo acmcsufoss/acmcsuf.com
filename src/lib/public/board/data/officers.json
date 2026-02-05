@@ -969,10 +969,7 @@
         { "title": "AI Team Lead", "tier": 20 },
         { "title": "Algo Officer", "tier": 12 }
       ],
-      "S26": [
-        { "title": "AI Team Lead", "tier": 20 },
-        { "title": "Algo Officer", "tier": 12 }
-      ]
+      "S26": [{ "title": "AI Team Lead", "tier": 20 }]
     },
     "discord": "@josu4412"
   },
@@ -1707,8 +1704,7 @@
     "fullName": "John Alora",
     "picture": "john-alora.webp",
     "positions": {
-      "F25": [{ "title": "Game Dev Officer", "tier": 23 }],
-      "S26": [{ "title": "Game Dev Officer", "tier": 23 }]
+      "F25": [{ "title": "Game Dev Officer", "tier": 23 }]
     },
     "discord": "@cedrix"
   },
