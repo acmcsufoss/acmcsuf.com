@@ -1167,8 +1167,7 @@
     "positions": {
       "F24": [{ "title": "AI Officer", "tier": 21 }],
       "S25": [{ "title": "AI Officer", "tier": 21 }],
-      "F25": [{ "title": "Dev Officer", "tier": 19 }],
-      "S26": [{ "title": "Dev Officer", "tier": 19 }]
+      "F25": [{ "title": "Dev Officer", "tier": 19 }]
     },
     "discord": "@kenny8092"
   },
