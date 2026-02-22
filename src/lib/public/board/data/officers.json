@@ -1331,8 +1331,7 @@
     "picture": "talhah-raheem.webp",
     "positions": {
       "S25": [{ "title": "Dev Officer", "tier": 19 }],
-      "F25": [{ "title": "Dev Officer", "tier": 19 }],
-      "S26": [{ "title": "Dev Officer", "tier": 19 }]
+      "F25": [{ "title": "Dev Officer", "tier": 19 }]
     },
     "discord": "@arrow5566"
   },
