@@ -8,10 +8,11 @@ export default [
     location: 'Virtual',
     theme: 'Camping',
     description:
-      'It all began in 2021 when Jacob Nguyen and Samuel Sandoval reignited the tradition of hackathons at California State University, Fullerton, being the first CSUF hackathon in decades. Due to the global pandemic, TuffyHacks 2021 was held virtually.',
+      'It all began in 2021 when Jacob Nguyen and Samuel Sandoval reignited the tradition of hackathons at California State University, Fullerton, being the first CSUF hackathon in decades. Due to the global pandemic, TuffyHacks 2021 was held virtually. Ethan Davidson led as the Head of Technology.',
     directors: [
       { name: 'Jacob Nguyen', picture: '/people/jacob-nguyen.webp' },
       { name: 'Samuel Sandoval', picture: '/people/samuel-sandoval.webp' },
+      { name: 'Ethan Davidson', picture: '/people/ethan-davidson.webp' },
     ],
   },
   {
@@ -20,10 +21,12 @@ export default [
     date: 'February 2022',
     location: 'Virtual',
     theme: 'Cyberpunk',
-    description: 'Following a successful first event, Jacob and Sam hosted TuffyHacks 2022.',
+    description:
+      'Following a successful first event, Jacob and Sam hosted TuffyHacks 2022 with Ethan continuing his role as Head of Technology.',
     directors: [
       { name: 'Jacob Nguyen', picture: '/people/jacob-nguyen.webp' },
       { name: 'Samuel Sandoval', picture: '/people/samuel-sandoval.webp' },
+      { name: 'Ethan Davidson', picture: '/people/ethan-davidson.webp' },
     ],
   },
   {
