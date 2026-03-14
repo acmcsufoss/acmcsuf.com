@@ -1,4 +1,4 @@
-export type semesters = 'fa24' | 'sp25' | 'fa25';
+export type semesters = 'fa24' | 'sp25' | 'fa25' | 'sp26';
 export type teams =
   | 'ai'
   | 'algo'
@@ -116,7 +116,7 @@ export const currentTable: Tables = {
       ],
       fa25: [
         {
-          name: '02 - Model Showdown',
+          name: 'HOW TO MAKE AN ML PROJECT',
           team: 'ai',
           semester: 'fa25',
           link: 'https://docs.google.com/presentation/d/18lXQFHqzVjcLjy8s-l-nPcBR14TufBN8zWe7185uUKQ/edit?usp=drivesdk',
@@ -164,10 +164,30 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1YeiP77koOZa2moy8Fjaz74tOjsEnQlWHOu3U_9tPR40/edit?usp=sharing',
         },
         {
+          name: 'acmAI:F25_FaceRecognition',
+          team: 'ai',
+          semester: 'fa25',
+          link: 'https://docs.google.com/presentation/d/1Cu4FVTLyEDLnwIqtFQKlpj4fQ0KttdQdDRby26apjBo/edit?usp=sharing',
+        },
+        {
           name: 'acmAI:Intro',
           team: 'ai',
           semester: 'fa25',
           link: 'https://docs.google.com/presentation/d/1KorWYI2a5W4GXTYOYFldl2xbdVysv5m3_rA-I-h9jDU/edit?usp=drivesdk',
+        },
+      ],
+      sp26: [
+        {
+          name: 'acmAI:Benchmarking AIs',
+          team: 'ai',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1sumw7MXcadibK9AQqG8ntxXNm7f-ln2MPPWKpQeQecI/edit?slide=id.p#slide=id.p',
+        },
+        {
+          name: 'acmAI:Deep Learning Design Basics with Fashion MNIST',
+          team: 'ai',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1jeM53D9lGd5usGqr5Cvkq_Xwgt6CPIf77FClpX-BqiE/edit?usp=sharing',
         },
       ],
     },
@@ -372,6 +392,7 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/14zxMbhd_bF4e0nU9RZLFSa_URWuMAfZZ0hndwEnELtw/edit?usp=sharing',
         },
       ],
+      sp26: [],
     },
   },
   design: {
@@ -422,6 +443,14 @@ export const currentTable: Tables = {
           team: 'design',
           semester: 'fa25',
           link: 'https://www.figma.com/board/MbiHgxKxzRLyby7xng7Iwr/Workshop-1---Figma-Basics-2025?node-id=0-1&t=kVcorKNN1sbXPZig-1',
+        },
+      ],
+      sp26: [
+        {
+          name: 'Intro',
+          team: 'design',
+          semester: 'sp26',
+          link: 'https://www.figma.com/board/yJYQdDD8GcGTD9IdsLudQc/Figma-Basics---Spring-2026?node-id=0-1&t=n5quKpWefavv54SL-1',
         },
       ],
     },
@@ -560,6 +589,44 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1jrBstxJbegrDfp7PmrAM-RZeyT2oFJb0bsRm24R7JBw/preview?slide=id.p',
         },
       ],
+      sp26: [
+        {
+          name: 'Dev SP2026: Build With npm',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1Mxoq2RdgKF8RsRl2MR6gRqsbOUx6F2A6g-1TJLwPfYc/edit?usp=drivesdk',
+        },
+        {
+          name: 'Dev SP2026: Deployment Day',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/148OM0EOspEvCq0R9DQG1xxKJ6-X7uNtbdbXkcY29ips/edit?usp=sharing',
+        },
+        {
+          name: 'Dev SP2026: Hackathons 101',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1UjeI7cKmVwNGAiUQ46euCW3H_g1Sidu4z6X9wca2xAg/edit?usp=sharing',
+        },
+        {
+          name: 'Dev SP2026: Intro to APIs',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1KeCJ2OGxrlmm8cVJmkJt-ixlZt1kdDO_gdR_x6UxYjs/edit?usp=sharing',
+        },
+        {
+          name: 'Dev SP2026: Intro to React',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1WI6xAihCC2Aab93N5Gneo25uERST7bqyeLtrhuyq1rQ/edit?usp=sharing',
+        },
+        {
+          name: 'Dev SP2026: Intro to Tailwind',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1x5FXyHXjBkqvYb_x0rdtOxKL-sLxh4H2btE1MxawjOw/edit?usp=sharing',
+        },
+      ],
     },
   },
   gamedev: {
@@ -629,6 +696,7 @@ export const currentTable: Tables = {
         },
       ],
       fa25: [],
+      sp26: [],
     },
   },
   general: {
@@ -650,6 +718,7 @@ export const currentTable: Tables = {
         },
       ],
       fa25: [],
+      sp26: [],
     },
   },
   icpc: {
@@ -682,6 +751,7 @@ export const currentTable: Tables = {
       ],
       sp25: [],
       fa25: [],
+      sp26: [],
     },
   },
   nodebuds: {
@@ -720,6 +790,14 @@ export const currentTable: Tables = {
           team: 'nodebuds',
           semester: 'fa25',
           link: 'https://docs.google.com/presentation/d/1hXoZIyMIICBPTJcw-AlQwDyfwUFDT6L_Iou_T-YYscM/edit?usp=sharing',
+        },
+      ],
+      sp26: [
+        {
+          name: 'Node Buds Info Session',
+          team: 'nodebuds',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1EzUXk77Ieqv9nAOPWkSTDVG-0Waikd-V8UQ-6arvHsk/edit?slide=id.g3c320e219ee_0_7#slide=id.g3c320e219ee_0_7',
         },
       ],
     },
@@ -789,12 +867,6 @@ export const currentTable: Tables = {
         },
       ],
       sp25: [
-        {
-          name: 'First Contributions',
-          team: 'oss',
-          semester: 'sp25',
-          link: 'https://acmcsufoss.github.io/1st/sp25/',
-        },
         {
           name: 'Open Source Software Team Spring 2025: Building + Winning FullyHacks',
           team: 'oss',
@@ -898,6 +970,50 @@ export const currentTable: Tables = {
           team: 'oss',
           semester: 'fa25',
           link: 'https://docs.google.com/presentation/d/1Zpg4aa61JmwJ0lIEI0X_P69JmcOgitFD_d_Pz1i6yWU/edit?usp=sharing',
+        },
+      ],
+      sp26: [
+        {
+          name: 'Open Source Team SP26 - Building Fullyhacks',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1XTgfH-hOVUqJt48p-LIB5wo2Q32xTbtLndFvCJgpjSU/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - First Contributions',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1oPgg0fKw721NVpiMJTW-5ulqzcRQ8rgGyN1pb6ElQ74/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Google Chrome Extensions',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1ELhWW00-MtUuwI7jcCbJEYk_xF0Vr2shIqRfhYiZdQw/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Intro to SvelteKit',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1g3ZGrOE5pmyYKiZNdWrWKw1QINn4-LYhT_bdrEG4VPM/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Intro to Typescript',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1R7EAvo4IYViTFOzPu8wvJQ2Z1Yl-PCesk70RTdQacQE/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Intro to the Open Source Team',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/172V5jK4_gCTqzD2pGqBmba4_zebqYSVWjf152g4ANQE/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Tech Stacks',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1yk2ExmTUjmdOd-gIa03gqHieoVzcpsr4w__i4y_ojsY/edit?usp=drivesdk',
         },
       ],
     },
