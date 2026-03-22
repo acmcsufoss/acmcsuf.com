@@ -312,28 +312,6 @@
     filter: brightness(90%);
   }
 
-  @media (prefers-color-scheme: dark) {
-    [data-theme='dark'] section .team-icons-inner-container .ai :hover {
-      cursor: pointer;
-      transform: scale(1.07);
-      filter: brightness(105%);
-    }
-
-    [data-theme='dark'] section .team-icons-inner-container a :hover {
-      cursor: pointer;
-      transform: scale(1.07);
-      filter: brightness(110%);
-    }
-
-    [data-theme='dark'] section .team-icons-inner-container .icon .ai :active {
-      filter: brightness(110%);
-    }
-
-    [data-theme='dark'] section .team-icons-inner-container .icon a :active {
-      filter: brightness(120%);
-    }
-  }
-
   section .team-icons-inner-container .icon a img {
     width: 100%;
     height: auto;
