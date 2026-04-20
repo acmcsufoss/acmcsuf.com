@@ -105,6 +105,7 @@ body,
 #svelte {
   font-family: 'Poppins', 'Verdana', 'Helvetica', sans-serif;
   font-display: fallback;
+  scroll-behavior: smooth;
 }
 
 body {

@@ -2,50 +2,41 @@
   import { slide } from 'svelte/transition';
   export let defaultValue = '';
   export let options: string[] = [];
+  export let hrefs: string[] = [];
 
   let currentValue: string = defaultValue;
-  let active = false;
-
-  function toggleDropdown() {
-    active = !active;
-  }
+  let detailsElement: HTMLDetailsElement;
 
   function handleOption(term: string) {
     currentValue = term;
     defaultValue = currentValue;
-    active = false;
+    if (detailsElement) {
+      detailsElement.open = false;
+    }
   }
 </script>
 
 <div class="term">
-  <div class="option-box" class:active>
-    <div
-      class="selected"
-      role="button"
-      on:click|preventDefault={toggleDropdown}
-      on:keypress={toggleDropdown}
-      tabindex="0"
-    >
+  <details class="option-box" bind:this={detailsElement}>
+    <summary class="selected" role="button">
       {currentValue}
-    </div>
+    </summary>
 
-    {#if active}
-      <div class="option" transition:slide|global>
-        {#each options as optionValue (optionValue)}
-          <div
-            class="option-choice"
-            role="button"
-            on:click|preventDefault={() => handleOption(optionValue)}
-            on:keypress={() => handleOption(optionValue)}
-            class:pre-selected={currentValue == optionValue}
-            tabindex="0"
-          >
-            {optionValue}
-          </div>
-        {/each}
-      </div>
-    {/if}
-  </div>
+    <div class="option" transition:slide|global>
+      {#each options as optionValue, i (optionValue)}
+        <a
+          href={hrefs[i] || '#'}
+          class="option-choice"
+          on:click={() => handleOption(optionValue)}
+          on:keypress={() => handleOption(optionValue)}
+          class:pre-selected={currentValue == optionValue}
+          tabindex="0"
+        >
+          {optionValue}
+        </a>
+      {/each}
+    </div>
+  </details>
 </div>
 
 <style lang="scss">
@@ -75,24 +66,37 @@
       }
 
       .selected {
+        display: block;
+        list-style: none;
         background-color: var(--button-bg);
         padding: 8px 24px;
         cursor: pointer;
         border-radius: 8px;
         transition: 0.25s ease-in-out;
 
+        &::-webkit-details-marker {
+          display: none;
+        }
+
         &:hover {
           background-color: var(--button-bg-hover);
         }
       }
+
       .option {
         cursor: pointer;
         transition: 0.25s ease-in-out;
+        background-color: var(--button-bg);
+        padding: 8px 24px;
+        margin-top: 0.2rem;
+        border-radius: 0 0 8px 8px;
 
         .option-choice {
+          display: block;
           text-align: center;
           cursor: pointer;
           transition: 0.25s ease-in-out;
+          text-decoration: none;
 
           &:hover:not(.pre-selected) {
             color: rgba(255, 255, 255, 0.7);
@@ -101,17 +105,9 @@
       }
     }
 
-    .active {
+    .option-box[open] {
       & > .selected {
         border-radius: 8px 8px 0 0;
-      }
-
-      & > .option {
-        background-color: var(--button-bg);
-        padding: 8px 24px;
-        margin-top: 0.2rem;
-        border-radius: 0 0 8px 8px;
-        transition: 0.25s ease-in-out;
       }
     }
   }
