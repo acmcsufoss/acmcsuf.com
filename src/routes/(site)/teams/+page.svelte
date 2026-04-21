@@ -4,6 +4,7 @@
   import { termIndex } from '$lib/public/board/utils';
   import Spacing from '$lib/public/legacy/spacing.svelte';
   import TeamSection from './team-section.svelte';
+  import ScrollToTop from '$lib/components/scroll-to-top/scroll.svelte';
   import { page } from '$app/stores';
   import type { PageData } from './$types';
 
@@ -34,24 +35,29 @@
 
 <Spacing --min="175px" --med="200px" --max="200px" />
 
-<section class="hero-container">
-  <p>
-    Our teams specialize in specific fields in the tech industry. We've designed the teams to be
-    gateways for students to explore new fields, develop new interests, and learn new skills that
-    will benefit them in the industry.
-  </p>
-  <p>
-    Feel free to reach out to board members through their Discord username, stated below their
-    profile.
-  </p>
-  <div class="board-history">
-    {#each VISIBLE_TERMS as termCode, i (termCode)}
-      <a href={termHrefs[i]} class="term-chip" class:active={data.termIndex === i}>
-        {formattedTerms[i]}
-      </a>
-    {/each}
+<section id="top" class="hero-container">
+  <div class="hero-inner-container">
+    <div class="hero-text">
+      <h1 class="acm-heavier size-xl">Explore our teams</h1>
+      <p>
+        Our teams specialize in specific fields in the tech industry. We've designed the teams to be
+        gateways for students to explore new fields, develop new interests, and learn new skills
+        that will benefit them in the industry.
+      </p>
+      <p>
+        Feel free to reach out to board members through their Discord username, stated below their
+        profile.
+      </p>
+      <div class="board-history">
+        {#each VISIBLE_TERMS as termCode, i (termCode)}
+          <a href={termHrefs[i]} class="term-chip" class:active={data.termIndex === i}>
+            {formattedTerms[i]}
+          </a>
+        {/each}
+      </div>
+    </div>
+    <img src="/assets/capy-read.svg" alt="Chip the Capybara reading a book" />
   </div>
-  <img src="/assets/capy-read.svg" alt="Chip the Capybara reading a book" />
   <Spacing --min="75px" --med="100px" --max="100px" />
 </section>
 
@@ -223,6 +229,8 @@
 </TeamSection>
 
 <Spacing --min="100px" --med="125px" --max="125px" />
+
+<ScrollToTop />
 
 <style>
   p {
