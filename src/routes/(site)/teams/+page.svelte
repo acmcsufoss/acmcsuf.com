@@ -35,25 +35,23 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <section class="hero-container">
-      <p>
-        Our teams specialize in specific fields in the tech industry. We've designed the teams to be
-        gateways for students to explore new fields, develop new interests, and learn new skills
-        that will benefit them in the industry.
-      </p>
-      <p>
-        Feel free to reach out to board members through their Discord username, stated below their
-        profile.
-      </p>
-      <div class="board-history">
-        {#each VISIBLE_TERMS as termCode, i (termCode)}
-          <a href={termHrefs[i]} class="term-chip" class:active={data.termIndex === i}>
-            {formattedTerms[i]}
-          </a>
-        {/each}
-      </div>
-    </div>
-    <img src="/assets/capy-read.svg" alt="Chip the Capybara reading a book" />
+  <p>
+    Our teams specialize in specific fields in the tech industry. We've designed the teams to be
+    gateways for students to explore new fields, develop new interests, and learn new skills that
+    will benefit them in the industry.
+  </p>
+  <p>
+    Feel free to reach out to board members through their Discord username, stated below their
+    profile.
+  </p>
+  <div class="board-history">
+    {#each VISIBLE_TERMS as termCode, i (termCode)}
+      <a href={termHrefs[i]} class="term-chip" class:active={data.termIndex === i}>
+        {formattedTerms[i]}
+      </a>
+    {/each}
   </div>
+  <img src="/assets/capy-read.svg" alt="Chip the Capybara reading a book" />
   <Spacing --min="75px" --med="100px" --max="100px" />
 </section>
 
@@ -225,8 +223,6 @@
 </TeamSection>
 
 <Spacing --min="100px" --med="125px" --max="125px" />
-
-
 
 <style>
   p {
