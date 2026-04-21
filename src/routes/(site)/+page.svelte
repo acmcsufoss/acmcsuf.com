@@ -5,7 +5,7 @@
   import Teams from './teams.svelte';
   import Lucky from './lucky.svelte';
   import FAQ from './faq.svelte';
-  import ScrollToTop from '$lib/components/scroll-to-top/scroll.svelte';
+
 </script>
 
 <svelte:head>
@@ -101,7 +101,7 @@
   </div> -->
 </div>
 
-<ScrollToTop />
+
 
 <style>
   .section-container {

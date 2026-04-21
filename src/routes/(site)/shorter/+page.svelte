@@ -10,7 +10,7 @@
 </svelte:head>
 
 <main class="responsive-width">
-  <section id="top">
+  <section>
     <div class="header">
       <h1 class="size-lg">Shortlinks</h1>
     </div>

@@ -35,7 +35,7 @@
     width: 50px;
     height: 50px;
     border-radius: 50%;
-    background: #00b0ff;
+    background: var(--acm-sky);
     color: white;
     border: none;
     font-size: 1.5rem;
@@ -43,7 +43,7 @@
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 176, 255, 0.4);
+    box-shadow: 0 4px 15px rgba(var(--acm-sky-rgb), 0.4);
     z-index: 1000;
     display: flex;
     justify-content: center;
@@ -51,9 +51,9 @@
     text-decoration: none;
   }
   .back-to-top:hover {
-    background: #00c8ff;
+    background: var(--acm-blue);
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(0, 176, 255, 0.5);
+    box-shadow: 0 6px 20px rgba(var(--acm-sky-rgb), 0.5);
   }
   .back-to-top.visible {
     opacity: 1;

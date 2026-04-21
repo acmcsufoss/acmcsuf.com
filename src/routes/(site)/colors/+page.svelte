@@ -13,7 +13,7 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <main class="responsive-width">
-  <section id="top">
+  <section>
     <div class="header">
       <h1 class="size-lg">Colors</h1>
     </div>

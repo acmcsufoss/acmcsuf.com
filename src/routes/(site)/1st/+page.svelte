@@ -33,7 +33,7 @@
     />
   </div>
 
-  <section id="top">
+  <section>
     <div class="header">
       <h1 class="size-lg">First Contributions</h1>
     </div>

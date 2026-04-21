@@ -12,7 +12,7 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <main class="responsive-width">
-  <section id="top">
+  <section>
     <div class="header">
       <img src="/assets/figma-capy.svg" alt="Branding Badge" />
       <div class="header-content">

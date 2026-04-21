@@ -4,7 +4,6 @@
   import { termIndex } from '$lib/public/board/utils';
   import Spacing from '$lib/public/legacy/spacing.svelte';
   import TeamSection from './team-section.svelte';
-  import ScrollToTop from '$lib/components/scroll-to-top/scroll.svelte';
   import { page } from '$app/stores';
   import type { PageData } from './$types';
 
@@ -35,10 +34,7 @@
 
 <Spacing --min="175px" --med="200px" --max="200px" />
 
-<section id="top" class="hero-container">
-  <div class="hero-inner-container">
-    <div class="hero-text">
-      <h1 class="acm-heavier size-xl">Explore our teams</h1>
+<section class="hero-container">
       <p>
         Our teams specialize in specific fields in the tech industry. We've designed the teams to be
         gateways for students to explore new fields, develop new interests, and learn new skills
@@ -230,7 +226,7 @@
 
 <Spacing --min="100px" --med="125px" --max="125px" />
 
-<ScrollToTop />
+
 
 <style>
   p {

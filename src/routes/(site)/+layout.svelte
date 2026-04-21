@@ -4,6 +4,7 @@
   import Navbar from '$lib/components/nav/bar.svelte';
   import Footer from '$lib/components/footer/footer.svelte';
   import AcmToaster from '$lib/components/toaster/toaster.svelte';
+  import ScrollToTop from '$lib/components/scroll-to-top/scroll.svelte';
   import { AcmTheme, theme } from '$lib/public/legacy/theme';
 
   function changeTheme(event: MediaQueryListEvent) {
@@ -25,9 +26,11 @@
   });
 </script>
 
+<div id="top" />
 <Navbar />
 <main><slot /></main>
 <Footer />
+<ScrollToTop />
 <AcmToaster />
 
 <svelte:head>
