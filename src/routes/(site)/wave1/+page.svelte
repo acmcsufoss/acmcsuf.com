@@ -51,19 +51,19 @@
 </script>
 
 <svelte:head>
-  <title>Fall 25 Executive Board Positions | ACM at CSUF</title>
+  <title>2026-2027 Executive Board Positions | ACM at CSUF</title>
 </svelte:head>
 
 <MetaTags
   openGraph={{
-    title: 'Fall 2026 Executive Board Applications',
+    title: '2026-2027 Executive Board Applications',
     description:
-      'Listed below are the positions that are open for the Fall 2025 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
+      'Listed below are the positions that are open for the 2026-2027 school year. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one.',
     url: 'https://acmcsuf.com/wave1',
     type: 'article',
     article: {
-      publishedTime: '2025-26-04T00:00:00.000Z',
-      modifiedTime: '2025-26-04T00:00:00.000Z',
+      publishedTime: '2026-04-01T00:00:00.000Z',
+      modifiedTime: '2026-04-01T00:00:00.000Z',
     },
   }}
 />
@@ -71,12 +71,13 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <Block align={TextAlignment.LEFT}>
-  <h1 slot="headline" class="size-lg">Fall 26 Executive Board Positions</h1>
+  <h1 slot="headline" class="size-lg">2026-2027 Executive Board Positions</h1>
   <p slot="text" class="size-sm">
-    Listed below are the positions that are open for 25'/26' Executive Board positions. Please read
-    the descriptions carefully and apply for the position(s) that you are interested in. You may
-    apply for multiple positions, but you may only be selected for one. If you are selected for a
-    position, you will be contacted by the current team lead in charge of that position.
+    Listed below are the Executive Board positions that are open for the 2026-2027 school year.
+    Please read the descriptions carefully and apply for the position(s) that you are interested in.
+    You may apply for multiple positions, but you may only be selected for one. Voting will commence
+    after the application deadline and will be open to all ACM members. If you are selected for a
+    position, you will be contacted by the current board member in charge of that position. <br />
     <br />
     <br />
     <span class="center-btn" on:click={action} on:keypress={action} role="button" tabindex="0">
