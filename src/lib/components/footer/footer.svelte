@@ -1,6 +1,5 @@
 <script lang="ts">
-  import BwIcon from '$lib/components/bw-icon/bw-icon.svelte';
-  import { AcmTheme } from '$lib/public/legacy/theme';
+  import SocialIcon from '$lib/components/social-icon/social-icon.svelte';
 
   const footerItems = [
     { title: 'Source Code', path: '/code' },
@@ -21,11 +20,7 @@
         {#each socials as socialPath (socialPath)}
           <li>
             <a href={socialPath} target="_blank" rel="noopener noreferrer">
-              <BwIcon
-                src={`/assets${socialPath}.svg`}
-                alt={socialPath.slice(1)}
-                filterOn={[AcmTheme.Dark, AcmTheme.Light]}
-              />
+              <SocialIcon src={`/assets${socialPath}.svg`} alt={socialPath.slice(1)} width={24} />
             </a>
           </li>
         {/each}
@@ -107,27 +102,16 @@
 
         .socials {
           display: flex;
+          padding-top: 6px;
           gap: 32px;
 
           a {
             display: flex;
-            padding-top: 6px;
+            --icon-color: #ffffff;
 
             &:hover {
-              & :global(path) {
-                fill: var(--acm-blue);
-              }
+              --icon-color: var(--acm-blue);
             }
-          }
-
-          & :global(svg) {
-            height: 32px;
-            width: auto;
-          }
-
-          & :global(path) {
-            fill: var(--perma-light);
-            transition: 0.25s ease-in-out;
           }
         }
       }
