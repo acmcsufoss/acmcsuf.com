@@ -11,7 +11,10 @@ export async function GET({ params }: RequestEvent<RouteParams>) {
   const events = await getData();
 
   if (events.length === 0) {
-    return new Response('[]', { status: 204 });
+    return new Response('[]', {
+      status: 200,
+      headers: { 'Content-Type': 'application/json' },
+    });
   }
 
   const filteredEvents =

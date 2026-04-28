@@ -18,23 +18,34 @@ export function fromGCal(events: GCalEvent[]): ClubEvent[] {
   return sortedEvents;
 }
 
-export async function listUpcomingEvents() {
+async function fetchPage(cal: ReturnType<typeof calendar>, pageToken?: string) {
+  return cal.events.list({
+    calendarId: GCAL_ID,
+    maxResults: 2500,
+    singleEvents: true,
+    orderBy: 'startTime',
+    showDeleted: false,
+    ...(pageToken ? { pageToken } : {}),
+  });
+}
+
+export type GCalEvent = NonNullable<Awaited<ReturnType<typeof fetchPage>>['data']['items']>[number];
+
+export async function listUpcomingEvents(): Promise<GCalEvent[]> {
   const cal = calendar({
     version: 'v3',
     auth: GCAL_API_KEY,
   });
-  return (
-    (
-      await cal.events.list({
-        calendarId: GCAL_ID,
-        timeMin: new Date().toISOString(),
-        maxResults: 100,
-        singleEvents: true,
-        orderBy: 'startTime',
-        showDeleted: false,
-      })
-    )?.data?.items ?? []
-  );
-}
 
-export type GCalEvent = Exclude<Awaited<ReturnType<typeof listUpcomingEvents>>, undefined>[number];
+  const allEvents: GCalEvent[] = [];
+  let pageToken: string | undefined;
+
+  do {
+    const response = await fetchPage(cal, pageToken);
+    const items = response?.data?.items ?? [];
+    allEvents.push(...items);
+    pageToken = response?.data?.nextPageToken ?? undefined;
+  } while (pageToken);
+
+  return allEvents;
+}
