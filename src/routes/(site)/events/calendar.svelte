@@ -129,6 +129,18 @@
     box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
   }
 
+  :global(html[data-theme='dark']) .calendar-wrapper {
+    --acm-light: #1e2432;
+    --acm-canvas: #2a3142;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(html:not([data-theme='light'])) .calendar-wrapper {
+      --acm-light: #1e2432;
+      --acm-canvas: #2a3142;
+    }
+  }
+
   .calendar-el {
     font-family: 'Poppins', 'Verdana', 'Helvetica', sans-serif;
   }
