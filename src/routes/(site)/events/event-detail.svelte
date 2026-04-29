@@ -197,6 +197,18 @@
     top: 120px;
   }
 
+  :global(html[data-theme='dark']) .event-detail {
+    --acm-light: #1e2432;
+    --acm-canvas: #2a3142;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    :global(html:not([data-theme='light'])) .event-detail {
+      --acm-light: #1e2432;
+      --acm-canvas: #2a3142;
+    }
+  }
+
   .detail-header {
     display: flex;
     justify-content: space-between;
