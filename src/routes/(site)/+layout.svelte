@@ -26,7 +26,7 @@
   });
 </script>
 
-<div id="top"></div>
+<div id="top" />
 <Navbar />
 <main><slot /></main>
 <Footer />

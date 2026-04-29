@@ -5,14 +5,16 @@
 </script>
 
 <div class="logo-card">
-  <img class="team-logo" src={logo.image} alt={logo.alt} />
+  <div class="logo-container">
+    <img class="team-logo" src={logo.image} alt={logo.alt} />
+  </div>
   <div class="logo-info">
     <div class="downloads">
       <a href={logo.svg} target="_blank" download
-        >SVG <img src="/assets/download-icon.png" alt="download=icon" /></a
+        >SVG <img src="/assets/download-icon.png" alt="download-icon" /></a
       >
       <a href={logo.png} target="_blank" download
-        >PNG <img src="/assets/download-icon.png" alt="download=icon" /></a
+        >PNG <img src="/assets/download-icon.png" alt="download-icon" /></a
       >
     </div>
   </div>
@@ -22,7 +24,6 @@
   .logo-card {
     display: flex;
     flex-direction: column;
-    align-items: center;
     padding: 20px;
     border: 1px solid #e0e0e0;
     border-radius: 8px;
@@ -39,10 +40,20 @@
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   }
 
-  .logo-card img {
-    max-width: 100px;
+  .logo-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .team-logo {
+    min-width: 100px;
+    max-width: 33%;
+    max-height: auto;
     height: auto;
-    margin-bottom: 15px;
+    width: auto;
+    object-fit: contain;
     transition: transform 0.3s ease;
   }
 
@@ -58,7 +69,7 @@
     display: inline-flex;
     align-items: center;
     gap: 6px;
-    margin: 0 10px;
+    margin: 10px;
     text-decoration: none;
     color: #007bff;
     font-weight: bold;
@@ -68,7 +79,6 @@
   .downloads a img {
     width: 1em;
     height: 1em;
-    transform: translateY(6px);
   }
 
   .downloads a:hover {
@@ -77,10 +87,7 @@
 
   @media (max-width: 768px) {
     .downloads a {
-      display: flex;
-    }
-    .logo-card img {
-      margin-bottom: 11px;
+      margin: 5px;
     }
   }
 </style>

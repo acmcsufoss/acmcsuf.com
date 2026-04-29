@@ -12,7 +12,7 @@
   style:--icon-url="url({src})"
   style:--size-w="{width}px"
   style:--size-h="{height}px"
-></div>
+/>
 
 <style lang="scss">
   .social-icon {

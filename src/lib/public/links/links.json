@@ -362,7 +362,6 @@
   "algo/tries-sp25": "https://docs.google.com/presentation/d/1sGGJHbxMlC8FKBxw7s--IuaegMXgYl-i54WfU64J_BY/edit?usp=drivesdk",
   "oss/cs-journeys-sp25": "https://docs.google.com/presentation/d/1tU6oLmnSJB2-gsPJvQZaANQ70v6q4_RMDLnTT9qDRUk/edit?slide=id.p#slide=id.p",
   "oss/commencement-sp25": "https://docs.google.com/presentation/d/1kzMumwu-W2zH1_XVr4C3NomZB32UCLUJpwEDsdnnh1Y/edit?slide=id.p#slide=id.p",
-  "election": "https://forms.gle/SkAbhYvMBv8E9sAVA",
   "oss/hoss25-intro": "https://docs.google.com/presentation/d/15BTneUXfBZ6DPqCklBxil1Jxc-HxG4hyU49Cvz3xhZs/edit?usp=sharing",
   "oss/hoss25-intro-to-sveltekit": "https://docs.google.com/presentation/d/1YoXje7mWPBT22oPnH08XEOqToggPqtZpFtEkDqMqeOs/edit?usp=sharing",
   "oss/hoss25-github-actions": "https://docs.google.com/presentation/d/1Jfpyi4h0FQ9ajRO4KIy-Z5UfZi44tmcxKWMmGNF5g6c/edit?usp=sharing",
@@ -475,5 +474,7 @@
   "dev/demo-day-sp26": "https://docs.google.com/presentation/d/1E5gFuntYp95E4g6SSdiiiM0z4D-T8qjV84vvPT1h4WM/edit?usp=drivesdk",
   "oss/bash-sp26": "https://docs.google.com/presentation/d/1mGqPKu4QR7IPFA7eX8DbHkdMxDIAMMqG4Sf7B4D-BTw/edit?usp=drivesdk",
   "ai/rag": "https://docs.google.com/presentation/d/1PU8QAOBFe7w6wLBXtxbCq15Qv8D6-N1FYZtOg4pRIUs/edit?slide=id.g3d718993c08_1_212#slide=id.g3d718993c08_1_212",
-  "oss/databases-sp26": "https://docs.google.com/presentation/d/1EOei2-9Ho4CkhAOC-oOXnq7rSec7HGV1Mu96eEJ_eu0/edit?usp=drivesdk"
+  "oss/databases-sp26": "https://docs.google.com/presentation/d/1EOei2-9Ho4CkhAOC-oOXnq7rSec7HGV1Mu96eEJ_eu0/edit?usp=drivesdk",
+  "election": "https://forms.gle/utxGEvfP5ECWZB3e7",
+  "oss/commencement-sp26": "https://docs.google.com/presentation/d/1rvitEFxb37WuGKJsBcSk_WzUqccJ0d92Zli8qT_Eg3Y/edit?usp=drivesdk"
 }
