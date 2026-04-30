@@ -1,11 +1,22 @@
 <script lang="ts">
   import type { PageData } from './$types';
+  import type { ClubEvent } from '$lib/public/events/event';
   import Block from '$lib/components/block/block.svelte';
   import Spacing from '$lib/public/legacy/spacing.svelte';
-  import EmptyContainer from './empty-container.svelte';
-  import EventList from './list.svelte';
+  import EventCalendar from './calendar.svelte';
+  import EventDetail from './event-detail.svelte';
 
   export let data: PageData;
+
+  let selectedEvent: ClubEvent | null = null;
+
+  function handleEventSelect(e: CustomEvent<ClubEvent>) {
+    selectedEvent = e.detail;
+  }
+
+  function handleClose() {
+    selectedEvent = null;
+  }
 </script>
 
 <svelte:head>
@@ -26,22 +37,27 @@
   </p>
 </Block>
 
-<Spacing --min="100px" --med="175px" --max="200px" />
+<Spacing --min="40px" --med="60px" --max="80px" />
 
 <div class="main-header">
-  <h2 class="size-lg acm-heavier">Upcoming Events</h2>
-  <img src="assets/bluecalendar.svg" alt="Blue Calender" />
+  <h2 class="size-lg acm-heavier">Our Events</h2>
+  <img src="assets/bluecalendar.svg" alt="Blue Calendar" />
 </div>
 
 <Spacing --med="16px" />
 
-{#if data.events.length > 0}
-  <EventList events={data.events} />
-{:else}
-  <EmptyContainer>
-    <p slot="content">There are no events scheduled!</p>
-  </EmptyContainer>
-{/if}
+<section class="calendar-section">
+  <div class="calendar-layout" class:has-detail={selectedEvent !== null}>
+    <EventCalendar events={data.events} on:select={handleEventSelect} />
+
+    {#if selectedEvent}
+      <!-- svelte-ignore a11y-click-events-have-key-events -->
+      <!-- svelte-ignore a11y-no-static-element-interactions -->
+      <div class="mobile-overlay" on:click={handleClose}></div>
+      <EventDetail event={selectedEvent} on:close={handleClose} />
+    {/if}
+  </div>
+</section>
 
 <Spacing --min="8px" --med="63px" --max="88px" />
 
@@ -63,6 +79,38 @@
 
   p {
     text-align: center;
+  }
+
+  .calendar-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 20px;
+  }
+
+  .calendar-layout {
+    display: flex;
+    gap: 24px;
+    width: 100%;
+    max-width: 1280px;
+    align-items: flex-start;
+  }
+
+  .mobile-overlay {
+    display: none;
+  }
+
+  @media (max-width: 899px) {
+    .calendar-layout {
+      flex-direction: column;
+    }
+
+    .mobile-overlay {
+      display: block;
+      position: fixed;
+      inset: 0;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 99;
+    }
   }
 
   @media (max-width: 300px) {

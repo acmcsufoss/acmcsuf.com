@@ -39,7 +39,8 @@ export function makeClubEvent(event: GCalEvent, refDate: Temporal.ZonedDateTime)
   const recurring = (event?.recurrence?.length ?? 0) > 0;
   const summary = produceSummary(title, description, selfLink);
   const teamID =
-    (variables.get('ACM_TEAM') ?? variables.get('ACM_PATH'))?.toLowerCase().trim() ?? 'general';
+    (variables.get('ACM_TEAM') ?? variables.get('ACM_PATH'))?.toLowerCase().trim() ??
+    inferTeamFromTitle(title);
 
   const thirdPartyCalendarLocation = location === 'Discord' ? selfLink : location;
   const thirdPartyCalendarArgs = [
@@ -146,7 +147,7 @@ export function thirdPartyCalendarDateTimeFromZonedDateTime(
   dt: Temporal.ZonedDateTimeLike
 ): string {
   const yyyyMMdd = [dt.year, dt.month, dt.day].map((d) => Number(d).toString().padStart(2, '0'));
-  const hhMMss = [dt.hour, dt.minute, dt.day].map((d) => Number(d).toString().padStart(2, '0'));
+  const hhMMss = [dt.hour, dt.minute, dt.second].map((d) => Number(d).toString().padStart(2, '0'));
   const yyyyMMddThhMMss = `${yyyyMMdd.join('')}T${hhMMss.join('')}`;
   return yyyyMMddThhMMss;
 }
@@ -256,4 +257,31 @@ export function zonedDateTimeFromGCalDateTime(
 
   // dtGCAL is often already in terms of our desired timeZone
   return Temporal.PlainDateTime.from(options).toZonedDateTime(timeZone);
+}
+
+const TEAM_PATTERNS: [RegExp, string][] = [
+  [/\bai\b/i, 'ai'],
+  [/\balgo\b/i, 'algo'],
+  [/\bicpc\b/i, 'icpc'],
+  [/\bgame\s*dev\b/i, 'gamedev'],
+  [/\bdev\b/i, 'dev'],
+  [/\bdesign\b/i, 'design'],
+  [/\bcreate\b/i, 'design'],
+  [/\bopen\s*source\b/i, 'oss'],
+  [/\boss\b/i, 'oss'],
+  [/\bnode\s*buds\b/i, 'nodebuds'],
+  [/\bmarketing\b/i, 'marketing'],
+  [/\bspecial\s*event/i, 'special-events'],
+  [/\bspookathon\b/i, 'special-events'],
+  [/\bhackathon\b/i, 'special-events'],
+  [/\bfullyhacks\b/i, 'special-events'],
+];
+
+export function inferTeamFromTitle(title: string): string {
+  for (const [pattern, team] of TEAM_PATTERNS) {
+    if (pattern.test(title)) {
+      return team;
+    }
+  }
+  return 'general';
 }
