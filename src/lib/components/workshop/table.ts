@@ -178,6 +178,12 @@ export const currentTable: Tables = {
       ],
       sp26: [
         {
+          name: 'acmAI:BYO Chatbot w/ Memory',
+          team: 'ai',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1daBrcEFupBMcewgR4FnpxroarQCdoNRMu-ONzt8qkkQ/edit?slide=id.g362851c2e2a_0_59#slide=id.g362851c2e2a_0_59',
+        },
+        {
           name: 'acmAI:Benchmarking AIs',
           team: 'ai',
           semester: 'sp26',
@@ -541,6 +547,12 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1C632d55AysW2eW7ZXK-L_cBoPajhovluJeB1i_efxWQ/edit?usp=sharing',
         },
         {
+          name: 'Clean Code & Debugging FA2025',
+          team: 'dev',
+          semester: 'fa25',
+          link: 'https://docs.google.com/presentation/d/1eyYt1_wEc-pcW3psynFpGsuneeYbJpNkFr4h3v9pibw/edit?usp=sharing',
+        },
+        {
           name: 'Intro To React Workshop',
           team: 'dev',
           semester: 'fa25',
@@ -597,6 +609,12 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1Mxoq2RdgKF8RsRl2MR6gRqsbOUx6F2A6g-1TJLwPfYc/edit?usp=drivesdk',
         },
         {
+          name: 'Dev SP2026: Clean Code & Debugging',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1E5gFuntYp95E4g6SSdiiiM0z4D-T8qjV84vvPT1h4WM/edit?usp=drivesdk',
+        },
+        {
           name: 'Dev SP2026: Deployment Day',
           team: 'dev',
           semester: 'sp26',
@@ -615,10 +633,22 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1KeCJ2OGxrlmm8cVJmkJt-ixlZt1kdDO_gdR_x6UxYjs/edit?usp=sharing',
         },
         {
+          name: 'Dev SP2026: Intro to Docker',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1i6g03dYpGo82yoRR5GVtOgpmP3RSPTqdbAsHXoDqhYU/edit?usp=sharing',
+        },
+        {
           name: 'Dev SP2026: Intro to React',
           team: 'dev',
           semester: 'sp26',
           link: 'https://docs.google.com/presentation/d/1WI6xAihCC2Aab93N5Gneo25uERST7bqyeLtrhuyq1rQ/edit?usp=sharing',
+        },
+        {
+          name: 'Dev SP2026: Intro to SQL',
+          team: 'dev',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1r7KMsOUbzwxkdySAeR-r89S_vzilL7si4VEzVts50fc/edit?usp=sharing',
         },
         {
           name: 'Dev SP2026: Intro to Tailwind',
@@ -980,6 +1010,24 @@ export const currentTable: Tables = {
           link: 'https://docs.google.com/presentation/d/1XTgfH-hOVUqJt48p-LIB5wo2Q32xTbtLndFvCJgpjSU/edit?usp=drivesdk',
         },
         {
+          name: 'Open Source Team SP26 - Commencement',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1rvitEFxb37WuGKJsBcSk_WzUqccJ0d92Zli8qT_Eg3Y/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Database Integration',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1EOei2-9Ho4CkhAOC-oOXnq7rSec7HGV1Mu96eEJ_eu0/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Embedded Devices',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1Dk7pzR12lkvGNUbz_iKKj2hkAcKZVKfNP5qmKQ7r0QI/edit?usp=drivesdk',
+        },
+        {
           name: 'Open Source Team SP26 - First Contributions',
           team: 'oss',
           semester: 'sp26',
@@ -990,6 +1038,12 @@ export const currentTable: Tables = {
           team: 'oss',
           semester: 'sp26',
           link: 'https://docs.google.com/presentation/d/1ELhWW00-MtUuwI7jcCbJEYk_xF0Vr2shIqRfhYiZdQw/edit?usp=drivesdk',
+        },
+        {
+          name: 'Open Source Team SP26 - Intro to Bash',
+          team: 'oss',
+          semester: 'sp26',
+          link: 'https://docs.google.com/presentation/d/1mGqPKu4QR7IPFA7eX8DbHkdMxDIAMMqG4Sf7B4D-BTw/edit?usp=drivesdk',
         },
         {
           name: 'Open Source Team SP26 - Intro to SvelteKit',
