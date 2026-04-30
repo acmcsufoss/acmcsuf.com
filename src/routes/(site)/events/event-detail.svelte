@@ -342,20 +342,21 @@
   @media (max-width: 899px) {
     .event-detail {
       position: fixed;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: calc(100% - 32px);
+      max-width: 420px;
       min-width: unset;
-      max-height: 70vh;
-      border-radius: 20px 20px 0 0;
-      border-bottom: none;
+      max-height: 85vh;
+      border-radius: 16px;
       z-index: 100;
-      box-shadow: 0 -6px 24px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+      overflow: hidden;
     }
 
     .detail-header {
-      border-radius: 20px 20px 0 0;
+      border-radius: 16px 16px 0 0;
     }
   }
 </style>

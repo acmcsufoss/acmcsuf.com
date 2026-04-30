@@ -75,16 +75,43 @@
     });
   }
 
-  onMount(() => {
-    calendar = new Calendar(calendarEl, {
-      plugins: [dayGridPlugin, interactionPlugin],
-      initialView: 'dayGridMonth',
-      events: clubEventsToFCEvents(events),
+  const MOBILE_QUERY = '(max-width: 640px)';
+  let mq: MediaQueryList | null = null;
+
+  function getToolbarOptions(isMobile: boolean) {
+    if (isMobile) {
+      return {
+        headerToolbar: { left: 'prev', center: 'title', right: 'next' },
+        footerToolbar: { center: 'dayGridWeek,today,dayGridMonth' },
+      } as const;
+    }
+    return {
       headerToolbar: {
         left: 'prev,next today',
         center: 'title',
         right: 'dayGridMonth,dayGridWeek',
       },
+      footerToolbar: false,
+    } as const;
+  }
+
+  function handleViewportChange() {
+    if (!calendar || !mq) return;
+    const opts = getToolbarOptions(mq.matches);
+    calendar.setOption('headerToolbar', opts.headerToolbar);
+    calendar.setOption('footerToolbar', opts.footerToolbar);
+  }
+
+  onMount(() => {
+    mq = window.matchMedia(MOBILE_QUERY);
+    const initial = getToolbarOptions(mq.matches);
+
+    calendar = new Calendar(calendarEl, {
+      plugins: [dayGridPlugin, interactionPlugin],
+      initialView: 'dayGridMonth',
+      events: clubEventsToFCEvents(events),
+      headerToolbar: initial.headerToolbar,
+      footerToolbar: initial.footerToolbar,
       height: 'auto',
       fixedWeekCount: false,
       eventDisplay: 'list-item',
@@ -101,9 +128,13 @@
     });
 
     calendar.render();
+    mq.addEventListener('change', handleViewportChange);
   });
 
   onDestroy(() => {
+    if (mq) {
+      mq.removeEventListener('change', handleViewportChange);
+    }
     if (calendar) {
       calendar.destroy();
     }
@@ -157,6 +188,7 @@
       font-weight: 500;
       font-size: var(--size-xs);
       padding: 6px 14px;
+      text-transform: capitalize;
       transition: all 0.2s ease-in-out;
     }
 
@@ -202,14 +234,25 @@
       box-shadow: 0 0 0 3px rgba(var(--acm-blue-rgb), 0.3);
     }
 
-    /* Today */
-    .fc .fc-today-button {
-      border-radius: 8px;
-      text-transform: capitalize;
+    /* Today — outlined style so it doesn't blend with the solid-blue view toggles.
+       Border-radius intentionally omitted so it inherits the surrounding button-group
+       shape (0 between siblings, 8px standalone on desktop). */
+    .fc .fc-button-primary.fc-today-button,
+    .fc .fc-button-primary.fc-today-button:disabled {
+      background-color: var(--acm-light);
+      border-color: var(--acm-blue);
+      color: var(--acm-blue);
     }
 
-    .fc .fc-today-button:disabled {
-      opacity: 0.5;
+    .fc .fc-button-primary.fc-today-button:hover:not(:disabled) {
+      background-color: var(--acm-blue);
+      border-color: var(--acm-blue);
+      color: var(--perma-light);
+    }
+
+    .fc .fc-button-primary.fc-today-button:disabled {
+      opacity: 0.45;
+      cursor: not-allowed;
     }
 
     /* Title */
@@ -353,6 +396,83 @@
     /* Other days */
     .fc .fc-day-other .fc-daygrid-day-number {
       opacity: 0.4;
+    }
+
+    /* Footer toolbar (only rendered on mobile via JS) */
+    .fc .fc-footer-toolbar {
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 640px) {
+      /* Reorder so the footer toolbar (week/today/month) sits under the title
+         and above the calendar grid, instead of below the grid. */
+      .fc {
+        display: flex;
+        flex-direction: column;
+      }
+      .fc .fc-header-toolbar {
+        order: 0;
+        margin-bottom: 8px !important;
+        align-items: center;
+        justify-content: center;
+        gap: 16px;
+      }
+      .fc .fc-header-toolbar .fc-toolbar-chunk {
+        display: flex;
+        align-items: center;
+      }
+      .fc .fc-header-toolbar .fc-toolbar-title {
+        margin: 0;
+        line-height: 1;
+      }
+      .fc .fc-footer-toolbar {
+        order: 1;
+        margin-top: 0 !important;
+        margin-bottom: 12px !important;
+      }
+      .fc .fc-view-harness {
+        order: 2;
+      }
+
+      .fc .fc-toolbar-title {
+        font-size: var(--size-md);
+        text-align: center;
+      }
+
+      .fc .fc-button {
+        font-size: 0.7rem;
+        padding: 4px 10px;
+      }
+
+      .fc .fc-prev-button,
+      .fc .fc-next-button {
+        width: 32px;
+        height: 32px;
+      }
+
+      .fc .fc-daygrid-day-number {
+        padding: 4px 6px;
+        font-size: 0.7rem;
+      }
+
+      .fc .fc-col-header-cell {
+        padding: 4px 0;
+      }
+
+      .fc .fc-col-header-cell-cushion {
+        font-size: 0.65rem;
+      }
+
+      .fc .fc-daygrid-event {
+        font-size: 0.65rem;
+      }
+
+      .fc .fc-daygrid-day-frame {
+        min-height: 70px;
+      }
     }
   }
 </style>
