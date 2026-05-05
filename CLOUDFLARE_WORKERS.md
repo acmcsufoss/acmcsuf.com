@@ -9,6 +9,7 @@ We're building with the official [@sveltejs/adapter-cloudflare](https://github.c
 ### Build Process
 
 Using `vite build` generates the following build directory:
+
 ```
 .svelte-kit/cloudflare/
 └── _worker.js          # Worker entry point
@@ -18,7 +19,7 @@ Using `npm run preview` will use this file and run the site on the workers runti
 
 ## Configuration
 
-`wrangler.toml`: The main configuration file. Read the comments in that file as well as [the official docs](https://developers.cloudflare.com/workers/wrangler/configuration/) for more information.  
+`wrangler.toml`: The main configuration file. Read the comments in that file as well as [the official docs](https://developers.cloudflare.com/workers/wrangler/configuration/) for more information.
 
 `svelte.config.js`: This is where SvelteKit is configured to use the Cloudflare adapter.
 
@@ -45,6 +46,7 @@ You can then use `npm run deploy` to deploy to prod. While this is possible and 
 #### Previews
 
 Since the local dev environment uses node + vite but the site runs on the workers runtime, it's important to use one or both of these after making changes. If you've created a PR, the GitHub action will create the live preview for you.
+
 ```bash
 npm run preview      # runs locally on your computer
 npm run preview:live # creates live preview deployment (requires correct permissions/variables)
