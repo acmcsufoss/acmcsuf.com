@@ -7,8 +7,8 @@
   "homepage": "https://acmcsuf.com/",
   "author": "EthanThatOneKid (https://etok.codes/)",
   "engines": {
-    "node": ">=22.0.0",
-    "npm": ">=10.5.1"
+    "node": ">=24.0.0",
+    "npm": ">=11.3.0"
   },
   "repository": {
     "url": "git+https://github.com/acmcsufoss/acmcsuf.com.git"
