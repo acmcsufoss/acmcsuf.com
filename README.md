@@ -4,7 +4,8 @@
 
 ## Develop
 
-> 💡 This project runs on Node.js; [install the latest long-term support version][node_download].
+> 💡 This project runs on Node.js; [install the latest long-term support version][node_download] or use a node version manager like
+> [fnm][fnm_download].
 
 To get started, clone this repository to your machine and run `npm i` in the root of this project.
 Then, run `npm start` to spin up the [development server][dev_server].
@@ -31,6 +32,7 @@ Maintained with 💖 by [**acmcsuf.com hub**][team_doc]
 Current Webmaster: [**Dianella Sy**][webmaster_url]
 
 [node_download]: https://nodejs.org/en/download/
+[fnm_download]: https://github.com/Schniz/fnm
 [github_action_deploy]: .github/workflows/deploy.yaml
 [live_url]: https://acmcsuf.com/
 [acm_officers]: https://acmcsuf.com/teams/
