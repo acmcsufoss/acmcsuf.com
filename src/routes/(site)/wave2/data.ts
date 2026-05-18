@@ -138,31 +138,31 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       ),
     ],
   },
-  {
-    title: 'Game Dev Officer',
-    teamColor: 'var(--acm-gamedev-rgb)',
-    qualifications: [
-      li('Passion and interest in game development'),
-      li('Strong communication and leadership'),
-      li('Flexibility with skills to assist students in a variety of projects'),
-    ],
-    tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
-    responsibilities: [
-      li(
-        'Attend Game Dev board meetings, provide essential input and collaborate with the Game Dev President and other officers'
-      ),
-      li('Assist and direct students in Game Dev related projects'),
-      li(
-        'Host engaging and interesting biweekly/weekly workshops along with the Design President and Officers'
-      ),
-      li(
-        'Research common game dev techniques to relay this information via workshops and events, and to enhance our chapter'
-      ),
-      li(
-        'Check Discord messages and respond to the important discussion in regards to Game Dev at least daily'
-      ),
-    ],
-  },
+  // {
+  //   title: 'Game Dev Officer',
+  //   teamColor: 'var(--acm-gamedev-rgb)',
+  //   qualifications: [
+  //     li('Passion and interest in game development'),
+  //     li('Strong communication and leadership'),
+  //     li('Flexibility with skills to assist students in a variety of projects'),
+  //   ],
+  //   tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
+  //   responsibilities: [
+  //     li(
+  //       'Attend Game Dev board meetings, provide essential input and collaborate with the Game Dev President and other officers'
+  //     ),
+  //     li('Assist and direct students in Game Dev related projects'),
+  //     li(
+  //       'Host engaging and interesting biweekly/weekly workshops along with the Design President and Officers'
+  //     ),
+  //     li(
+  //       'Research common game dev techniques to relay this information via workshops and events, and to enhance our chapter'
+  //     ),
+  //     li(
+  //       'Check Discord messages and respond to the important discussion in regards to Game Dev at least daily'
+  //     ),
+  //   ],
+  // },
   {
     title: 'Marketing Officer',
     teamColor: 'var(--acm-marketing-rgb)',
