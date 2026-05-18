@@ -57,14 +57,14 @@
 </script>
 
 <svelte:head>
-  <title>Spring 2026 Board Applications | ACM at CSUF</title>
+  <title>Fall 2026 Board Applications | ACM at CSUF</title>
 </svelte:head>
 
 <MetaTags
   openGraph={{
-    title: 'Spring 2026 board applications',
+    title: 'Fall 2026 board applications',
     description:
-      'Listed below are the positions that are open for the Spring 2026 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
+      'Listed below are the positions that are open for the Fall 2026 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
     type: 'article',
   }}
 />
@@ -72,16 +72,16 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <Block align={TextAlignment.LEFT}>
-  <h1 slot="headline" class="size-lg">Spring 2026 Board Positions</h1>
+  <h1 slot="headline" class="size-lg">Fall 2026 Board Positions</h1>
   <p slot="text" class="size-sm">
-    Listed below are the positions that are open for the Spring 2026 semester (semester long
+    Listed below are the positions that are open for the Fall 2026 semester (semester long
     position). Please read the descriptions carefully and apply for the position(s) that you are
     interested in. You may apply for multiple positions, but you may only be selected for one. If
     you are selected for a position, you will be contacted by the current board member in charge of
     that position.
     <br />
     <br />
-    Last updated Nov 24, 2025
+    Last updated May 18, 2026
     <br />
     <br />
     <span class="center-btn" on:click={action} on:keypress={action} role="button" tabindex="0">
@@ -113,7 +113,7 @@
 <Spacing --med="64px" />
 
 <span class="center-btn">
-  <Button link="https://forms.gle/qaFhFydHfntrsyPi9" text="Apply now!" />
+  <Button link="https://forms.gle/XoUBuSZiJNc3zx3t7" text="Apply now!" />
 </span>
 
 <Spacing --med="64px" />
@@ -128,17 +128,17 @@
     </p>
 
     <p class="size-sm">
-      <span class="acm-heaviest">Mark Garcia (ACM President)</span>
+      <span class="acm-heaviest">Dianella Sy (ACM President)</span>
     </p>
     <ul>
-      <li>Discord: <code>markgdev</code></li>
+      <li>Discord: <code>diane11a</code></li>
     </ul>
 
     <p class="size-sm">
-      <span class="acm-heaviest">Max Rivas (ACM VP)</span>
+      <span class="acm-heaviest">Yuriko Ysique (ACM VP)</span>
     </p>
     <ul>
-      <li>Discord: <code>meexy23</code></li>
+      <li>Discord: <code>yuriko.lpz</code></li>
     </ul>
   </div>
 </Block>
