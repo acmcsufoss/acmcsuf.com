@@ -29,13 +29,13 @@ The site can also be deployed manually by those with sufficient permissions usin
 ---
 
 Maintained with 💖 by [**acmcsuf.com hub**][team_doc]  
-Current Webmaster: [**Dianella Sy**][webmaster_url]
+Current Webmaster: [**Mark Gaballa**][webmaster_url]
 
 [node_download]: https://nodejs.org/en/download/
 [fnm_download]: https://github.com/Schniz/fnm
 [github_action_deploy]: .github/workflows/deploy.yaml
 [live_url]: https://acmcsuf.com/
 [acm_officers]: https://acmcsuf.com/teams/
-[webmaster_url]: https://github.com/dianellasy/
+[webmaster_url]: https://github.com/GaballaGit
 [dev_server]: http://localhost:3000/
 [team_doc]: https://docs.google.com/document/d/11GoIBTAAnIOgmWuG1TsgXUE3MMkweQ8V6bB9TbrY0Hs/edit?usp=sharing
