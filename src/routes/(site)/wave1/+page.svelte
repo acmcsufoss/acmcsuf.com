@@ -116,17 +116,17 @@
     </p>
 
     <p class="size-sm">
-      <span class="acm-heaviest">Mark Garcia (ACM President)</span>
+      <span class="acm-heaviest">Dianella Sy (ACM President)</span>
     </p>
     <ul>
-      <li>Discord: <code>markgdev</code></li>
+      <li>Discord: <code>diane11a</code></li>
     </ul>
 
     <p class="size-sm">
-      <span class="acm-heaviest">Max Rivas (ACM VP)</span>
+      <span class="acm-heaviest">Yuriko Ysique (ACM VP)</span>
     </p>
     <ul>
-      <li>Discord: <code>meexy23</code></li>
+      <li>Discord: <code>yuriko.lpz</code></li>
     </ul>
   </div>
 </Block>
