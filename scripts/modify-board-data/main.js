@@ -211,7 +211,7 @@ async function mainLoop() {
           ).toLowerCase();
 
           if (confirmation === 'yes' || confirmation === 'y') {
-            await commitChanges();
+            await commitChanges(JSON.stringify(boardOfficers, null, 2));
             break;
           }
 
@@ -224,8 +224,7 @@ async function mainLoop() {
         }
         break;
       }
-      case '5': {
-        // todo
+      case ('5', 'q'): {
         closeRL();
         await deleteCopy();
         return;
