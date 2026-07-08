@@ -12,10 +12,7 @@
 
 import { stdin as input, stdout as output } from 'node:process';
 import * as readline from 'node:readline/promises';
-import { getJSON, writeToCopy, deleteCopy } from './json-operations.js';
-
-const officerJSON = '../../src/lib/public/board/data/officers.json';
-const copyJSON = '../../src/lib/public/board/data/officers-diff.json';
+import { getJSON, writeToCopy, deleteCopy, officerJSON, copyJSON } from './json-operations.js';
 
 // Read an input with prompt. Also determines what to do with SIGINT from Ctrl+C
 async function readInput(prompt) {

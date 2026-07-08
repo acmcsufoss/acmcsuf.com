@@ -1,6 +1,9 @@
 import { readFile } from 'fs/promises';
 import { unlink, writeFile } from 'node:fs/promises';
 
+export const officerJSON = '../../src/lib/public/board/data/officers.json';
+export const copyJSON = '../../src/lib/public/board/data/officers-diff.json';
+
 // Get a json file from /src/lib/public/board/data
 export async function getJSON(filePath) {
   try {
@@ -15,9 +18,8 @@ export async function getJSON(filePath) {
 // ALL changes should be written to a separate
 // file before being committed in case a mistake is made.
 export async function writeToCopy(content) {
-  const filePath = '../../src/lib/public/board/data/officers-diff.json';
   try {
-    await writeFile(filePath, content);
+    await writeFile(copyJSON, content);
   } catch (err) {
     console.log('Error writting to diff file: ', err);
     process.exit(1);
