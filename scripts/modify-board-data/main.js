@@ -224,7 +224,8 @@ async function mainLoop() {
         }
         break;
       }
-      case ('5', 'q'): {
+      case '5':
+      case 'q': {
         closeRL();
         await deleteCopy();
         return;
