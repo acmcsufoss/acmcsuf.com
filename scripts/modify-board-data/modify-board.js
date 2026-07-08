@@ -10,38 +10,45 @@
  *
  */
 
-import { stdin as input, stdout as output } from 'node:process';
-import * as readline from 'node:readline/promises';
-import { getJSON, writeToCopy, deleteCopy, officerJSON, copyJSON } from './json-operations.js';
+import {
+  getJSON,
+  writeToCopy,
+  deleteCopy,
+  commitChanges,
+  officerJSON,
+  copyJSON,
+  tiersJSON,
+} from './json-operations.js';
+import { readInput, upperFirstLetters, closeRL } from './helpers.js';
+import { execSync } from 'child_process';
 
-// Read an input with prompt. Also determines what to do with SIGINT from Ctrl+C
-async function readInput(prompt) {
+// Tier mapping
+function mapTier(tiers, tier) {
+  return tiers[upperFirstLetters(tier)].id;
+}
+
+async function viewDiff() {
   try {
-    const result = await rl.question(prompt);
-    return result;
-  } catch (error) {
-    if (error === 'AbortError' || error.code === 'ABORT_ERR') {
-      console.log('Ctrl+C detected, exiting');
-      process.exit(0);
-    }
+    execSync(`git diff --no-index "${officerJSON}" "${copyJSON}"`, { stdio: 'inherit' });
+  } catch {
+    console.log('No Diff');
   }
 }
+
+// === Officer operations ===
 
 function findOfficer(boardOfficers, name) {
   return boardOfficers.find((o) => o.fullName.toLowerCase() === name.toLowerCase());
 }
 
-async function editOfficer(officers) {
-  const lookfor = await readInput('What officer do you want to edit/add?');
+async function editOfficer(officers, tiers) {
+  const lookfor = await readInput('What officer do you want to edit/add? ');
   let officer = await findOfficer(officers, lookfor);
   if (!officer) {
     console.log('Unable to locate ', lookfor, '. Making new officer');
 
     officer = {
-      fullName: lookfor
-        .split(' ')
-        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-        .join(' '),
+      fullName: upperFirstLetters(lookfor),
       picture: '',
       discord: '',
       positions: {},
@@ -94,9 +101,15 @@ async function editOfficer(officers) {
       continue;
     }
 
-    const term = (
-      await readInput('What term will you edit/add? (e.g. F25 or S26): ')
-    ).toUpperCase();
+    let term;
+    while (true) {
+      term = (await readInput('What term will you edit/add? (e.g. F25 or S26): ')).toUpperCase();
+
+      if (/^[FS]\d{2}$/.test(term)) {
+        break;
+      }
+      console.log('Invalid term. Please use the format F25 or S26.');
+    }
 
     if (!officer.positions[term]) {
       officer.positions[term] = [];
@@ -110,23 +123,36 @@ async function editOfficer(officers) {
       }
 
       officer.positions[term].push({
-        title,
-        tier: 0, // TODO: map tier to title with the json
+        title: upperFirstLetters(title),
+        tier: mapTier(tiers, title),
       });
     }
 
     break;
   }
 
-  console.log(officer);
+  console.log(JSON.stringify(officer, null, 2));
+  while (true) {
+    const confirmation = (await readInput('Are you okay with these changes? [y/n] ')).toLowerCase();
+    if (confirmation === 'yes' || confirmation === 'y') {
+      writeToCopy(JSON.stringify(officers, null, 2));
+      return officers;
+    }
+
+    if (confirmation === 'no' || confirmation === 'n') {
+      return officers;
+    }
+
+    console.log('Invalid Input.');
+  }
 }
 // =========== MAIN PROCESS ===========
 
-const rl = readline.createInterface(input, output);
-
 const boardJSON = await getJSON(officerJSON);
-await writeToCopy(JSON.stringify(boardJSON));
-const boardOfficers = await getJSON(copyJSON);
+await writeToCopy(JSON.stringify(boardJSON, null, 2));
+let boardOfficers = await getJSON(copyJSON);
+
+const tiers = await getJSON(tiersJSON);
 
 async function mainLoop() {
   while (true) {
@@ -139,11 +165,11 @@ async function mainLoop() {
     [ 3 ] View current diff\n
     [ 4 ] Commit changes\n
     [ 5 ] Quit\n
-    `
+    > `
     );
     console.log('You chose: ', option);
     switch (option) {
-      case '1':
+      case '1': {
         const find = await readInput('Lookup: ');
         console.log('Looking up...');
         const officer = findOfficer(boardOfficers, find);
@@ -154,21 +180,40 @@ async function mainLoop() {
         }
         await readInput('Press any key to continue: ');
         break;
-      case '2':
-        await editOfficer(boardOfficers);
-        // todo
+      }
+      case '2': {
+        boardOfficers = await editOfficer(boardOfficers, tiers);
         break;
-      case '3':
-        // todo
+      }
+      case '3': {
+        viewDiff();
         break;
-      case '4':
-        // todo
+      }
+      case '4': {
+        while (true) {
+          const confirmation = (
+            await readInput('ARE YOU SURE YOU WANT TO COMMIT CHANGES? [y/n] ')
+          ).toLowerCase();
+
+          if (confirmation === 'yes' || confirmation === 'y') {
+            await commitChanges();
+            break;
+          }
+
+          if (confirmation === 'no' || confirmation === 'n') {
+            break;
+          }
+
+          console.log('Invalid input.');
+        }
         break;
-      case '5':
+      }
+      case '5': {
         // todo
-        rl.close();
+        closeRL();
         await deleteCopy();
-        process.exit(0);
+        return;
+      }
       default:
         console.log('Invalid option, try again.');
         break;
@@ -176,4 +221,5 @@ async function mainLoop() {
   }
 }
 
-mainLoop();
+await mainLoop();
+process.exit(0);
