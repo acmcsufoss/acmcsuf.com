@@ -16,9 +16,9 @@ test('transforms GCalEvent list to ClubEvent list', async () => {
   //
   // const { writeFileSync } = await import('node:fs');
   // writeFileSync(
-  //   'src/lib/server/events/data/club-events.json',
-  //   JSON.stringify(actual, null, 2) + '\n'
-  // );
+  //    'src/lib/server/events/data/club-events.json',
+  //    JSON.stringify(actual, null, 2) + '\n'
+  //);
   //
   // Remember to comment out the above lines of code before committing.
 
