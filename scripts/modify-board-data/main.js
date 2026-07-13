@@ -39,7 +39,11 @@ import { execSync } from 'child_process';
 
 // Tier mapping
 function mapTier(tiers, tier) {
-  return tiers[upperFirstLetters(tier)].id;
+  try {
+    return tiers[upperFirstLetters(tier)].id;
+  } catch (err) {
+    return undefined;
+  }
 }
 
 async function viewDiff() {
@@ -135,6 +139,14 @@ async function editOfficer(officers, tiers) {
 
       if (title === '') {
         break;
+      }
+
+      const tier = mapTier(tiers, title);
+      if (tier == undefined) {
+        console.log(
+          'Bad Title, please check the spelling and try again [Can be found in src/lib/public/board/data/tiers]'
+        );
+        continue;
       }
 
       officer.positions[term].push({
