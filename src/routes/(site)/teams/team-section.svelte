@@ -20,6 +20,7 @@
     Term.Spring25,
     Term.Fall25,
     Term.Spring26,
+    Term.Fall26,
   ];
   const gamedevTerms = [
     Term.Spring23,
