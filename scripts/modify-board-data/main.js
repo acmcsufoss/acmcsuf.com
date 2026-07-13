@@ -63,7 +63,9 @@ function findOfficer(boardOfficers, name) {
 async function editOfficer(officers, tiers) {
   const lookfor = await readInput('What officer do you want to edit/add? ');
   let officer = await findOfficer(officers, lookfor);
+  let ifNew = false;
   if (!officer) {
+    ifNew = true;
     console.log('Unable to locate ', lookfor, '. Making new officer');
 
     officer = {
@@ -72,8 +74,6 @@ async function editOfficer(officers, tiers) {
       discord: '',
       positions: {},
     };
-
-    officers.push(officer);
   }
 
   // Gaballa, why are you switching between string literal and template literal?
@@ -162,6 +162,9 @@ async function editOfficer(officers, tiers) {
   while (true) {
     const confirmation = (await readInput('Are you okay with these changes? [y/n] ')).toLowerCase();
     if (confirmation === 'yes' || confirmation === 'y') {
+      if (ifNew) {
+        officers.push(officer);
+      }
       writeToCopy(JSON.stringify(officers, null, 2));
       return officers;
     }
