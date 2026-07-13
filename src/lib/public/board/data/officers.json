@@ -1027,6 +1027,16 @@
           "title": "Open Source Team Lead",
           "tier": 32
         }
+      ],
+      "F26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        },
+        {
+          "title": "Event Coordinator",
+          "tier": 6
+        }
       ]
     },
     "discord": "@surrealreal_"
@@ -3580,6 +3590,12 @@
           "title": "Marketing Officer",
           "tier": 9
         }
+      ],
+      "F26": [
+        {
+          "title": "Design Team Lead",
+          "tier": 13
+        }
       ]
     },
     "discord": "@sofa.gui9702"
@@ -3617,6 +3633,16 @@
         {
           "title": "Dev Team Lead",
           "tier": 17
+        }
+      ],
+      "F26": [
+        {
+          "title": "Treasurer",
+          "tier": 4
+        },
+        {
+          "title": "Dev Officer",
+          "tier": 19
         }
       ]
     },
@@ -3681,6 +3707,12 @@
           "title": "Algo Officer",
           "tier": 12
         }
+      ],
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
       ]
     },
     "discord": "@eli.th"
@@ -3707,6 +3739,16 @@
         {
           "title": "Marketing Officer",
           "tier": 9
+        }
+      ],
+      "F26": [
+        {
+          "title": "Vice President",
+          "tier": 1
+        },
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
         }
       ]
     },
@@ -3926,6 +3968,12 @@
           "title": "AI Officer",
           "tier": 21
         }
+      ],
+      "F26": [
+        {
+          "title": "AI Team Lead",
+          "tier": 20
+        }
       ]
     },
     "discord": "@53np41_jaeger.00"
@@ -4089,6 +4137,12 @@
           "title": "Algo Officer",
           "tier": 12
         }
+      ],
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
       ]
     },
     "discord": "@patheit"
@@ -4140,6 +4194,12 @@
         {
           "title": "Dev Officer",
           "tier": 19
+        }
+      ],
+      "F26": [
+        {
+          "title": "Dev Team Lead",
+          "tier": 17
         }
       ]
     },
@@ -4199,6 +4259,12 @@
     "picture": "adam-ho.webp",
     "positions": {
       "S26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
+      ],
+      "F26": [
         {
           "title": "Open Source Officer",
           "tier": 33
@@ -4276,6 +4342,45 @@
         {
           "title": "Open Source Officer",
           "tier": 33
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Jared Anastacio Ferrer",
+    "picture": "jared-anastacio-ferrer.webp",
+    "discord": "jxred_17",
+    "positions": {
+      "F26": [
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Tayas Nguyen",
+    "picture": "tayas-nguyen.webp",
+    "discord": "main12345__",
+    "positions": {
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Esteban Maldonado",
+    "picture": "esteban-maldonado.webp",
+    "discord": "esteban.m_1",
+    "positions": {
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
         }
       ]
     }
