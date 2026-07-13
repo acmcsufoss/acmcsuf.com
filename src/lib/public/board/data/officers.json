@@ -4066,6 +4066,16 @@
           "title": "Algo Officer",
           "tier": 12
         }
+      ],
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        },
+        {
+          "title": "Design Officer",
+          "tier": 16
+        }
       ]
     },
     "discord": "@acepainter"
@@ -4167,9 +4177,15 @@
   },
   {
     "fullName": "Kevin Fuentes",
-    "picture": "placeholder.webp",
+    "picture": "kevin-fuentes.webp",
     "positions": {
       "S26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
+      ],
+      "F26": [
         {
           "title": "Node Buds Officer",
           "tier": 26
@@ -4190,5 +4206,78 @@
       ]
     },
     "discord": "@farmerakh"
+  },
+  {
+    "fullName": "Michelle Pineda",
+    "picture": "michelle-pineda.webp",
+    "discord": "michelletz",
+    "positions": {
+      "F26": [
+        {
+          "title": "Secretary",
+          "tier": 5
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Aiden Rus",
+    "picture": "",
+    "discord": "",
+    "positions": {
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        },
+        {
+          "title": "Design Officer",
+          "tier": 16
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Kevin Do",
+    "picture": "placeholder.webp",
+    "discord": "cryocial",
+    "positions": {
+      "F26": [
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Chisom Okonkwo",
+    "picture": "chisom-okonkwo.webp",
+    "discord": "chip_06",
+    "positions": {
+      "F26": [
+        {
+          "title": "Design Officer",
+          "tier": 16
+        }
+      ]
+    }
+  },
+  {
+    "fullName": "Cody Le",
+    "picture": "cody-le.webp",
+    "discord": "joosbananas",
+    "positions": {
+      "F26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        },
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
+      ]
+    }
   }
 ]
