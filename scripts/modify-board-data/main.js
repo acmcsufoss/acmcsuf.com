@@ -71,8 +71,8 @@ async function editOfficer(officers, tiers) {
     officer = {
       fullName: upperFirstLetters(lookfor),
       picture: '',
-      discord: '',
       positions: {},
+      discord: '',
     };
   }
 
