@@ -4276,7 +4276,6 @@
   {
     "fullName": "Michelle Pineda",
     "picture": "michelle-pineda.webp",
-    "discord": "michelletz",
     "positions": {
       "F26": [
         {
@@ -4284,29 +4283,12 @@
           "tier": 5
         }
       ]
-    }
-  },
-  {
-    "fullName": "Aiden Rus",
-    "picture": "",
-    "discord": "",
-    "positions": {
-      "F26": [
-        {
-          "title": "Algo Officer",
-          "tier": 12
-        },
-        {
-          "title": "Design Officer",
-          "tier": 16
-        }
-      ]
-    }
+    },
+    "discord": "@michelletz",
   },
   {
     "fullName": "Kevin Do",
     "picture": "placeholder.webp",
-    "discord": "cryocial",
     "positions": {
       "F26": [
         {
@@ -4314,12 +4296,12 @@
           "tier": 19
         }
       ]
-    }
+    },
+    "discord": "@cryocial"
   },
   {
     "fullName": "Chisom Okonkwo",
     "picture": "chisom-okonkwo.webp",
-    "discord": "chip_06",
     "positions": {
       "F26": [
         {
@@ -4327,12 +4309,12 @@
           "tier": 16
         }
       ]
-    }
+    },
+    "discord": "@chip_06"
   },
   {
     "fullName": "Cody Le",
     "picture": "cody-le.webp",
-    "discord": "joosbananas",
     "positions": {
       "F26": [
         {
@@ -4344,12 +4326,12 @@
           "tier": 33
         }
       ]
-    }
+    },
+    "discord": "@joosbananas"
   },
   {
     "fullName": "Jared Anastacio Ferrer",
     "picture": "jared-anastacio-ferrer.webp",
-    "discord": "jxred_17",
     "positions": {
       "F26": [
         {
@@ -4357,12 +4339,12 @@
           "tier": 19
         }
       ]
-    }
+    },
+    "discord": "@jxred_17"
   },
   {
     "fullName": "Tayas Nguyen",
     "picture": "tayas-nguyen.webp",
-    "discord": "main12345__",
     "positions": {
       "F26": [
         {
@@ -4370,12 +4352,12 @@
           "tier": 12
         }
       ]
-    }
+    },
+    "discord": "@main12345__"
   },
   {
     "fullName": "Esteban Maldonado",
     "picture": "esteban-maldonado.webp",
-    "discord": "esteban.m_1",
     "positions": {
       "F26": [
         {
@@ -4383,6 +4365,7 @@
           "tier": 21
         }
       ]
-    }
+    },
+    "discord": "@esteban.m_1"
   }
 ]
