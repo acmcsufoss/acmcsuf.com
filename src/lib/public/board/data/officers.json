@@ -3689,6 +3689,10 @@
         {
           "title": "Dev Officer",
           "tier": 19
+        },
+        {
+          "title": "Marketing Officer",
+          "tier": 9
         }
       ]
     },
@@ -4110,6 +4114,12 @@
           "title": "Game Dev Officer",
           "tier": 23
         }
+      ],
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
+        }
       ]
     },
     "discord": "@biryani23"
@@ -4213,10 +4223,6 @@
         {
           "title": "Algo Officer",
           "tier": 12
-        },
-        {
-          "title": "Design Officer",
-          "tier": 16
         }
       ]
     },
@@ -4465,8 +4471,8 @@
     "discord": "@jxred_17"
   },
   {
-    "fullName": "Tayas Nguyen",
-    "picture": "tayas-nguyen.webp",
+    "fullName": "Taymas Nguyen",
+    "picture": "taymas-nguyen.webp",
     "positions": {
       "F26": [
         {
@@ -4479,7 +4485,7 @@
   },
   {
     "fullName": "Esteban Maldonado",
-    "picture": "esteban-maldonado.webp",
+    "picture": "placeholder.webp",
     "positions": {
       "F26": [
         {
