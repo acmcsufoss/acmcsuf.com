@@ -41,7 +41,7 @@ import { execSync } from 'child_process';
 function mapTier(tiers, tier) {
   try {
     return tiers[upperFirstLetters(tier)].id;
-  } catch (err) {
+  } catch {
     return undefined;
   }
 }
