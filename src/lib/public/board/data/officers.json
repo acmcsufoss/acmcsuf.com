@@ -76,6 +76,29 @@
     "discord": "@semsema"
   },
   {
+    "fullName": "Mark Gaballa",
+    "picture": "mark-gaballa.webp",
+    "positions": {
+      "S26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
+      ],
+      "F26": [
+        {
+          "title": "Webmaster",
+          "tier": 2
+        },
+        {
+          "title": "Open Source Co-TL",
+          "tier": 33
+        }
+      ]
+    },
+    "discord": "@gaballa."
+  },
+  {
     "fullName": "Armanul Ambia",
     "picture": "armanul-ambia.webp",
     "positions": {
@@ -4159,29 +4182,6 @@
       ]
     },
     "discord": "@joshywatt"
-  },
-  {
-    "fullName": "Mark Gaballa",
-    "picture": "mark-gaballa.webp",
-    "positions": {
-      "S26": [
-        {
-          "title": "Open Source Officer",
-          "tier": 33
-        }
-      ],
-      "F26": [
-        {
-          "title": "Webmaster",
-          "tier": 2
-        },
-        {
-          "title": "Open Source Co-TL",
-          "tier": 33
-        }
-      ]
-    },
-    "discord": "@gaballa."
   },
   {
     "fullName": "Isamaliya Tirth Vipulbhai",
