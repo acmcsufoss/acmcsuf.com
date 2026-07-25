@@ -8,21 +8,20 @@
   /** Teams to display as navigation icons (in order). */
   const NAV_TEAMS = TEAMS_JSON.filter((t) => t.id);
 
-  $: isVisible = (teamId: string) =>
-    isTeamVisibleForTerm(teamId, term, OFFICERS_JSON, TEAMS[teamId]?.tiers);
+  $: visibleTeams = NAV_TEAMS.filter((team) =>
+    isTeamVisibleForTerm(team.id, term, OFFICERS_JSON, TEAMS[team.id]?.tiers)
+  );
 </script>
 
 <section class="team-container">
   <div class="team-icons-inner-container">
-    {#each NAV_TEAMS as team (team.id)}
-      {#if isVisible(team.id)}
-        <div class="icon">
-          <a href={`#${team.id}`} class={team.id}>
-            <img src={team.logoSrc} alt={`${team.id}-logo`} width="125px" height="125px" />
-          </a>
-          <p class="acm-heaviest">{team.title}</p>
-        </div>
-      {/if}
+    {#each visibleTeams as team (team.id)}
+      <div class="icon">
+        <a href={`#${team.id}`} class={team.id}>
+          <img src={team.logoSrc} alt={`${team.id}-logo`} width="125px" height="125px" />
+        </a>
+        <p class="acm-heaviest">{team.title}</p>
+      </div>
     {/each}
   </div>
 </section>

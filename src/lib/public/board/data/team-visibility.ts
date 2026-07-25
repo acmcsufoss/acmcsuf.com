@@ -45,9 +45,9 @@ const TERM_RESTRICTED_TEAMS: Record<string, Term[]> = {
  *
  * A team is hidden when:
  * - It has no members for the term AND is not a permanent team (ex: Special Events)
- * 
+ *
  * OR
- * 
+ *
  * - It has a term restriction list and the current term is not in it. (ex: Game Dev)
  */
 export function isTeamVisibleForTerm(
