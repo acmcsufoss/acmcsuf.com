@@ -5,9 +5,9 @@
 
   export let term: Term;
 
-  /** Teams to display as navigation icons (in order). */
-  const NAV_TEAMS = TEAMS_JSON.filter((t) => t.id);
+  const NAV_TEAMS = TEAMS_JSON;
 
+  /** Teams to display as navigation icons (in order). */
   $: visibleTeams = NAV_TEAMS.filter((team) =>
     isTeamVisibleForTerm(team.id, term, OFFICERS_JSON, TEAMS[team.id]?.tiers)
   );
