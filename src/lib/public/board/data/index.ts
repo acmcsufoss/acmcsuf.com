@@ -3,4 +3,5 @@ export { default as OFFICERS_JSON } from './officers.json' assert { type: 'json'
 export { default as TEAMS_JSON } from './teams.json' assert { type: 'json' };
 
 export * from './teams';
+export * from './team-visibility';
 export * from './terms';

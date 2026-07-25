@@ -1,6 +1,6 @@
 <script lang="ts">
   import type { Team } from '$lib/public/board/types';
-  import { OFFICERS_JSON } from '$lib/public/board/data';
+  import { OFFICERS_JSON, isTeamVisibleForTerm } from '$lib/public/board/data';
   import { Term, getMembers } from '$lib/public/board';
   import Members from './members.svelte';
 
@@ -10,31 +10,9 @@
   $: members = getMembers(OFFICERS_JSON, term, info?.tiers ?? []);
 
   const generalLogoNoPreference = '/assets/general-logo.gif';
-  const permanentTeamIDs = ['general', 'icpc', 'oss'];
   const oldTerms = [Term.Fall21, Term.Spring21, Term.Spring22];
-  const nodebudsTerms = [
-    Term.Fall21,
-    Term.Spring21,
-    Term.Spring22,
-    Term.Fall24,
-    Term.Spring25,
-    Term.Fall25,
-    Term.Spring26,
-    Term.Fall26,
-  ];
-  const gamedevTerms = [
-    Term.Spring23,
-    Term.Fall23,
-    Term.Spring24,
-    Term.Fall24,
-    Term.Spring25,
-    Term.Fall25,
-    Term.Spring26,
-  ];
-  $: skip =
-    (members.length === 0 && !permanentTeamIDs.includes(info?.id)) ||
-    (info?.id === 'nodebuds' && !nodebudsTerms.includes(term)) ||
-    (info?.id === 'gamedev' && !gamedevTerms.includes(term));
+
+  $: skip = !isTeamVisibleForTerm(info?.id, term, OFFICERS_JSON, info?.tiers);
 </script>
 
 {#if !skip}
