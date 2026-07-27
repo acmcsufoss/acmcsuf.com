@@ -39,7 +39,11 @@ import { execSync } from 'child_process';
 
 // Tier mapping
 function mapTier(tiers, tier) {
-  return tiers[upperFirstLetters(tier)].id;
+  try {
+    return tiers[upperFirstLetters(tier)].id;
+  } catch {
+    return undefined;
+  }
 }
 
 async function viewDiff() {
@@ -59,17 +63,17 @@ function findOfficer(boardOfficers, name) {
 async function editOfficer(officers, tiers) {
   const lookfor = await readInput('What officer do you want to edit/add? ');
   let officer = await findOfficer(officers, lookfor);
+  let ifNew = false;
   if (!officer) {
+    ifNew = true;
     console.log('Unable to locate ', lookfor, '. Making new officer');
 
     officer = {
       fullName: upperFirstLetters(lookfor),
       picture: '',
-      discord: '',
       positions: {},
+      discord: '',
     };
-
-    officers.push(officer);
   }
 
   // Gaballa, why are you switching between string literal and template literal?
@@ -137,6 +141,14 @@ async function editOfficer(officers, tiers) {
         break;
       }
 
+      const tier = mapTier(tiers, title);
+      if (tier == undefined) {
+        console.log(
+          'Bad Title, please check the spelling and try again [Can be found in src/lib/public/board/data/tiers]'
+        );
+        continue;
+      }
+
       officer.positions[term].push({
         title: upperFirstLetters(title),
         tier: mapTier(tiers, title),
@@ -150,6 +162,9 @@ async function editOfficer(officers, tiers) {
   while (true) {
     const confirmation = (await readInput('Are you okay with these changes? [y/n] ')).toLowerCase();
     if (confirmation === 'yes' || confirmation === 'y') {
+      if (ifNew) {
+        officers.push(officer);
+      }
       writeToCopy(JSON.stringify(officers, null, 2));
       return officers;
     }

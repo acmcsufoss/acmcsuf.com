@@ -6,7 +6,8 @@
     { title: 'Algo Team', src: '/assets/badge-algo.svg', href: '/teams#algo' },
     { title: 'Design Team', src: '/assets/badge-design.svg', href: '/teams#design' },
     { title: 'Dev Team', src: '/assets/badge-dev.svg', href: '/teams#dev' },
-    { title: 'Game Dev Team', src: '/assets/badge-gamedev.svg', href: '/teams#gamedev' },
+    /** note: the last gamedev semester was spring 26 as of this commit */
+    { title: 'Game Dev Team', src: '/assets/badge-gamedev.svg', href: '/teams?term=S26#gamedev' },
     { title: 'ICPC Team', src: '/assets/badge-icpc.svg', href: '/teams#icpc' },
     { title: 'Marketing Team', src: '/assets/badge-marketing.svg', href: '/teams#marketing' },
     { title: 'Node Buds Team', src: '/assets/badge-node-buds.svg', href: '/teams#nodebuds' },

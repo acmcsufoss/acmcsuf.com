@@ -22,6 +22,12 @@
           "title": "Open Source Co-TL",
           "tier": 33
         }
+      ],
+      "F26": [
+        {
+          "title": "President",
+          "tier": 0
+        }
       ]
     },
     "discord": "@diane11a"
@@ -68,6 +74,29 @@
       ]
     },
     "discord": "@semsema"
+  },
+  {
+    "fullName": "Mark Gaballa",
+    "picture": "mark-gaballa.webp",
+    "positions": {
+      "S26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
+      ],
+      "F26": [
+        {
+          "title": "Webmaster",
+          "tier": 2
+        },
+        {
+          "title": "Open Source Co-TL",
+          "tier": 33
+        }
+      ]
+    },
+    "discord": "@gaballa."
   },
   {
     "fullName": "Armanul Ambia",
@@ -1026,6 +1055,16 @@
         {
           "title": "Open Source Team Lead",
           "tier": 32
+        }
+      ],
+      "F26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        },
+        {
+          "title": "Event Coordinator",
+          "tier": 6
         }
       ]
     },
@@ -2891,6 +2930,20 @@
           "title": "Dev Officer",
           "tier": 19
         }
+      ],
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
+        },
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        },
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
       ]
     },
     "discord": "@kenny8092"
@@ -3205,6 +3258,12 @@
           "title": "Open Source Officer",
           "tier": 33
         }
+      ],
+      "F26": [
+        {
+          "title": "Open Source Team Lead",
+          "tier": 32
+        }
       ]
     },
     "discord": "@thejolman"
@@ -3444,6 +3503,16 @@
           "title": "Design Officer",
           "tier": 16
         }
+      ],
+      "F26": [
+        {
+          "title": "Marketing Team Lead",
+          "tier": 8
+        },
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
       ]
     },
     "discord": "@qasple"
@@ -3526,6 +3595,16 @@
           "title": "Event Coordinator",
           "tier": 6
         }
+      ],
+      "F26": [
+        {
+          "title": "Event Coordinator",
+          "tier": 6
+        },
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
       ]
     },
     "discord": "@lalalaliz"
@@ -3580,6 +3659,12 @@
           "title": "Marketing Officer",
           "tier": 9
         }
+      ],
+      "F26": [
+        {
+          "title": "Design Team Lead",
+          "tier": 13
+        }
       ]
     },
     "discord": "@sofa.gui9702"
@@ -3618,6 +3703,20 @@
           "title": "Dev Team Lead",
           "tier": 17
         }
+      ],
+      "F26": [
+        {
+          "title": "Treasurer",
+          "tier": 4
+        },
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        },
+        {
+          "title": "Marketing Officer",
+          "tier": 9
+        }
       ]
     },
     "discord": "@8ab1ker"
@@ -3645,6 +3744,16 @@
           "title": "Open Source Officer",
           "tier": 33
         }
+      ],
+      "F26": [
+        {
+          "title": "Node Buds Co-Team Lead",
+          "tier": 36
+        },
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
       ]
     },
     "discord": "@beeemi"
@@ -3662,6 +3771,12 @@
           "title": "Marketing Officer",
           "tier": 9
         }
+      ],
+      "F26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
       ]
     },
     "discord": "@steezyprogrammer"
@@ -3677,6 +3792,12 @@
         }
       ],
       "S26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
+      ],
+      "F26": [
         {
           "title": "Algo Officer",
           "tier": 12
@@ -3708,6 +3829,16 @@
           "title": "Marketing Officer",
           "tier": 9
         }
+      ],
+      "F26": [
+        {
+          "title": "Vice President",
+          "tier": 1
+        },
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
       ]
     },
     "discord": "@yuriko.lpz"
@@ -3734,6 +3865,16 @@
         {
           "title": "Marketing Officer",
           "tier": 9
+        }
+      ],
+      "F26": [
+        {
+          "title": "Marketing Officer",
+          "tier": 9
+        },
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
         }
       ]
     },
@@ -3769,6 +3910,12 @@
         }
       ],
       "S26": [
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        }
+      ],
+      "F26": [
         {
           "title": "Dev Officer",
           "tier": 19
@@ -3811,6 +3958,12 @@
         {
           "title": "Marketing Officer",
           "tier": 9
+        }
+      ],
+      "F26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
         }
       ]
     },
@@ -3926,6 +4079,12 @@
           "title": "AI Officer",
           "tier": 21
         }
+      ],
+      "F26": [
+        {
+          "title": "AI Team Lead",
+          "tier": 20
+        }
       ]
     },
     "discord": "@53np41_jaeger.00"
@@ -3978,6 +4137,12 @@
           "title": "Game Dev Officer",
           "tier": 23
         }
+      ],
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
+        }
       ]
     },
     "discord": "@biryani23"
@@ -4019,19 +4184,6 @@
     "discord": "@joshywatt"
   },
   {
-    "fullName": "Mark Gaballa",
-    "picture": "placeholder.webp",
-    "positions": {
-      "S26": [
-        {
-          "title": "Open Source Officer",
-          "tier": 33
-        }
-      ]
-    },
-    "discord": "@gaballa."
-  },
-  {
     "fullName": "Isamaliya Tirth Vipulbhai",
     "picture": "isamaliya-tirth-vipulbhai.webp",
     "positions": {
@@ -4066,6 +4218,12 @@
           "title": "Algo Officer",
           "tier": 12
         }
+      ],
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
       ]
     },
     "discord": "@acepainter"
@@ -4075,6 +4233,12 @@
     "picture": "placeholder.webp",
     "positions": {
       "S26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
+      ],
+      "F26": [
         {
           "title": "Algo Officer",
           "tier": 12
@@ -4092,6 +4256,12 @@
           "title": "Algo Officer",
           "tier": 12
         }
+      ],
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
       ]
     },
     "discord": "@jerrycompiled"
@@ -4104,6 +4274,12 @@
         {
           "title": "Algo Officer",
           "tier": 12
+        }
+      ],
+      "F26": [
+        {
+          "title": "Algo Team Lead",
+          "tier": 11
         }
       ]
     },
@@ -4131,13 +4307,19 @@
           "title": "Dev Officer",
           "tier": 19
         }
+      ],
+      "F26": [
+        {
+          "title": "Dev Team Lead",
+          "tier": 17
+        }
       ]
     },
     "discord": "@xiaowidebao"
   },
   {
     "fullName": "Samson Du",
-    "picture": "placeholder.webp",
+    "picture": "samson-du.webp",
     "positions": {
       "S26": [
         {
@@ -4148,18 +4330,34 @@
           "title": "Node Buds Officer",
           "tier": 26
         }
+      ],
+      "F26": [
+        {
+          "title": "Node Buds Team Lead",
+          "tier": 34
+        }
       ]
     },
     "discord": "@samson.duu"
   },
   {
     "fullName": "Brian Hlonggul",
-    "picture": "placeholder.webp",
+    "picture": "brian-hlonggul.webp",
     "positions": {
       "S26": [
         {
           "title": "Node Buds Officer",
           "tier": 26
+        }
+      ],
+      "F26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        },
+        {
+          "title": "Open Source Officer",
+          "tier": 33
         }
       ]
     },
@@ -4167,9 +4365,15 @@
   },
   {
     "fullName": "Kevin Fuentes",
-    "picture": "placeholder.webp",
+    "picture": "kevin-fuentes.webp",
     "positions": {
       "S26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        }
+      ],
+      "F26": [
         {
           "title": "Node Buds Officer",
           "tier": 26
@@ -4187,8 +4391,126 @@
           "title": "Open Source Officer",
           "tier": 33
         }
+      ],
+      "F26": [
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
       ]
     },
     "discord": "@farmerakh"
+  },
+  {
+    "fullName": "Michelle Pineda",
+    "picture": "michelle-pineda.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Secretary",
+          "tier": 5
+        }
+      ]
+    },
+    "discord": "@michelletz"
+  },
+  {
+    "fullName": "Kevin Do",
+    "picture": "placeholder.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        }
+      ]
+    },
+    "discord": "@cryocial"
+  },
+  {
+    "fullName": "Chisom Okonkwo",
+    "picture": "chisom-okonkwo.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Design Officer",
+          "tier": 16
+        }
+      ]
+    },
+    "discord": "@chip_06"
+  },
+  {
+    "fullName": "Cody Le",
+    "picture": "cody-le.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Node Buds Officer",
+          "tier": 26
+        },
+        {
+          "title": "Open Source Officer",
+          "tier": 33
+        }
+      ]
+    },
+    "discord": "@joosbananas"
+  },
+  {
+    "fullName": "Jared Anastacio Ferrer",
+    "picture": "jared-anastacio-ferrer.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Dev Officer",
+          "tier": 19
+        }
+      ]
+    },
+    "discord": "@jxred_17"
+  },
+  {
+    "fullName": "Taymas Nguyen",
+    "picture": "taymas-nguyen.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "Algo Officer",
+          "tier": 12
+        }
+      ]
+    },
+    "discord": "@main12345__"
+  },
+  {
+    "fullName": "Esteban Maldonado",
+    "picture": "placeholder.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
+        }
+      ]
+    },
+    "discord": "@esteban.m_1"
+  },
+  {
+    "fullName": "Tania Rivera",
+    "picture": "tania-rivera.webp",
+    "positions": {
+      "F26": [
+        {
+          "title": "AI Officer",
+          "tier": 21
+        },
+        {
+          "title": "Design Officer",
+          "tier": 16
+        }
+      ]
+    },
+    "discord": "@thetunasalad"
   }
 ]
