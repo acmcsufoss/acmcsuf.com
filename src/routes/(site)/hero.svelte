@@ -12,7 +12,7 @@
     { title: 'Open Source Team', src: '/assets/badge-open-source.svg', href: '/teams#oss' },
   ];
 
-  const angle = 360/badges.length
+  const angle = 360 / badges.length;
 </script>
 
 <section class="hero-container">
@@ -38,7 +38,7 @@
 
       {#each badges as badge, i (i)}
         <div class="orbit" style="--i:{i}; --angle:{angle}deg">
-        <a title={badge.title} href={badge.href} data-sveltekit-reload>
+          <a title={badge.title} href={badge.href} data-sveltekit-reload>
             <img src={badge.src} alt="{badge.title} Badge" />
           </a>
         </div>
@@ -127,16 +127,16 @@
     transform: translate(-50%, -50%);
   }
 
-  <!-- 
-  This is how the badges are rotated:
-  For each badge we multiply its index with the angle it should be at (360/amount of teams active))
-  Then we translate it with the size of the radius
-  Each badge is then rotated inversely because they would all be spinning on their own otherwise.
-  -->
+  /*
+   This is how the badges are rotated:
+   For each badge we multiply its index with the angle it should be at (360/amount of teams active))
+   Then we translate it with the size of the radius
+   Each badge is then rotated inversely because they would all be spinning on their own otherwise.
+  */
   @keyframes spin {
     0% {
-      transform: rotate(calc(var(--i) * var(--angle) )) translate(var(--radius))
-      rotate(calc(-1 * var(--i) * var(--angle)));
+      transform: rotate(calc(var(--i) * var(--angle))) translate(var(--radius))
+        rotate(calc(-1 * var(--i) * var(--angle)));
     }
     100% {
       transform: rotate(calc(var(--i) * var(--angle) + 360deg)) translate(var(--radius))
@@ -185,6 +185,7 @@
       height: 0;
     }
 
+    /* Refer to above comment */
     @keyframes spin {
       0% {
         transform: rotate(calc(var(--i) * var(--angle))) translate(var(--radius))
