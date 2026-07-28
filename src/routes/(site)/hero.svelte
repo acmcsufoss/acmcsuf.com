@@ -6,13 +6,13 @@
     { title: 'Algo Team', src: '/assets/badge-algo.svg', href: '/teams#algo' },
     { title: 'Design Team', src: '/assets/badge-design.svg', href: '/teams#design' },
     { title: 'Dev Team', src: '/assets/badge-dev.svg', href: '/teams#dev' },
-    /** note: the last gamedev semester was spring 26 as of this commit */
-    { title: 'Game Dev Team', src: '/assets/badge-gamedev.svg', href: '/teams?term=S26#gamedev' },
     { title: 'ICPC Team', src: '/assets/badge-icpc.svg', href: '/teams#icpc' },
     { title: 'Marketing Team', src: '/assets/badge-marketing.svg', href: '/teams#marketing' },
     { title: 'Node Buds Team', src: '/assets/badge-node-buds.svg', href: '/teams#nodebuds' },
     { title: 'Open Source Team', src: '/assets/badge-open-source.svg', href: '/teams#oss' },
   ];
+
+  const angle = 360/badges.length
 </script>
 
 <section class="hero-container">
@@ -37,8 +37,8 @@
       </div>
 
       {#each badges as badge, i (i)}
-        <div class="orbit" style="--i:{i}">
-          <a title={badge.title} href={badge.href} data-sveltekit-reload>
+        <div class="orbit" style="--i:{i}; --angle:{angle}deg">
+        <a title={badge.title} href={badge.href} data-sveltekit-reload>
             <img src={badge.src} alt="{badge.title} Badge" />
           </a>
         </div>
@@ -127,14 +127,20 @@
     transform: translate(-50%, -50%);
   }
 
+  <!-- 
+  This is how the badges are rotated:
+  For each badge we multiply its index with the angle it should be at (360/amount of teams active))
+  Then we translate it with the size of the radius
+  Each badge is then rotated inversely because they would all be spinning on their own otherwise.
+  -->
   @keyframes spin {
     0% {
-      transform: rotate(calc(var(--i) * 36deg)) translate(var(--radius))
-        rotate(calc(-1 * var(--i) * 36deg));
+      transform: rotate(calc(var(--i) * var(--angle) )) translate(var(--radius))
+      rotate(calc(-1 * var(--i) * var(--angle)));
     }
     100% {
-      transform: rotate(calc(var(--i) * 36deg + 360deg)) translate(var(--radius))
-        rotate(calc(-1 * (var(--i) * 36deg + 360deg)));
+      transform: rotate(calc(var(--i) * var(--angle) + 360deg)) translate(var(--radius))
+        rotate(calc(-1 * (var(--i) * var(--angle) + 360deg)));
     }
   }
 
@@ -181,13 +187,13 @@
 
     @keyframes spin {
       0% {
-        transform: rotate(calc(var(--i) * 36deg)) translate(var(--radius))
-          rotate(calc(var(--i) * -36deg));
+        transform: rotate(calc(var(--i) * var(--angle))) translate(var(--radius))
+          rotate(calc(var(--i) * (-1) * var(--angle)));
       }
 
       100% {
-        transform: rotate(calc(var(--i) * 36deg + 360deg)) translate(var(--radius))
-          rotate(calc((var(--i) * -36deg) - 360deg));
+        transform: rotate(calc(var(--i) * var(--angle) + 360deg)) translate(var(--radius))
+          rotate(calc((var(--i) * (-1) * var(--angle)) - 360deg));
       }
     }
   }
