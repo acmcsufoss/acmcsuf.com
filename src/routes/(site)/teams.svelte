@@ -66,16 +66,6 @@
           >
         </div>
       </div>
-      <!-- Game Dev Header-->
-      <div>
-        <a href="/teams#gamedev"><img src="/assets/gamedev-logo.svg" alt="Game Dev Team Badge" /></a
-        >
-        <div class="size-md acm-heavy hero-text">
-          <span
-            >Level up your game development skills at the <span class="acm-red">Game Dev</span> hub</span
-          >
-        </div>
-      </div>
       <!--ICPC Header-->
       <div>
         <a href="/teams#icpc"><img src="/assets/icpc-logo.svg" alt="ICPC Team Badge" /></a>
@@ -166,27 +156,14 @@
     }
   }
 
-  @media screen and (min-width: 640px) {
-    section .team-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 2em;
-    }
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
   }
 
-  @media screen and (min-width: 768px) {
-    section .team-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 2em;
-    }
-  }
-
-  @media screen and (min-width: 1024px) {
-    section .team-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr 1fr;
-      gap: 2em;
-    }
+  .team-container > div {
+    width: 220px;
   }
 </style>
