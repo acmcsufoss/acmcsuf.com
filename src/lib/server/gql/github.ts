@@ -17,11 +17,16 @@ export async function doQuery<T>(query: string): Promise<T> {
     throw new Error(`GitHub query failed: ${r.status} ${r.statusText}`);
   }
 
-  // A failed query responds with an errors array and no data.
   const body = await r.json();
-  if (!body.data) {
+
+  if (!body) {
+    throw new Error(`GitHub query failed: no body returned`);
+  }
+
+  // A failed query responds with an errors array we handle.
+  if (body.errors && body.errors.length > 0) {
     const reason = body.errors?.map((e: { message: string }) => e.message).join('; ');
-    throw new Error(`GitHub query failed: ${reason ?? body.message ?? 'no data returned'}`);
+    throw new Error(`GitHub query failed: ${reason}`);
   }
 
   return body.data as T;
