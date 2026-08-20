@@ -9,6 +9,7 @@
     Party: '🎉',
     Neon: '💜',
     Space: '🚀',
+    'Under the Sea': '🌊',
   };
   $: themeEmoji = themeEmojiMap[data.theme] || '🎭';
 </script>

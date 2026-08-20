@@ -67,4 +67,16 @@ export default [
       { name: 'Sama Ahmed', picture: '/people/sama-ahmed.webp' },
     ],
   },
+  {
+    id: 'fullyhacks2026',
+    title: 'FullyHacks 2026',
+    date: 'April 2026',
+    location: 'California State University, Fullerton',
+    theme: 'Under the Sea',
+    description: 'TODO',
+    directors: [
+      { name: 'Max Rivas', picture: '/people/max-rivas.webp' },
+      { name: 'Mark Ryan Garcia', picture: '/people/mark-ryan-garcia.webp' },
+    ],
+  },
 ] as const satisfies Hackathon[];
