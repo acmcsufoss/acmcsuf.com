@@ -25,7 +25,7 @@ export async function doQuery<T>(query: string): Promise<T> {
 
   // A failed query responds with an errors array we handle.
   if (body.errors && body.errors.length > 0) {
-    const reason = body.errors?.map((e: { message: string }) => e.message).join('; ');
+    const reason = body.errors.map((e: { message: string }) => e.message).join('; ');
     throw new Error(`GitHub query failed: ${reason}`);
   }
 
