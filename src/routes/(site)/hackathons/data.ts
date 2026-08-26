@@ -67,4 +67,17 @@ export default [
       { name: 'Sama Ahmed', picture: '/people/sama-ahmed.webp' },
     ],
   },
+  {
+    id: 'fullyhacks2026',
+    title: 'FullyHacks 2026',
+    date: 'April 2026',
+    location: 'California State University, Fullerton',
+    theme: 'Under the Sea',
+    description:
+      'Back in the CS Building for another 24 hours, FullyHacks 2026 attracted over 380 applicants and 185 hackers, with 60 project submissions, 11 judges, and workshops led by OpenAI, Figma, Esri, and Human Delta.',
+    directors: [
+      { name: 'Max Rivas', picture: '/people/max-rivas.webp' },
+      { name: 'Mark Ryan Garcia', picture: '/people/mark-ryan-garcia.webp' },
+    ],
+  },
 ] as const satisfies Hackathon[];
