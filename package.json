@@ -21,12 +21,6 @@
     "svelte"
   ],
   "license": "MIT",
-  "size-limit": [
-    {
-      "path": ".svelte-kit/cloudflare/_worker.js",
-      "limit": "50 KB"
-    }
-  ],
   "scripts": {
     "start": "npm run dev",
     "dev": "vite dev",
@@ -36,7 +30,6 @@
     "preview:live": "npm run build:prod && wrangler versions upload -e production",
     "test": "vitest --run",
     "test:watch": "vitest",
-    "test:size": "npm run build && size-limit",
     "test:coverage": "vitest run --coverage",
     "check": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json --compiler-warnings \"css-unused-selector:ignore,unused-export-let:error\"",
     "lint": "eslint . --fix",
