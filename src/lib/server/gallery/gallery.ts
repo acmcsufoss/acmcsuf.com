@@ -7,12 +7,10 @@ export async function getGallery(): Promise<Gallery> {
   const files = await listFiles(drive, GDRIVE_GALLERY_FOLDER_ID);
   return files
     .filter((file) => file.mimeType?.startsWith('image/'))
-    .map(
-      (file): GalleryItem => ({
-        id: String(file.id),
-        webContentLink: String(file.webContentLink),
-        mimeType: String(file.mimeType),
-        name: String(file.name),
-      })
-    );
+    .map((file): GalleryItem => ({
+      id: String(file.id),
+      webContentLink: String(file.webContentLink),
+      mimeType: String(file.mimeType),
+      name: String(file.name),
+    }));
 }

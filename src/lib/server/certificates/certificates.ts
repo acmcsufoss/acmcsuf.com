@@ -33,18 +33,16 @@ async function getPRs(q: PRsQuery): Promise<PR[]> {
   while (limit--) {
     const prResponse = await doQuery<PRsResponse>(makePRsQuery(q));
     prs.push(
-      ...prResponse.search.edges.map(
-        (edge): PR => ({
-          mergedAt: edge.node.mergedAt,
-          title: edge.node.title,
-          number: edge.node.number,
-          url: edge.node.url,
-          commits: edge.node.commits.edges.map((edge) => ({
-            message: edge.node.commit.message,
-            url: edge.node.commit.url,
-          })),
-        })
-      )
+      ...prResponse.search.edges.map((edge): PR => ({
+        mergedAt: edge.node.mergedAt,
+        title: edge.node.title,
+        number: edge.node.number,
+        url: edge.node.url,
+        commits: edge.node.commits.edges.map((edge) => ({
+          message: edge.node.commit.message,
+          url: edge.node.commit.url,
+        })),
+      }))
     );
 
     // Check if there are more pages of pull requests.
@@ -72,14 +70,12 @@ export async function getIssues(q: IssuesQuery): Promise<Issue[]> {
   while (limit--) {
     const issueResponse = await doQuery<IssuesResponse>(makeIssuesQuery(q));
     issues.push(
-      ...issueResponse.search.edges.map(
-        (edge): Issue => ({
-          openedAt: edge.node.createdAt,
-          title: edge.node.title,
-          number: edge.node.number,
-          url: edge.node.url,
-        })
-      )
+      ...issueResponse.search.edges.map((edge): Issue => ({
+        openedAt: edge.node.createdAt,
+        title: edge.node.title,
+        number: edge.node.number,
+        url: edge.node.url,
+      }))
     );
 
     // Check if there are more pages of issues.
