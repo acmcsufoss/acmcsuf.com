@@ -14,7 +14,7 @@
   let index = 0;
 
   let responses: (QuizResponse | undefined)[] = [];
-  let answeredAllQuestions = false;
+  let answeredAllQuestions: boolean;
 
   let showResults = false;
   let showMoreInfo = false;
