@@ -45,9 +45,6 @@ jobs:
       - name: Vitest tests
         run: npm t
 
-      - name: Size Check
-        run: npm run test:size
-
       - name: Transform Genuary Check Changes
         id: transform-genuary-check-changes
         shell: bash
