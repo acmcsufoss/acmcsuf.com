@@ -1,14 +1,6 @@
 export type semesters = 'fa24' | 'sp25' | 'fa25' | 'sp26';
 export type teams =
-  | 'ai'
-  | 'algo'
-  | 'design'
-  | 'dev'
-  | 'gamedev'
-  | 'general'
-  | 'icpc'
-  | 'nodebuds'
-  | 'oss';
+  'ai' | 'algo' | 'design' | 'dev' | 'gamedev' | 'general' | 'icpc' | 'nodebuds' | 'oss';
 
 // Semester shortcut, in the case of f25 -> fa25
 const sSc = new Map<string, string>();
