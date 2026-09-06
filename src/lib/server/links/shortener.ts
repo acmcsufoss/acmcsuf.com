@@ -13,7 +13,6 @@ export function shortener(): Handle {
     try {
       const url = new URL(event.request.url);
 
-      // Pass to QR code generation endpoint.
       if (url.pathname.toLowerCase().endsWith('.svg')) {
         return resolve(event);
       }
@@ -28,11 +27,9 @@ export function shortener(): Handle {
       }
 
       const destination = new URL(location, shortlinkURL);
-      // Match the old resolver: request query parameters override the link's defaults.
-      mergeSearchParams(destination, url);
+      mergeSearchParams(destination, url);  // request query parameters override the link's defaults.
       return Response.redirect(destination, response.status);
     } catch {
-      // The site must remain available if the shortlink service is unavailable.
       return resolve(event);
     }
   };
