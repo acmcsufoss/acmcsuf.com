@@ -4,7 +4,7 @@
 declare module 'svelte-confetti' {
   import { SvelteComponentTyped } from 'svelte';
 
-  declare const __propDef: {
+  const __propDef: {
     props: {
       /**
        * The max size in pixels of the individual confetti pieces.

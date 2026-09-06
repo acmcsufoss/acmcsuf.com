@@ -77,9 +77,9 @@ In the case of this project, our TSConfig is mostly extended from [`@tsconfig/sv
 
 [This file](.eslintrc.cjs) is a file that declares the _linting_ configuration of the project.
 
-## `.prettierrc` and `.prettierignore` 📄
+## `oxfmtrc.jsonc`
 
-[This file](.prettierrc) is a file that declares the _formatting_ configuration of the project.
+[This file](.oxfmtrc) is a file that declares the _formatting_ configuration of the project.
 
 ## `package.json` 📄
 
