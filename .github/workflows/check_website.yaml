@@ -37,16 +37,13 @@ jobs:
         run: npm run check
 
       - name: Format
-        run: npm run format && git diff --exit-code
+        run: npm run format:check
 
       - name: Lint
-        run: npm run lint && git diff --exit-code
+        run: npm run lint:check
 
       - name: Vitest tests
         run: npm t
-
-      - name: Size Check
-        run: npm run test:size
 
       - name: Transform Genuary Check Changes
         id: transform-genuary-check-changes

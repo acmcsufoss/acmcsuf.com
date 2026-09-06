@@ -7,7 +7,7 @@
   export let data: PageData;
 
   const totalSubmissions = Object.keys(data.season?.submissions ?? {}).reduce(
-    (sum, userID) => (sum += Object.keys(data.season?.submissions[userID] ?? {}).length),
+    (sum, userID) => sum + Object.keys(data.season?.submissions[userID] ?? {}).length,
     0
   );
 
