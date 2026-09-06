@@ -1,6 +1,6 @@
 <script lang="ts">
   import Spacing from '$lib/public/legacy/spacing.svelte';
-  import { LINKS } from '$lib/public/links';
+  let { data } = $props();
 </script>
 
 <Spacing --min="175px" --med="200px" --max="200px" />
@@ -15,8 +15,8 @@
       <h1 class="size-lg">Shortlinks</h1>
     </div>
     <p class="acm-heaviest">
-      {#each Object.entries(LINKS) as [pathname, destination] (pathname)}
-        {pathname}: <a href={destination}>{destination}</a>
+      {#each data.links as { slug, url } (slug)}
+        {slug}: <a href={url}>{url}</a>
         <br />
         <br />
       {/each}

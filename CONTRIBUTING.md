@@ -143,9 +143,8 @@ Alternatively board members may update their own board member data using a Disco
 
 ## Updating shortlinks
 
-To update the shortlinks, contributors may directly edit the `src/lib/public/links/links.json` JSON file.
-
-Alternatively, board members may update the shortlinks using a Discord slash command `/shorter` in our official club Discord server. For more information, see <https://acmcsuf.com/shorter-handbook>.
+Shortlinks are managed through the shortlink service at <https://s.acmcsuf.com>. The site uses that
+service for redirects, QR codes, and the shortlink directory.
 
 ## Updating blog posts
 
