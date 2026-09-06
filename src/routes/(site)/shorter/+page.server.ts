@@ -12,7 +12,7 @@ interface ShortlinksResponse {
   result: Shortlink[];
 }
 
-export const load: PageServerLoad = async ({ fetch }) => {
+export async function load({ fetch }: Parameters<PageServerLoad>[0]) {
   const links: Shortlink[] = [];
   let page = 1;
 
@@ -33,4 +33,4 @@ export const load: PageServerLoad = async ({ fetch }) => {
   }
 
   return { links };
-};
+}
