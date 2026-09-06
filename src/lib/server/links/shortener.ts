@@ -27,7 +27,7 @@ export function shortener(): Handle {
       }
 
       const destination = new URL(location, shortlinkURL);
-      mergeSearchParams(destination, url);  // request query parameters override the link's defaults.
+      mergeSearchParams(destination, url); // request query parameters override the link's defaults.
       return Response.redirect(destination, response.status);
     } catch {
       return resolve(event);

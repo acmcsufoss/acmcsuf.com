@@ -24,7 +24,9 @@ test('redirects when the shortlink service resolves the path', async () => {
   expect(response.status).toBe(302);
   expect(resolve).not.toHaveBeenCalled();
   const [requestedURL, options] = vi.mocked(fetch).mock.calls[0];
-  expect(requestedURL.toString()).toBe('https://s.acmcsuf.com/general/workshop?source=request&foo=bar');
+  expect(requestedURL.toString()).toBe(
+    'https://s.acmcsuf.com/general/workshop?source=request&foo=bar'
+  );
   expect(options).toEqual({ redirect: 'manual' });
 });
 
