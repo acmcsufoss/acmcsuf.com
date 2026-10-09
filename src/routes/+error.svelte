@@ -30,8 +30,20 @@
   <div class="container">
     <div class="content-container">
       <div class="text-container">
-        <h1>404</h1>
+        <h1>{$page.status}</h1>
+        {#if $page.status >= 500}
+        <h2>Server Error</h2>
+        {:else if $page.status == 429}
+        <h2>You're asking too much</h2>
+        {:else if $page.status == 413}
+        <h2>That's too much information</h2>
+        {:else if $page.status == 404}
         <h2>Can't find where you're going?</h2>
+        {:else if $page.status == 401}
+        <h2>Unauthorized Access</h2>
+        {:else if $page.status == 400}
+        <h2>Bad Request</h2>
+        {/if}
         <h2 class="gap">Head home!</h2>
         <Button text="Return to Home" link="/" />
       </div>
