@@ -31,18 +31,32 @@
     <div class="content-container">
       <div class="text-container">
         <h1>{$page.status}</h1>
-        {#if $page.status >= 500}
-        <h2>Server Error</h2>
+        {#if $page.status === 505}
+          <h2>Interesting HTTP protocol you got there.</h2>
+        {:else if $page.status === 504}
+          <h2>Your gateway took too long.</h2>
+        {:else if $page.status === 503}
+          <h2>We might be down for maintenance. Check back later!</h2>
+        {:else if $page.status === 502}
+          <h2>Your gateway got on the wrong bus.</h2>
+        {:else if $page.status === 501}
+          <h2>We didn't implement this yet LOL</h2>
+        {:else if $page.status === 500}
+          <h2>Something went wrong on our end..</h2>
         {:else if $page.status == 429}
-        <h2>You're asking too much</h2>
+          <h2>You're asking too much</h2>
         {:else if $page.status == 413}
-        <h2>That's too much information</h2>
-        {:else if $page.status == 404}
-        <h2>Can't find where you're going?</h2>
-        {:else if $page.status == 401}
-        <h2>Unauthorized Access</h2>
-        {:else if $page.status == 400}
-        <h2>Bad Request</h2>
+          <h2>That's too much information</h2>
+        {:else if $page.status === 404}
+          <h2>Can't find where you're going?</h2>
+        {:else if $page.status === 403}
+          <h2>YOU SHALL NOT PASS!!</h2>
+        {:else if $page.status === 402}
+          <h2>Give us your money!</h2>
+        {:else if $page.status === 401}
+          <h2>Sorry, you're not built for this page.</h2>
+        {:else if $page.status === 400}
+          <h2>Your request is in another castle.</h2>
         {/if}
         <h2 class="gap">Head home!</h2>
         <Button text="Return to Home" link="/" />
