@@ -43,6 +43,10 @@
           <h2>We didn't implement this yet LOL</h2>
         {:else if $page.status === 500}
           <h2>Something went wrong on our end..</h2>
+        {:else if $page.status == 429}
+          <h2>You're asking too much</h2>
+        {:else if $page.status == 413}
+          <h2>That's too much information</h2>
         {:else if $page.status === 404}
           <h2>Can't find where you're going?</h2>
         {:else if $page.status === 403}
