@@ -54,6 +54,7 @@ export default [
       'pnpm-lock.yaml',
       'package-lock.json',
       'yarn.lock',
+      'src/lib/components/error-game/js/',
     ],
   },
 ];
