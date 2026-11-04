@@ -51,19 +51,19 @@
 </script>
 
 <svelte:head>
-  <title>Wave 1 board applications | ACM at CSUF</title>
+  <title>2026-2027 Executive Board Positions | ACM at CSUF</title>
 </svelte:head>
 
 <MetaTags
   openGraph={{
-    title: 'Fall 2023 board applications',
+    title: '2026-2027 Executive Board Applications',
     description:
-      'Listed below are the positions that are open for the Fall 2023/Spring 2024 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
+      'Listed below are the positions that are open for the 2026-2027 school year. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one.',
     url: 'https://acmcsuf.com/wave1',
     type: 'article',
     article: {
-      publishedTime: '2023-24-04T00:00:00.000Z',
-      modifiedTime: '2023-24-04T00:00:00.000Z',
+      publishedTime: '2026-04-01T00:00:00.000Z',
+      modifiedTime: '2026-04-01T00:00:00.000Z',
     },
   }}
 />
@@ -71,16 +71,13 @@
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <Block align={TextAlignment.LEFT}>
-  <h1 slot="headline" class="size-lg">Wave 1 board applications</h1>
+  <h1 slot="headline" class="size-lg">2026-2027 Executive Board Positions</h1>
   <p slot="text" class="size-sm">
-    Listed below are the positions that are open for the Fall 2023/Spring 2024 semester (full time
-    position). Please read the descriptions carefully and apply for the position(s) that you are
-    interested in. You may apply for multiple positions, but you may only be selected for one. If
-    you are selected for a position, you will be contacted by the current board member in charge of
-    that position.
-    <br />
-    <br />
-    Last updated April 24th, 2023
+    Listed below are the Executive Board positions that are open for the 2026-2027 school year.
+    Please read the descriptions carefully and apply for the position(s) that you are interested in.
+    You may apply for multiple positions, but you may only be selected for one. Voting will commence
+    after the application deadline and will be open to all ACM members. If you are selected for a
+    position, you will be contacted by the current board member in charge of that position. <br />
     <br />
     <br />
     <span class="center-btn" on:click={action} on:keypress={action} role="button" tabindex="0">
@@ -104,7 +101,7 @@
 <Spacing --med="64px" />
 
 <span class="center-btn">
-  <Button link="/wave1apply" text="Apply now!" />
+  <Button link="https://forms.gle/KQ76h5cXgdmamqjV8" text="Apply now!" />
 </span>
 
 <Spacing --med="64px" />
@@ -113,25 +110,23 @@
   <h1 id="contact-information" slot="headline" class="size-lg">Contact information</h1>
   <div slot="text" class="contact-text">
     <p class="size-sm">
-      <span class="brand-italic"
+      <span class="acm-italic"
         >Feel free to contact the ACM Executive Board if you have questions.</span
       >
     </p>
 
     <p class="size-sm">
-      <span class="brand-em">Karnikaa Velumani (ACM President)</span>
+      <span class="acm-heaviest">Dianella Sy (ACM President)</span>
     </p>
     <ul>
-      <li>Email: <code>karnikaavelumani@csu.fullerton.edu</code></li>
-      <li>Discord: <code>Karbas#0001</code></li>
+      <li>Discord: <code>diane11a</code></li>
     </ul>
 
     <p class="size-sm">
-      <span class="brand-em">Ethan Davidson (ACM VP / Webmaster)</span>
+      <span class="acm-heaviest">Yuriko Ysique (ACM VP)</span>
     </p>
     <ul>
-      <li>Email: <code>ethandavidson@csu.fullerton.edu</code></li>
-      <li>Discord: <code>EthanThatOneKid#3456</code></li>
+      <li>Discord: <code>yuriko.lpz</code></li>
     </ul>
   </div>
 </Block>

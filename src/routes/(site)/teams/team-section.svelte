@@ -1,8 +1,7 @@
 <script lang="ts">
   import type { Team } from '$lib/public/board/types';
-  import { OFFICERS_JSON } from '$lib/public/board/data';
+  import { OFFICERS_JSON, isTeamVisibleForTerm } from '$lib/public/board/data';
   import { Term, getMembers } from '$lib/public/board';
-  import DiamondPicture from './diamond-picture.svelte';
   import Members from './members.svelte';
 
   export let info: Team;
@@ -10,20 +9,17 @@
 
   $: members = getMembers(OFFICERS_JSON, term, info?.tiers ?? []);
 
-  const permanentTeamIDs = ['general', 'icpc', 'oss'];
+  const generalLogoNoPreference = '/assets/general-logo.gif';
   const oldTerms = [Term.Fall21, Term.Spring21, Term.Spring22];
-  const nodebudsTerms = [...oldTerms];
-  const gamedevTerms = [Term.Fall23, Term.Spring23];
-  $: skip =
-    (members.length === 0 && !permanentTeamIDs.includes(info?.id)) ||
-    (info?.id === 'nodebuds' && !nodebudsTerms.includes(term)) ||
-    (info?.id === 'gamedev' && !gamedevTerms.includes(term));
+
+  $: skip = !isTeamVisibleForTerm(info?.id, term, OFFICERS_JSON, info?.tiers);
 </script>
 
 {#if !skip}
-  <div class="container">
+  <div class="team-section-container">
     <section
       id={info.id}
+      class="team-section"
       class:marketing-animation={info.id === 'marketing'}
       class:algo-animation={info.id === 'algo'}
       class:design-animation={info.id === 'design'}
@@ -35,22 +31,25 @@
       class:special-events-animation={info.id === 'special-events'}
       class:gamedev-animation={info.id === 'gamedev'}
     >
-      {#if info.id === 'general'}
-        <DiamondPicture
-          src="https://cdn.discordapp.com/icons/710225099923521558/a_f72bf9caa196d84a44ff40cdfd3f8d9a.gif?size=1024"
-          reducedMotionSrc={info.logoSrc}
-          altSrc="General Picture"
-        />
-      {:else}
+      <picture>
+        {#if info.id === 'general'}
+          <source
+            srcset={oldTerms.includes(term)
+              ? (info.oldLogoSrc ?? generalLogoNoPreference)
+              : generalLogoNoPreference}
+            media="(prefers-reduced-motion: no-preference)"
+          />
+        {/if}
+
         <img
-          src={oldTerms.includes(term) ? info.oldLogoSrc ?? info.logoSrc : info.logoSrc}
+          src={oldTerms.includes(term) ? (info.oldLogoSrc ?? info.logoSrc) : info.logoSrc}
           alt={`${info.title} Team Logo`}
         />
-      {/if}
+      </picture>
 
       <div class="team-description">
         <h2>
-          <span class="headers size-lg brand-em">
+          <span class="acm-heavier size-lg acm-heaviest">
             <span style:--font-color={info.color} class="team-title">{info.title}</span>
             Team
           </span>
@@ -64,34 +63,39 @@
 {/if}
 
 <style>
-  .container {
+  .team-section-container {
     display: grid;
+    padding: 1rem 0;
   }
 
-  section {
+  .team-section {
     display: grid;
     grid-template-columns: 1fr;
     margin: 0 1rem;
     scroll-margin-top: 100px;
   }
 
-  section img {
+  .team-section img {
     max-width: clamp(20rem, 17.342rem + 10.13vw, 30rem);
     justify-self: center;
   }
 
-  section .team-title {
+  .team-section picture {
+    text-align: center;
+  }
+
+  .team-section .team-title {
     color: var(--font-color, var(--acm-dark));
   }
 
-  section .team-description {
+  .team-section .team-description {
     display: grid;
     align-items: center;
     text-align: center;
   }
 
   .marketing-animation img {
-    animation-duration: 2s;
+    animation-duration: 1.5s;
     animation-name: portrait-rotate;
     animation-timing-function: cubic-bezier(0.86, 0, 0.07, 1);
     animation-iteration-count: infinite;
@@ -103,7 +107,7 @@
       transform: rotate(0);
     }
     to {
-      transform: rotate(-90deg);
+      transform: rotate(-10deg);
     }
   }
 
@@ -270,22 +274,33 @@
   }
 
   .nodebuds-animation img {
-    animation-duration: 1.8s;
+    animation-duration: 1.2s;
     animation-name: slide;
     animation-iteration-count: infinite;
     animation-direction: alternate;
     position: relative;
+    animation-timing-function: cubic-bezier(0, 0, 0, 0);
   }
 
   @keyframes slide {
     0% {
-      left: -60px;
-      top: 0px;
+      left: -18px;
+    }
+
+    33% {
+      left: -10px;
+    }
+
+    50% {
+      left: 0;
+    }
+
+    66% {
+      left: 10px;
     }
 
     100% {
-      left: 15px;
-      top: 0px;
+      left: 20px;
     }
   }
 
@@ -305,7 +320,7 @@
   }
 
   @media screen and (min-width: 1000px) {
-    section {
+    .team-section {
       grid-template-columns: 1fr 2fr;
       justify-self: center;
       width: 1064px;
@@ -313,22 +328,23 @@
       margin: 0 32px;
     }
 
-    section img {
+    .team-section img {
       margin-left: -32px;
       width: 350px;
     }
 
-    section .team-description {
+    .team-section .team-description {
       text-align: left;
     }
 
-    section .team-description h2 {
+    .team-section .team-description h2 {
       align-self: end;
     }
 
-    :nth-child(even) section {
+    :nth-child(even) .team-section {
       grid-template-columns: 2fr 1fr;
     }
+
     :nth-child(even) .team-description {
       order: -1;
     }

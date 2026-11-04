@@ -79,7 +79,7 @@ async function handleGetReleaseCertificatePageData(username: string, release: st
 
 function makeReleaseCertificateQuery(username: string, release: string) {
   return {
-    // Repository <https://github.com/ethanthatonekid/acmcsuf.com>.
+    // Repository <https://github.com/acmcsufoss/acmcsuf.com>.
     owner: 'EthanThatOneKid',
     name: 'acmcsuf.com',
 

@@ -9,6 +9,12 @@
   import { POSITIONS } from './data';
 
   /**
+   * is_fall is true when it is fall semester
+   * includes secretary and event coordinator positions
+   */
+  let is_fall = true;
+
+  /**
    * positions is the list of position elements.
    */
   let positions: HTMLDialogElement[] | null = null;
@@ -51,36 +57,31 @@
 </script>
 
 <svelte:head>
-  <title>Wave 2 board applications | ACM at CSUF</title>
+  <title>Fall 2026 Board Applications | ACM at CSUF</title>
 </svelte:head>
 
 <MetaTags
   openGraph={{
-    title: 'Fall 2023 board applications',
+    title: 'Fall 2026 board applications',
     description:
-      'Listed below are the positions that are open for the Fall 2023 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
-    url: 'https://acmcsuf.com/wave2',
+      'Listed below are the positions that are open for the Fall 2026 semester. Please read the descriptions carefully and apply for the position(s) that you are interested in. You may apply for multiple positions, but you may only be selected for one. If you are selected for a position, you will be contacted by the current board member in charge of that position.',
     type: 'article',
-    article: {
-      publishedTime: '2023-22-05T00:00:00.000Z',
-      modifiedTime: '2023-22-05T00:00:00.000Z',
-    },
   }}
 />
 
 <Spacing --min="175px" --med="200px" --max="200px" />
 
 <Block align={TextAlignment.LEFT}>
-  <h1 slot="headline" class="size-lg">Wave 2 board applications</h1>
+  <h1 slot="headline" class="size-lg">Fall 2026 Board Positions</h1>
   <p slot="text" class="size-sm">
-    Listed below are the positions that are open for the Fall 2023 semester (semester long
+    Listed below are the positions that are open for the Fall 2026 semester (semester long
     position). Please read the descriptions carefully and apply for the position(s) that you are
     interested in. You may apply for multiple positions, but you may only be selected for one. If
     you are selected for a position, you will be contacted by the current board member in charge of
     that position.
     <br />
     <br />
-    Last updated May 22nd, 2023
+    Last updated May 18, 2026
     <br />
     <br />
     <span class="center-btn" on:click={action} on:keypress={action} role="button" tabindex="0">
@@ -97,14 +98,22 @@
     role="button"
     tabindex="0"
   >
-    <PositionList data={POSITIONS} />
+    {#if is_fall}
+      {#each POSITIONS as position (position.title)}
+        <PositionList data={[position]} />
+      {/each}
+    {:else}
+      {#each POSITIONS.filter((position) => position.title !== 'Secretary' && position.title !== 'Event Coordinator') as position (position.title)}
+        <PositionList data={[position]} />
+      {/each}
+    {/if}
   </div>
 </section>
 
 <Spacing --med="64px" />
 
 <span class="center-btn">
-  <Button link="/wave2apply" text="Apply now!" />
+  <Button link="https://forms.gle/XoUBuSZiJNc3zx3t7" text="Apply now!" />
 </span>
 
 <Spacing --med="64px" />
@@ -113,25 +122,23 @@
   <h1 id="contact-information" slot="headline" class="size-lg">Contact information</h1>
   <div slot="text" class="contact-text">
     <p class="size-sm">
-      <span class="brand-italic"
+      <span class="acm-italic"
         >Feel free to contact the ACM Executive Board if you have questions.</span
       >
     </p>
 
     <p class="size-sm">
-      <span class="brand-em">Karnikaa Velumani (ACM President)</span>
+      <span class="acm-heaviest">Dianella Sy (ACM President)</span>
     </p>
     <ul>
-      <li>Email: <code>karnikaavelumani@csu.fullerton.edu</code></li>
-      <li>Discord: <code>Karbas#0001</code></li>
+      <li>Discord: <code>diane11a</code></li>
     </ul>
 
     <p class="size-sm">
-      <span class="brand-em">Ethan Davidson (ACM VP / Webmaster)</span>
+      <span class="acm-heaviest">Yuriko Ysique (ACM VP)</span>
     </p>
     <ul>
-      <li>Email: <code>ethandavidson@csu.fullerton.edu</code></li>
-      <li>Discord: <code>EthanThatOneKid#3456</code></li>
+      <li>Discord: <code>yuriko.lpz</code></li>
     </ul>
   </div>
 </Block>

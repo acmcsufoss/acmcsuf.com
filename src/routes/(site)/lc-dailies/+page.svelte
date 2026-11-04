@@ -33,12 +33,10 @@
 
   <p>Usage instructions: <a href="/lc-dailies-handbook">acmcsuf.com/lc-dailies-handbook</a></p>
 
-  <p>See our daily O(N)ovember challenge: <a href="/onovember">acmcsuf.com/onovember</a></p>
-
   <h2>Seasons</h2>
 
   <ol>
-    {#each data.seasons as season}
+    {#each data.seasons as season (season.id)}
       <li id={season.id}>
         <a href="/lc-dailies/{season.id}">
           Season {season.id}

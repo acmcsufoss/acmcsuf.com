@@ -13,7 +13,7 @@
 
   <Spacing --min="16px" --med="16px" --max="16px" />
 
-  <h1 class="size-l toplevel-text headers">
+  <h1 class="size-l toplevel-text acm-heavier">
     <a
       class="username"
       href={`https://github.com/${data.user.login}`}
@@ -27,7 +27,7 @@
     {/if}
     in
     <a
-      href={`https://github.com/EthanThatOneKid/acmcsuf.com/releases/tag/${data.to.tagName}`}
+      href={`https://github.com/acmcsufoss/acmcsuf.com/releases/tag/${data.to.tagName}`}
       target="_blank"
       rel="noopener noreferrer">release {data.to.tagName}</a
     >
@@ -63,7 +63,7 @@
             </summary>
 
             <ol>
-              {#each pr.commits as commit}
+              {#each pr.commits as commit (commit.url)}
                 <li>
                   <a href={commit.url} target="_blank" rel="noopener noreferrer">
                     {@html commit.message}
@@ -82,7 +82,7 @@
   <h2 class="size-l toplevel-text">Select a different release:</h2>
 
   <ul class="releases">
-    {#each data.releases as release, i}
+    {#each data.releases as release, i (release.tagName)}
       <li>
         {#if release.tagName === data.to.tagName}
           <b>{release.tagName}</b> ({i === 0 ? 'latest' : 'previous'})

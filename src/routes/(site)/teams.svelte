@@ -12,64 +12,89 @@
         >
       </h1>
     </div>
-    <div class="size-lg brand-med hero-text">
+    <div class="size-lg acm-heavy hero-text">
       <span>We made it easy to focus on what <span class="acm-sky">interests you.</span></span>
       <span>Explore the different <span class="acm-sky">teams</span> you can expect from us.</span>
     </div>
 
-    <div class="team-row1-container">
-      <!--Algo Header-->
-      <div class="hero-inner-container">
-        <img src="/assets/algo-logo.svg" alt="Algo Team Badge" />
-        <div class="size-md brand-med hero-text">
-          <span
-            >Refine your knowledge of <span class="acm-purple">Algorithms</span> used for FAANG interviews</span
-          >
-        </div>
-      </div>
-      <!--Dev Header-->
-      <div class="hero-inner-container">
-        <img src="/assets/dev-logo.svg" alt="Dev Team Badge" />
-        <div class="size-md brand-med hero-text">
-          <span><span class="acm-bluer">Develop</span> semester-long projects to show your mom</span
-          >
-        </div>
-      </div>
-      <!--Design Header-->
-      <div class="hero-inner-container">
-        <img src="/assets/design-logo.svg" alt="Design Team Badge" />
-        <div class="size-md brand-med hero-text">
-          <span
-            >Learn to <span class="acm-pink">Design</span> UI/UX and web development material</span
-          >
-        </div>
-      </div>
-    </div>
-
-    <div class="team-row2-container">
+    <div class="team-container">
       <!--AI Header-->
-      <div class="hero-inner-container">
-        <img src="/assets/ai-logo.svg" alt="AI Team Badge" />
-        <div class="size-md brand-med hero-text">
+      <div>
+        <a href="/teams#ai"><img src="/assets/ai-logo.svg" alt="AI Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
           <span
             >Dive into the world of <span class="acm-emerald">Artificial Intelligence</span></span
           >
         </div>
       </div>
-      <!-- Game Dev -->
-      <div class="hero-inner-container">
-        <img src="/assets/gamedev-logo.svg" alt="Game Dev Team Badge" />
-        <div class="size-md brand-med hero-text">
+
+      <!--Algo Header-->
+      <div>
+        <a href="/teams#algo"><img src="/assets/algo-logo.svg" alt="Algo Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
           <span
-            >Level up your game development skills at the <span class="acm-red">Game Dev</span> hub</span
+            >Refine your knowledge of <span class="acm-purple">Algorithms</span> used for FAANG interviews</span
           >
         </div>
       </div>
-    </div>
 
-    <div class="discover-button">
-      <AcmButton text="Discover more" link="/teams" redirect={true} />
+      <!--Design Header-->
+      <div>
+        <a href="/teams#design"><img src="/assets/design-logo.svg" alt="Design Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
+          <span
+            >Learn to <span class="acm-pink">Design</span> UI/UX and web development material</span
+          >
+        </div>
+      </div>
+
+      <!-- OSS Header-->
+      <div>
+        <a href="/teams#oss"><img src="/assets/oss-logo.svg" alt="OSS Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
+          <span
+            >Take off into the world of collaborative <span class="acm-turquoise">Open Source</span
+            ></span
+          >
+        </div>
+      </div>
+      <!--Dev Header-->
+      <div>
+        <a href="/teams#dev"><img src="/assets/dev-logo.svg" alt="Dev Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
+          <span><span class="acm-bluer">Develop</span> semester-long projects to show your mom</span
+          >
+        </div>
+      </div>
+      <!--ICPC Header-->
+      <div>
+        <a href="/teams#icpc"><img src="/assets/icpc-logo.svg" alt="ICPC Team Badge" /></a>
+        <div class="size-md acm-heavy hero-text">
+          <span
+            >Ready for a challenge? Scratch your competitive itch with the <span class="acm-orange"
+              >ICPC</span
+            > team</span
+          >
+        </div>
+      </div>
+
+      <!-- NodeBuds Header-->
+      <div>
+        <a href="/teams#nodebuds"
+          ><img src="/assets/nodebuds-logo-old.svg" alt="Node Buds Team Badge" /></a
+        >
+        <div class="size-md acm-heavy hero-text">
+          <span
+            >Connect with <span class="acm-red">Node Buds</span> for mentorship, events, and friendships
+            in tech
+          </span>
+        </div>
+      </div>
     </div>
+  </div>
+
+  <div class="discover-button">
+    <AcmButton text="Discover more" link="/teams" redirect={true} />
   </div>
 </section>
 
@@ -97,20 +122,20 @@
     text-align: center;
   }
 
-  section .hero-inner-container .team-row2-container {
-    justify-self: center;
-  }
-
   section .hero-inner-container img {
-    width: 200px;
-    height: 200px;
     display: grid;
-    justify-self: center;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
   }
 
-  section .hero-inner-container .discover-button {
-    display: grid;
-    justify-self: center;
+  section .hero-inner-container img:hover {
+    transform: scale(1.2);
+  }
+
+  section .team-container .hero-text {
+    max-width: 35ch;
+    margin-inline: auto;
   }
 
   @media screen and (min-width: 480px) {
@@ -129,27 +154,16 @@
     section .hero-inner-container .hero-text {
       text-align: start;
     }
-
-    section .hero-inner-container .hero-text .discover-button {
-      justify-self: center;
-    }
   }
 
-  @media screen and (min-width: 768px) {
-    section .hero-inner-container .team-row1-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      align-items: baseline;
-      gap: 2em;
-    }
+  .team-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+  }
 
-    section .hero-inner-container .team-row2-container {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      align-items: baseline;
-      justify-content: center;
-      width: 70ch;
-      gap: 2em;
-    }
+  .team-container > div {
+    width: 220px;
   }
 </style>

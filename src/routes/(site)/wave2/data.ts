@@ -52,21 +52,6 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
     ],
   },
   {
-    title: 'Web Officer',
-    teamColor: 'var(--acm-general-rgb)',
-    qualifications: [
-      li('Passion for web development and open source projects'),
-      li('Open to learning new technologies'),
-      li('Ability to work in a team and to teach others'),
-    ],
-    tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
-    responsibilities: [
-      li('Work closely with the Webmaster to maintain the ACM website and OSS projects'),
-      li('Understand the Git workflow and be able to teach it to others'),
-      li('Attend weekly meetings and provide updates on projects'),
-    ],
-  },
-  {
     title: 'AI Officer',
     teamColor: 'var(--acm-ai-rgb)',
     qualifications: [
@@ -140,7 +125,6 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
         'Attend Dev board meetings, provide essential input and collaborate with the Dev President and other officers'
       ),
       li('Oversee multiple Dev semester projects'),
-      li('Assist and direct students in ACM Open Source Projects'),
       li(
         'Possibility of being tasked to collaborate and participate in events created in partnerships with other ACM branches',
         [
@@ -154,31 +138,31 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       ),
     ],
   },
-  {
-    title: 'Game Dev Officer',
-    teamColor: 'var(--acm-gamedev-rgb)',
-    qualifications: [
-      li('Passion and interest in game development'),
-      li('Strong communication and leadership'),
-      li('Flexibility with skills to assist students in a variety of projects'),
-    ],
-    tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
-    responsibilities: [
-      li(
-        'Attend Game Dev board meetings, provide essential input and collaborate with the Game Dev President and other officers'
-      ),
-      li('Assist and direct students in Game Dev related projects'),
-      li(
-        'Host engaging and interesting biweekly/weekly workshops along with the Design President and Officers'
-      ),
-      li(
-        'Research common game dev techniques to relay this information via workshops and events, and to enhance our chapter'
-      ),
-      li(
-        'Check Discord messages and respond to the important discussion in regards to Dev at least daily'
-      ),
-    ],
-  },
+  // {
+  //   title: 'Game Dev Officer',
+  //   teamColor: 'var(--acm-gamedev-rgb)',
+  //   qualifications: [
+  //     li('Passion and interest in game development'),
+  //     li('Strong communication and leadership'),
+  //     li('Flexibility with skills to assist students in a variety of projects'),
+  //   ],
+  //   tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
+  //   responsibilities: [
+  //     li(
+  //       'Attend Game Dev board meetings, provide essential input and collaborate with the Game Dev President and other officers'
+  //     ),
+  //     li('Assist and direct students in Game Dev related projects'),
+  //     li(
+  //       'Host engaging and interesting biweekly/weekly workshops along with the Design President and Officers'
+  //     ),
+  //     li(
+  //       'Research common game dev techniques to relay this information via workshops and events, and to enhance our chapter'
+  //     ),
+  //     li(
+  //       'Check Discord messages and respond to the important discussion in regards to Game Dev at least daily'
+  //     ),
+  //   ],
+  // },
   {
     title: 'Marketing Officer',
     teamColor: 'var(--acm-marketing-rgb)',
@@ -195,6 +179,42 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Suggest and direct new ideas for the diversification of our club '),
       li('Take pictures of our members to add to our socials and website gallery'),
       li('Produce paragraphs for the announcements in our official Discord server'),
+    ],
+  },
+  {
+    title: 'Node Buds Officer',
+    teamColor: 'var(--acm-nodebuds-rgb)',
+    qualifications: [
+      li('Interest in raising the next generation of ACM members'),
+      li('Interest in dedicating time to befriend and mentor assigned members'),
+      li('Represent and advocate diversity within the club'),
+    ],
+    tools: ['Discord'],
+    responsibilities: [
+      li('Participate in weekly Friday Node Buds meetings'),
+      li("Attend to assigned 'littles' and encourage involvement in ACM"),
+    ],
+  },
+  {
+    title: 'Open Source Officer',
+    teamColor: 'var(--acm-oss-rgb)',
+    qualifications: [
+      li('Interest in open source development and collaboration'),
+      li('Flexibility with skills to develop projects for ACM'),
+      li('Strong communcation and leadership'),
+      li('Ability to manage time effectively and balance responsibilities'),
+    ],
+    tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
+    responsibilities: [
+      li(
+        'Host weekly workshops on topics related to open source development along with the Open Source President and Officers'
+      ),
+      li(
+        'Oversee and assist the development of semester-long open source projects that benefit the ACM community',
+        [li('Research and evaluate relevant technologies used across projects (e.g. SvelteKit)')]
+      ),
+      li('Attend weekly meetings to prepare events, workshops, and discuss progress'),
+      li('Check Discord messages and respond to important Open Source discussions daily'),
     ],
   },
 ];

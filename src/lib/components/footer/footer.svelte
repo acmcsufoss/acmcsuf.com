@@ -1,11 +1,10 @@
 <script lang="ts">
-  import BwIcon from '$lib/components/bw-icon/bw-icon.svelte';
-  import { AcmTheme } from '$lib/public/legacy/theme';
+  import SocialIcon from '$lib/components/social-icon/social-icon.svelte';
 
   const footerItems = [
     { title: 'Source Code', path: '/code' },
     { title: 'Report a Bug', path: '/bug' },
-    { title: 'COVID-19 Policy', path: '/covid-19' },
+    { title: 'Sitemap', path: '/sitemap' },
     { title: 'Privacy Policy', path: '/privacy' },
   ];
 
@@ -15,17 +14,13 @@
 <footer>
   <div class="container">
     <div class="connect">
-      <h3 class="brand-header size-md">Stay connected</h3>
+      <h3 class="acm-heavier size-md">Stay connected</h3>
 
       <ul class="socials">
         {#each socials as socialPath (socialPath)}
           <li>
             <a href={socialPath} target="_blank" rel="noopener noreferrer">
-              <BwIcon
-                src={`/assets${socialPath}.svg`}
-                alt={socialPath.slice(1)}
-                filterOn={[AcmTheme.Dark, AcmTheme.Light]}
-              />
+              <SocialIcon src={`/assets${socialPath}.svg`} alt={socialPath.slice(1)} width={24} />
             </a>
           </li>
         {/each}
@@ -33,13 +28,11 @@
     </div>
 
     <div class="legal">
-      <h3 class="brand-header size-md">
-        &copy; 2023 ACM Chapter at <span class="brand-bold">CSUF</span>
-      </h3>
+      <h3 class="acm-heavier size-md">&copy; 2026 ACM Chapter at CSUF</h3>
 
       <a
         href="mailto:acmcsufullerton@gmail.com"
-        class="brand-med size-sm"
+        class="acm-heavy size-sm"
         target="_blank"
         rel="noopener noreferrer"
         >Get in Touch
@@ -47,12 +40,12 @@
     </div>
 
     <div class="more">
-      <h3 class="brand-header size-md">More from us</h3>
+      <h3 class="acm-heavier size-md">More from us</h3>
 
       <ul class="links">
         {#each footerItems as { title, path } (path)}
           <li>
-            <a href={path} class="brand-med size-sm" target="_blank" rel="noopener noreferrer">
+            <a href={path} class="acm-heavy size-sm" target="_blank" rel="noopener noreferrer">
               {@html title}
             </a>
           </li>
@@ -98,8 +91,7 @@
         flex-direction: column;
         gap: 4px;
 
-        h3,
-        h3 span {
+        h3 {
           color: var(--perma-light);
         }
       }
@@ -110,27 +102,16 @@
 
         .socials {
           display: flex;
+          padding-top: 6px;
           gap: 32px;
 
           a {
             display: flex;
-            padding-top: 6px;
+            --icon-color: #ffffff;
 
             &:hover {
-              & :global(path) {
-                fill: var(--acm-blue);
-              }
+              --icon-color: var(--acm-blue);
             }
-          }
-
-          & :global(svg) {
-            height: 32px;
-            width: auto;
-          }
-
-          & :global(path) {
-            fill: var(--perma-light);
-            transition: 0.25s ease-in-out;
           }
         }
       }

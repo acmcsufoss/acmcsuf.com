@@ -8,6 +8,12 @@ export enum Term {
   Fall22 = 'F22',
   Spring23 = 'S23',
   Fall23 = 'F23',
+  Spring24 = 'S24',
+  Fall24 = 'F24',
+  Spring25 = 'S25',
+  Fall25 = 'F25',
+  Spring26 = 'S26',
+  Fall26 = 'F26',
 }
 
 /**
@@ -27,18 +33,6 @@ export interface Tier {
    * tier. The higher the index, the lower the tier.
    */
   index: number;
-}
-
-/**
- * Social is an enum of optional social media links for an officer.
- */
-export enum Social {
-  Website = 'website',
-  GitHub = 'github',
-  Discord = 'discord',
-  LinkedIn = 'linkedin',
-  Instagram = 'instagram',
-  YouTube = 'youtube',
 }
 
 /**
@@ -70,9 +64,8 @@ export interface Officer {
   positions: {
     [key in Term]?: Position[];
   };
-  socials?: {
-    [key in Social]?: string;
-  };
+  discord?: string;
+  displayName?: string;
 }
 
 /**

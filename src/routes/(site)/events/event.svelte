@@ -34,6 +34,11 @@
     }
     details.open = true;
   });
+
+  function handleClick() {
+    shown = !shown;
+    window.open(info.meetingLink, '_blank', 'noopener,noreferrer');
+  }
 </script>
 
 <div
@@ -45,11 +50,11 @@
   tabindex="0"
 >
   <!-- Workaround for the top panel covering the event card's anchor. -->
-  <div class="anchor" id={info.id} bind:this={anchor} />
+  <div class="anchor" id={info.id} bind:this={anchor}></div>
   <details class="event-card" bind:this={details} class:highlighted={shown} role="region">
     <summary class="event-body">
       <div class="event-name">
-        <h2 class="headers">
+        <h2 class="acm-heavier">
           {info.title}
         </h2>
 
@@ -67,16 +72,7 @@
         </time>
       </p>
 
-      <a
-        class="event-join size-sm"
-        href={info.meetingLink}
-        role="button"
-        target="_blank"
-        rel="noopener noreferrer"
-        on:click={(/* janky hack */) => {
-          shown = !shown;
-        }}>Join</a
-      >
+      <button class="event-join size-sm" on:click={handleClick}> Join </button>
     </summary>
 
     <noscript>

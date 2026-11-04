@@ -1,5 +1,5 @@
 import type { ClubEvent } from '$lib/public/events/event';
-import { Temporal } from '@js-temporal/polyfill';
+import { Temporal } from 'temporal-polyfill';
 import type { GCalEvent } from './gcal';
 
 export function makeClubEvent(event: GCalEvent, refDate: Temporal.ZonedDateTime): ClubEvent | null {
@@ -9,17 +9,14 @@ export function makeClubEvent(event: GCalEvent, refDate: Temporal.ZonedDateTime)
     event.start?.timeZone == undefined ||
     event.start.dateTime == undefined ||
     event.end?.timeZone == undefined ||
-    event.end.dateTime == undefined ||
-    event.description == undefined
+    event.end.dateTime == undefined
   ) {
     return null;
   }
 
-  const dtStart = zonedDateTimeFromGCalDateTime(
-    new Date(event.start.dateTime),
-    refDate.getTimeZone()
-  );
-  const dtEnd = zonedDateTimeFromGCalDateTime(new Date(event.end.dateTime), refDate.getTimeZone());
+  const dtStart = zonedDateTimeFromGCalDateTime(new Date(event.start.dateTime), refDate.timeZoneId);
+
+  const dtEnd = zonedDateTimeFromGCalDateTime(new Date(event.end.dateTime), refDate.timeZoneId);
   const date = dtStart.toString();
   const month = dtStart.toLocaleString('en-US', { month: 'long' });
   const day = dtStart.day;
@@ -34,13 +31,16 @@ export function makeClubEvent(event: GCalEvent, refDate: Temporal.ZonedDateTime)
 
   const { location, meetingLink } = parseLocation(event.location);
   const title = event.summary;
-  const { description, variables } = parseDescription(event.description);
+  const { description, variables } = parseDescription(
+    event.description || 'Event description is missing :('
+  );
   const id = makeEventId(title, dtStart);
   const selfLink = makeEventLink(id);
   const recurring = (event?.recurrence?.length ?? 0) > 0;
   const summary = produceSummary(title, description, selfLink);
   const teamID =
-    (variables.get('ACM_TEAM') ?? variables.get('ACM_PATH'))?.toLowerCase().trim() ?? 'general';
+    (variables.get('ACM_TEAM') ?? variables.get('ACM_PATH'))?.toLowerCase().trim() ??
+    inferTeamFromTitle(title);
 
   const thirdPartyCalendarLocation = location === 'Discord' ? selfLink : location;
   const thirdPartyCalendarArgs = [
@@ -147,7 +147,7 @@ export function thirdPartyCalendarDateTimeFromZonedDateTime(
   dt: Temporal.ZonedDateTimeLike
 ): string {
   const yyyyMMdd = [dt.year, dt.month, dt.day].map((d) => Number(d).toString().padStart(2, '0'));
-  const hhMMss = [dt.hour, dt.minute, dt.day].map((d) => Number(d).toString().padStart(2, '0'));
+  const hhMMss = [dt.hour, dt.minute, dt.second].map((d) => Number(d).toString().padStart(2, '0'));
   const yyyyMMddThhMMss = `${yyyyMMdd.join('')}T${hhMMss.join('')}`;
   return yyyyMMddThhMMss;
 }
@@ -251,10 +251,37 @@ export function zonedDateTimeFromGCalDateTime(
 
   // dtGCAL is in terms of +00:00 when 'Z' is present
   if (dtGCal.at(-1) === 'Z') {
-    options.timeZone = Temporal.TimeZone.from('+00:00');
+    options.timeZone = '+00:00';
     return Temporal.ZonedDateTime.from(options).withTimeZone(timeZone);
   }
 
   // dtGCAL is often already in terms of our desired timeZone
   return Temporal.PlainDateTime.from(options).toZonedDateTime(timeZone);
+}
+
+const TEAM_PATTERNS: [RegExp, string][] = [
+  [/\bai\b/i, 'ai'],
+  [/\balgo\b/i, 'algo'],
+  [/\bicpc\b/i, 'icpc'],
+  [/\bgame\s*dev\b/i, 'gamedev'],
+  [/\bdev\b/i, 'dev'],
+  [/\bdesign\b/i, 'design'],
+  [/\bcreate\b/i, 'design'],
+  [/\bopen\s*source\b/i, 'oss'],
+  [/\boss\b/i, 'oss'],
+  [/\bnode\s*buds\b/i, 'nodebuds'],
+  [/\bmarketing\b/i, 'marketing'],
+  [/\bspecial\s*event/i, 'special-events'],
+  [/\bspookathon\b/i, 'special-events'],
+  [/\bhackathon\b/i, 'special-events'],
+  [/\bfullyhacks\b/i, 'special-events'],
+];
+
+export function inferTeamFromTitle(title: string): string {
+  for (const [pattern, team] of TEAM_PATTERNS) {
+    if (pattern.test(title)) {
+      return team;
+    }
+  }
+  return 'general';
 }

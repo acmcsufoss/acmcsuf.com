@@ -11,13 +11,17 @@ export const TOOLS = {
   'Google Drive/Docs': 'To collaborate on presentations, documents, and spreadsheets.',
   Discord: 'Internal team communication, assistance for student questions',
   Figma: 'Create marketing materials and teaching students how to use it',
+  LeetCode: 'To prepare for interview technical assessments.',
   GitHub: 'To collaborate on code, manage projects, and teach students how to use it',
   'Social media': 'Discord, Instagram, LinkedIn, and YouTube',
   'Google Colab/Juptyer Notebook': 'Cloud development environment for Python',
   'Unreal/Unity': 'Game development environment',
+  TitanLink: 'For event management, booking meeting rooms, and managing club roster.',
+  'Sage Intacct': 'The online financial system utilized by clubs to manage their Agency Account.',
 };
 
 export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
+  // Executive positions
   {
     title: 'President',
     teamColor: 'var(--acm-general-rgb)',
@@ -26,15 +30,8 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Strong leadership, communication, and organizational skills'),
       li('Committed to promoting diversity and inclusion within the organization'),
     ],
-    requirements: [li('Must be a member of ACM for at least one semester')],
-    tools: [
-      'Google Drive/Docs',
-      'Discord',
-      'Figma',
-      'GitHub',
-      'Social media',
-      'Google Colab/Juptyer Notebook',
-    ],
+    requirements: [li('Must have been a member of ACM for at least one semester')],
+    tools: ['Discord', 'TitanLink', 'Google Drive/Docs', 'GitHub'],
     responsibilities: [
       li(
         'Official spokesperson of the organization, representing the policies, views and opinions of the organization in its relations with the campus and community at large'
@@ -51,23 +48,15 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
     title: 'Vice President',
     teamColor: 'var(--acm-general-rgb)',
     qualifications: [
-      li('Retain similar intentions as the President and provide the backend support'),
+      li('Retain similar intentions as the President and provide backup support'),
       li('Must be approachable, positive, empathetic, and flexible'),
       li("Be familiar with the President's responsibilities and be able to step in if needed"),
     ],
-    tools: [
-      'Google Drive/Docs',
-      'Discord',
-      'Figma',
-      'GitHub',
-      'Social media',
-      'Google Colab/Juptyer Notebook',
-    ],
+    tools: ['Discord', 'TitanLink', 'Google Drive/Docs', 'GitHub'],
     responsibilities: [
       li('Presides at the organization’s meetings in the absence of the President'),
       li('Collaborates with the President to carry out tasks'),
-      li('Organizes at least one board meeting a month'),
-      li('Assist in reaching out other organizations to do collaborations'),
+      li('Assist in reaching out to other organizations for collaborations'),
       li('Oversees all ACM teams and workshops'),
       li('Check Discord messages and respond to the important discussion in regards to ACM daily'),
     ],
@@ -80,19 +69,18 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li(
         'Expertise and understanding of financial management, financial reporting, and budgeting.'
       ),
-      li('Flexible schedule and availability to attend weekly ECS-ICC meetings'),
+      li('Flexible schedule and availability to attend bi-weekly ECS-ICC meetings'),
     ],
-    tools: ['Google Drive/Docs', 'Discord'],
+    tools: ['Sage Intacct', 'Google Drive/Docs', 'Discord'],
     responsibilities: [
       li('Handle all financial affairs and budgeting of the organization'),
       li(
-        "Maintain ASI Agency Accounts in the organization's name, which requires signatures of the Treasurer, President, and Advisor"
+        "Maintain the ASI Agency Account in the organization's name, which requires signatures of the Treasurer, President, and Advisor"
       ),
       li('Manage club equipment and t-shirts'),
-      li('Submit Financial Annual Report'),
       li('Lead fundraising effort and attaining professional sponsorship'),
       li('Manage sponsorship packet and disbursement'),
-      li('Attend weekly ECS-ICC meetings and request funding for events if necessary'),
+      li('Attend bi-weekly ECS-ICC meetings and request funding for events if necessary'),
     ],
   },
   {
@@ -104,7 +92,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Passion for guiding AI related student projects'),
       li('Strong leadership, communication, and organizational skills'),
     ],
-    tools: ['Google Drive/Docs', 'Discord', 'Google Colab/Juptyer Notebook', 'GitHub'],
+    tools: ['Discord', 'Google Drive/Docs', 'Google Colab/Juptyer Notebook', 'GitHub'],
     responsibilities: [
       li(
         'Create biweekly/weekly workshop presentations prior to events that effectively teach students artificial intelligence'
@@ -123,7 +111,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Interest in public speaking and leading events'),
       li('Strong leadership, communication, and organizational skills'),
     ],
-    tools: ['Google Drive/Docs', 'Discord'],
+    tools: ['Discord', 'Google Drive/Docs', 'LeetCode'],
     responsibilities: [
       li(
         'Create biweekly/weekly workshop presentations prior to events that effectively teach students algorithms/data structures'
@@ -142,7 +130,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Interest in programming to create basic front-end applications'),
       li('Strong leadership, communication, and organizational skills'),
     ],
-    tools: ['Google Drive/Docs', 'Discord', 'Figma'],
+    tools: ['Discord', 'Google Drive/Docs', 'Figma'],
     responsibilities: [
       li(
         'Create biweekly/weekly workshop presentations prior to events that effectively teach students design'
@@ -162,7 +150,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Strong leadership, communication, and organizational skills'),
       li('Flexibility with skills to assist students in a variety of projects'),
     ],
-    tools: ['Google Drive/Docs', 'Discord', 'GitHub'],
+    tools: ['Discord', 'Google Drive/Docs', 'GitHub'],
     responsibilities: [
       li(
         'Create biweekly/weekly workshop presentations prior to events that effectively teach students common development tools'
@@ -173,26 +161,26 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Attend all necessary ACM Executive Board Meetings'),
     ],
   },
-  {
-    title: 'Game Dev Team Lead',
-    teamColor: 'var(--acm-gamedev-rgb)',
-    qualifications: [
-      li('Passion and interest in game development'),
-      li('Strong leadership, communication, and organizational skills'),
-      li('Flexibility with skills to assist students in a variety of projects'),
-    ],
-    tools: ['Google Drive/Docs', 'Discord', 'GitHub', 'Unreal/Unity'],
-    responsibilities: [
-      li(
-        'Create biweekly/weekly workshop presentations prior to events that effectively teach students game development'
-      ),
-      li('Recruit members to set up and maintain infrastructure for the Game Dev Team'),
-      li(
-        'Check Discord messages and respond to the important discussion in regards to Game Dev daily'
-      ),
-      li('Attend all necessary ACM Executive Board Meetings'),
-    ],
-  },
+  // {
+  //   title: 'Game Dev Team Lead',
+  //   teamColor: 'var(--acm-gamedev-rgb)',
+  //   qualifications: [
+  //     li('Passion and interest in game development'),
+  //     li('Strong leadership, communication, and organizational skills'),
+  //     li('Flexibility with skills to assist students in a variety of projects'),
+  //   ],
+  //   tools: ['Discord', 'Google Drive/Docs', 'GitHub', 'Unreal/Unity'],
+  //   responsibilities: [
+  //     li(
+  //       'Create biweekly/weekly workshop presentations prior to events that effectively teach students game development'
+  //     ),
+  //     li('Recruit members to set up and maintain infrastructure for the Game Dev Team'),
+  //     li(
+  //       'Check Discord messages and respond to the important discussion in regards to Game Dev daily'
+  //     ),
+  //     li('Attend all necessary ACM Executive Board Meetings'),
+  //   ],
+  // },
   {
     title: 'Marketing Team Lead',
     teamColor: 'var(--acm-marketing-rgb)',
@@ -202,7 +190,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Represent and advocate diversity within the club'),
       li('Strong management and organizational skills'),
     ],
-    tools: ['Google Drive/Docs', 'Discord', 'Figma', 'Social media'],
+    tools: ['Discord', 'Google Drive/Docs', 'Figma', 'Social media'],
     responsibilities: [
       li(
         'Assist in designing flyers for marketing to be printed and posted on all forms of social media'
@@ -210,6 +198,41 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
       li('Suggest and direct new ideas for the diversification of our club'),
       li('Oversee and manage all social media platforms'),
       li('Delegate tasks to other board members of the Marketing Team'),
+    ],
+  },
+  {
+    title: 'Open Source Team Lead',
+    teamColor: 'var(--acm-oss-rgb)',
+    qualifications: [
+      li('Passion for web development and open source projects'),
+      li('Ability to work in a team and to teach others'),
+      li('Strong management and organizational skills'),
+      li('Open to learning new technologies'),
+    ],
+    tools: ['Discord', 'Google Drive/Docs', 'GitHub'],
+    responsibilities: [
+      li('Work closely with the Webmaster to maintain the ACM website and Open Source projects'),
+      li('Understand the Git workflow and be able to teach it to others'),
+      li('Attend weekly meetings and provide updates on projects'),
+    ],
+  },
+  {
+    title: 'Node Buds Team Lead',
+    teamColor: 'var(--acm-nodebuds-rgb)',
+    qualifications: [
+      li('Passion for mentorship and guiding beginners'),
+      li('Ability to work collaboratively and lead a team of "Bigs"'),
+      li('Strong organizational and communication skills'),
+      li('Experience or strong interest in a mentorship/Big role'),
+      li('Patient and empathetic approach to teaching and learning'),
+    ],
+    tools: ['Discord', 'Google Drive/Docs'],
+    responsibilities: [
+      li('Lead the planning and execution of the Node Buds Big/Little program'),
+      li('Recruit, onboard, and support Bigs within the program'),
+      li('Facilitate matching and communication between Bigs and Littles'),
+      li('Organize program sessions, workshops, or activities'),
+      li('Gather feedback and continuously improve the program structure and content'),
     ],
   },
 ];
