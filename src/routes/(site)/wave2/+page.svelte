@@ -113,7 +113,10 @@
 <Spacing --med="64px" />
 
 <span class="center-btn">
-  <Button link="https://docs.google.com/forms/d/e/1FAIpQLSf_UE6a9qufznv4a5jeCc7ZxOxGafMuekulg9XolFHPzCnxLw/viewform?usp=publish-editor" text="Apply now!" />
+  <Button
+    link="https://docs.google.com/forms/d/e/1FAIpQLSf_UE6a9qufznv4a5jeCc7ZxOxGafMuekulg9XolFHPzCnxLw/viewform?usp=publish-editor"
+    text="Apply now!"
+  />
 </span>
 
 <Spacing --med="64px" />
