@@ -103,7 +103,8 @@
         <PositionList data={[position]} />
       {/each}
     {:else}
-      {#each POSITIONS.filter((position) => position.title !== 'Secretary' && position.title !== 'Event Coordinator') as position (position.title)}
+      <!-- && position.title !== 'Event Coordinator' (there was an exception for sprint 27 -->
+      {#each POSITIONS.filter((position) => position.title !== 'Secretary') as position (position.title)}
         <PositionList data={[position]} />
       {/each}
     {/if}
