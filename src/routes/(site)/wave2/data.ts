@@ -46,7 +46,7 @@ export const POSITIONS: ClubPosition<keyof typeof TOOLS>[] = [
     ],
     tools: ['Google Drive/Docs', 'Discord', 'Social media'],
     responsibilities: [
-      li('Plan and organize socials and technical events every Friday at 5pm'),
+      li('Plan and organize socials and technical events every Thursday at 5:30pm'),
       li('Collaborate with other ACM branches to host events'),
       li('Work with the Secretary to book rooms for events and other logistics'),
     ],
